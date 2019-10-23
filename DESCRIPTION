@@ -18,3 +18,5 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/lcreteig/amsterdown
 BugReports: https://github.com/lcreteig/amsterdown/issues
+Imports: 
+    bookdown
