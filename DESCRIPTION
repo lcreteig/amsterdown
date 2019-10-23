@@ -13,7 +13,7 @@ Description: An RMarkdown PhD thesis template for the University of Amsterdam.
     to convert the (R)Markdown files to pdf or html outputs. A modification 
     of the default LaTeX template ensures the PhD thesis conforms to the 
     University of Amsterdam requirements.
-License: MIT + file LICENSE
+License: CC0
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/lcreteig/amsterdown
