@@ -1,0 +1,4 @@
+name: UvA thesis
+description: >
+   Template for creating a University of Amsterdam PhD thesis using RMarkdown and the bookdown package.
+create_dir: FALSE
