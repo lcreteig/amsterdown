@@ -1,0 +1,13 @@
+Package: amsterdown
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Leon",
+           family = "Reteig",
+           role = c("aut", "cre"),
+           email = "leonreteig@gmail.com",
+           comment = c(ORCID = "0000-0002-5814-0992"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
