@@ -1,5 +1,8 @@
 % This is the default LaTeX template (default-1.17.0.2.tex) from the RMarkdown package, from:
 % https://github.com/rstudio/rmarkdown/blob/master/inst/rmd/latex/default-1.17.0.2.tex
+%
+% New additions to the template are marked with "LCR"
+
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
@@ -193,69 +196,26 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 
-$if(compact-title)$
-%%% Change title format to be more compact
-\usepackage{titling}
-
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
-
-\setlength{\droptitle}{-2em}
-$endif$
-
-$if(title)$
-  \title{$title$}
-  $if(compact-title)$
-  \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-  $endif$
-$else$
-  \title{}
-  $if(compact-title)$
-  \pretitle{\vspace{\droptitle}}
-  \posttitle{}
-  $endif$
-$endif$
-$if(subtitle)$
-\subtitle{$subtitle$}
-$endif$
-$if(author)$
-  \author{$for(author)$$author$$sep$ \\ $endfor$}
-  $if(compact-title)$
-  \preauthor{\centering\large\emph}
-  \postauthor{\par}
-  $endif$
-$else$
-  \author{}
-  $if(compact-title)$
-  \preauthor{}\postauthor{}
-  $endif$
-$endif$
-$if(date)$
-  $if(compact-title)$
-  \predate{\centering\large\emph}
-  \postdate{\par}
-  $endif$
-  \date{$date$}
-$else$
-  \date{}
-  $if(compact-title)$
-  \predate{}\postdate{}
-  $endif$
-$endif$
-
 $for(header-includes)$
 $header-includes$
 $endfor$
 
+%%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%
 \begin{document}
-$if(title)$
-\maketitle
-$endif$
+
+%% Page I: the half-title / "Franse pagina" %LCR
+\frontmatter
+\pagestyle{empty}
+\def\drop{.1\textheight}
+
+\vspace*{\drop}
+\begin{center}
+\Huge \textsc{$if(title)$$title$$else$[…Title Doctoral Thesis…]$endif$}
+\end{center}
+\clearpage
+
+\mainmatter
+
 $if(abstract)$
 \begin{abstract}
 $abstract$

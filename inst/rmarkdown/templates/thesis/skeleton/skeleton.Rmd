@@ -1,7 +1,8 @@
 ---
-title: "Template Title"
+title: "My Awesome Thesis"
 author: "Your Name"
 date: "The Date"
+documentclass: book
 output: 
   bookdown::pdf_book:
     template: template.tex
