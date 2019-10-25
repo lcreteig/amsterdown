@@ -1,0 +1,3 @@
+# Preface {-}
+
+This will only show in the html version. Here you can add some general info about your thesis that's also in the pdf (e.g. who your supervisors were).

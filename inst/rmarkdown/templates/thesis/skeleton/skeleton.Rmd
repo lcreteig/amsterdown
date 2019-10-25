@@ -1,7 +1,10 @@
 ---
-title: "My Awesome Thesis"
-author: "Your Name"
-date: "The Date"
+# Title page
+title: "My Awesome Thesis" # The main title of your thesis (not including possible subtitles)
+author: "Phil Henry Doctor" # Your full name (including middle names if applicable)
+date: "maandag 21 oktober" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month]"
+
+
 documentclass: book
 site: bookdown::bookdown_site
 output:
@@ -10,14 +13,6 @@ output:
     template: template.tex
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r, include = FALSE, child = if (knitr::is_html_output()) '_00-preface.Rmd'}
+# see the 00-preface.Rmd file, which will only show in the html version
 ```
-
-# Adding an RMarkdown Template
-
-This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires.
-
-This is a good place to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
-
-Finally, be sure to remove this message!
