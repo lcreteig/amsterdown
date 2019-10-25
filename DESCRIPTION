@@ -1,5 +1,6 @@
 Package: amsterdown
-Title: An RMarkdown PhD thesis template for the University of Amsterdam
+Title: An RMarkdown PhD thesis template for the University of
+    Amsterdam
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Leon",
@@ -7,16 +8,19 @@ Authors@R:
            role = c("aut", "cre"),
            email = "leonreteig@gmail.com",
            comment = c(ORCID = "0000-0002-5814-0992"))
-Description: An RMarkdown PhD thesis template for the University of Amsterdam.
-    Enables reproducible thesis writing using (R)Markdown, with data, code,
-    text, figures, and the like all in one place. Uses the bookdown package
-    to convert the (R)Markdown files to pdf or html outputs. A modification 
-    of the default LaTeX template ensures the PhD thesis conforms to the 
-    University of Amsterdam requirements.
+Description: An RMarkdown PhD thesis template for the University
+    of Amsterdam.  Enables reproducible thesis writing using (R)Markdown,
+    with data, code, text, figures, and the like all in one place. Uses
+    the bookdown package to convert the (R)Markdown files to pdf or html
+    outputs. A modification of the default LaTeX template ensures the PhD
+    thesis conforms to the University of Amsterdam requirements.
 License: CC0
-Encoding: UTF-8
-LazyData: true
 URL: https://github.com/lcreteig/amsterdown
 BugReports: https://github.com/lcreteig/amsterdown/issues
 Imports: 
-    bookdown
+    bookdown,
+    lifecycle
+RdMacros: 
+    lifecycle
+Encoding: UTF-8
+LazyData: true

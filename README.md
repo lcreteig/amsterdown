@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.com/lcreteig/amsterdown.svg?branch=master)](https://travis-ci.com/lcreteig/amsterdown)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 `amsterdown` is an RMarkdown PhD thesis template for the University of
@@ -16,12 +18,14 @@ thesis](https://github.com/lcreteig/thesis) that I wrote with
 more basic and more general template in case anyone else at the UvA
 wants to do the same.
 
-This repo is currently just a skeleton and the package is not functional
-yet.
+The template supports `html` and `pdf` outputs. To inspect the outputs
+as produced by the latest version of the template, see here:
+[html](https://lcreteig.github.io/amsterdown),
+[pdf](https://lcreteig.github.io/amsterdown/thesis.pdf).
 
 ## Installation
 
-And the development version from [GitHub](https://github.com/) with:
+Get the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -30,4 +34,5 @@ devtools::install_github("lcreteig/amsterdown")
 
 ## Building the thesis
 
-TBC
+This package is currently under active development; there’s not a lot of
+functionality yet. To be continued…
