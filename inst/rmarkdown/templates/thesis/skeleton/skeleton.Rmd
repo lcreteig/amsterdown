@@ -4,6 +4,9 @@ title: "My Awesome Thesis" # The main title of your thesis (not including possib
 author: "Phil Henry Doctor" # Your full name (including middle names if applicable)
 date: "maandag 21 oktober" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month]"
 
+# Colophon (if you don't want any of these elements, just leave them out)
+funder: "the Non-existent Organization for Space Exploration (NOSE)"
+grant: "Starting grant (111-2-3)"
 
 documentclass: book
 site: bookdown::bookdown_site

@@ -212,7 +212,18 @@ $endfor$
 \begin{center}
 \Huge \textsc{$if(title)$$title$$else$[…Title Doctoral Thesis…]$endif$}
 \end{center}
+%% Page II: Colophon
 \clearpage
+\vspace*{\fill}
+\begingroup % to change formatting only temporarily
+\small
+\setlength{\parskip}{\baselineskip} % add space between paragraphs
+\setlength\parindent{0pt} % no indents
+$if(funder)$
+The investigations in this thesis were supported by $if(grant)$a $grant$ from $endif$
+$if(funder)$$funder$.$endif$
+$endif$
+\endgroup
 
 \mainmatter
 
