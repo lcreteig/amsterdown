@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/lcreteig/amsterdown.svg?branch=master)](https://travis-ci.com/lcreteig/amsterdown)
 <!-- badges: end -->
 
 `amsterdown` is an RMarkdown PhD thesis template for the University of

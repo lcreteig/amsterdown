@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 # amsterdown
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/lcreteig/amsterdown.svg?branch=master)](https://travis-ci.com/lcreteig/amsterdown)
 <!-- badges: end -->
 
 `amsterdown` is an RMarkdown PhD thesis template for the University of Amsterdam. It's based on [my PhD thesis](https://github.com/lcreteig/thesis) that I wrote with [`bookdown`](https://bookdown.org/yihui/bookdown/). I figured I'd make a more basic and more general template in case anyone else at the UvA wants to do the same.
