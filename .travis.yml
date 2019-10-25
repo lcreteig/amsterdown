@@ -3,7 +3,7 @@
 language: R
 cache: packages
 
-after_success: Rscript _render.R
+after_success: Rscript R/_render.R
 
 deploy:
   provider: pages
