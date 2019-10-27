@@ -212,6 +212,7 @@ $endfor$
 \begin{center}
 \Huge \textsc{$if(title)$$title$$else$[…Title Doctoral Thesis…]$endif$}
 \end{center}
+
 %% Page II: Colophon
 \clearpage
 \vspace*{\fill}
@@ -222,6 +223,13 @@ $endfor$
 $if(funder)$
 The investigations in this thesis were supported by $if(grant)$a $grant$ from $endif$
 $if(funder)$$funder$.$endif$
+$endif$
+
+This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package
+$if(ISBN)$\\ ISBN: $ISBN$$endif$$if(printing)$\\ Printing: $printing$$endif$$if(cover)$\\ Cover: $cover$$endif$
+
+$if(thesis_url)$
+An online version of this thesis is available at $thesis_url$$if(license)$, licensed under a $license$.$endif$
 $endif$
 \endgroup
 

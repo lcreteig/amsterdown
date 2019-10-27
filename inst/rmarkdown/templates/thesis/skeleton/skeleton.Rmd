@@ -1,12 +1,25 @@
 ---
-# Title page
+### Title page
 title: "My Awesome Thesis" # The main title of your thesis (not including possible subtitles)
 author: "Phil Henry Doctor" # Your full name (including middle names if applicable)
 date: "maandag 21 oktober" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month]"
 
-# Colophon (if you don't want any of these elements, just leave them out)
+### Colophon 
+# Can be skipped entirely, but if you define FUNDER, this will read: 
+# "The investigations in this thesis were supported by [a] GRANT [from] FUNDER"
+grant: "Starting grant (111-2-3)" # optional, otherwise this bit is omitted
 funder: "the Non-existent Organization for Space Exploration (NOSE)"
-grant: "Starting grant (111-2-3)"
+
+# This paragraph begins with "This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package"
+# and is optionally followed by:
+ISBN: "xxx-xx-xxxx-xxx-x" # optional, otherwise this bit is omitted
+printing: "Acme Press, Inc." # optional, otherwise this bit is omitted
+cover: "Designed by Phil Henry Doctor" # optional, otherwise this bit is omitted
+
+# Can be skipped entirely, but if you define THESIS_URL, this will read: 
+# "An online version of this thesis is available at THESIS_URL [,licensed under a LICENSE.]
+thesis_url: "https://lcreteig.github.io/amsterdown"
+license: "to-be-determined license" # optional, otherwise this bit is omitted
 
 documentclass: book
 site: bookdown::bookdown_site
