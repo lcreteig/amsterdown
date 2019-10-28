@@ -213,7 +213,7 @@ $endfor$
 \Huge \textsc{$if(title)$$title$$else$[…Title Doctoral Thesis…]$endif$}
 \end{center}
 
-%% Page II: Colophon
+%% Page II: Colophon %LCR
 \clearpage
 \vspace*{\fill}
 \begingroup % to change formatting only temporarily
@@ -232,6 +232,35 @@ $if(thesis_url)$
 An online version of this thesis is available at $thesis_url$$if(license)$, licensed under a $license$.$endif$
 $endif$
 \endgroup
+
+%% Page III: `Title page' mandated by University of Amsterdam %LCR
+\clearpage
+\vspace*{\drop}
+\begin{center}
+\Huge\textbf{$if(title)$$title$$else$[… Title Doctoral Thesis…]$endif$}\par
+$if(subtitle)$
+\vspace{\baselineskip}
+\Large\textit{$subtitle$}\par
+$endif$
+\vfill % this space will be whatever is left on the page
+\large \textsc{Academisch Proefschrift}\par
+\vspace{\baselineskip}
+\linespread{1.3}{\normalsize ter verkrijging van de graad van doctor\\
+aan de Universiteit van Amsterdam\\
+op gezag van de Rector Magnificus\\
+prof. dr. ir. K.I.J. Maex\\ % make sure this is the current rector magnificus
+\mbox{ten overstaan van een door het College voor Promoties ingestelde commissie,}\\
+in het openbaar te verdedigen in de $if(aula)$Aula der Universiteit$else$Agnietenkapel$endif$\\
+op $if(date)$$date$$else$[………]dag […date…] […month…] 20[..]$endif$, te $if(time)$$time$$else$[…time…]$endif$ uur \\ }\par %
+\vspace{\baselineskip}
+{\large door}\par
+\vspace{\baselineskip}
+{\Large $if(author)$$author$$else$[…given names in full…] [… surname…]$endif$}\par
+\vspace{\baselineskip}
+{\large geboren te $if(birthplace)$$birthplace$$if(country_of_birth)$, $country_of_birth$$endif$$else$[…place of birth…]$endif$}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%
 
 \mainmatter
 

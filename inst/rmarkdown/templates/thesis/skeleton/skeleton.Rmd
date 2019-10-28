@@ -1,8 +1,16 @@
 ---
 ### Title page
 title: "My Awesome Thesis" # The main title of your thesis (not including possible subtitles)
+subtitle: |
+  | This subtitle is sooooo long 
+  | I'm 'a break it up 
+# (can also be  omitted if you don't have a subtitle)
 author: "Phil Henry Doctor" # Your full name (including middle names if applicable)
 date: "maandag 21 oktober" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month]"
+aula: true # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
+time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
+birthplace: "Parijs" # your place of birth, in Dutch
+country_of_birth: "Frankrijk" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
 
 ### Colophon 
 # Can be skipped entirely, but if you define FUNDER, this will read: 
