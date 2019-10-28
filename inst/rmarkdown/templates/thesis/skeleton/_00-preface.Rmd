@@ -1,3 +1,14 @@
 # Preface {-}
 
-This will only show in the html version. Here you can add some general info about your thesis that's also in the pdf (e.g. who your supervisors were).
+This is the `html` output of the University of Amsterdam PhD thesis template from the [`amsterdown` package](https://github.com/lcreteig/amsterdown). To see the `pdf` version of the output, click on the <i class="fa fa-file-pdf-o"></i> on the toolbar above.
+
+This section will only show in the `html` version. Here you can add some general info about your thesis that's typically included in the `pdf`. For example:
+
+* who your supervisors were
+* where the project was conducted
+* the license the thesis is published under
+* funding info
+* an image of the cover of your thesis
+* etc.
+
+For these and other ideas, see what this section looks like in [my PhD thesis](https://lcreteig.github.io/thesis/) (and also check out the source file [here](https://github.com/lcreteig/thesis/blob/master/_00-preface.Rmd)).
