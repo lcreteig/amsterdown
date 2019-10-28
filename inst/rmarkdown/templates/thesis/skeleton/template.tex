@@ -262,8 +262,6 @@ op $if(date)$$date$$else$[………]dag […date…] […month…] 20[..]$endif$
 
 %%%%%%%%%%%%%%%%%%
 
-\mainmatter
-
 $if(abstract)$
 \begin{abstract}
 $abstract$
@@ -289,8 +287,10 @@ $endif$
 $if(lof)$
 \listoffigures
 $endif$
+\mainmatter
 $body$
 
+\backmatter
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$
