@@ -1,0 +1,29 @@
+# Yet another chapter
+
+__Abstract__
+
+\noindent 
+Insert abstract.
+
+---
+
+\vspace*{\fill}
+\noindent
+_Possibly insert citation here._
+\newpage
+
+## Introduction {#intro3}
+
+Here's what we will do.
+
+## Methods {#methods3}
+
+Here's how we did it.
+
+## Results {#results3}
+
+We did it!
+
+## Discussion {#discussion3}
+
+Science is better now [ref kording].
