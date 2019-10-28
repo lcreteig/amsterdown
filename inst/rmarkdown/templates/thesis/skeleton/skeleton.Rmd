@@ -69,12 +69,14 @@ members:
 faculty: 
 
 ### Book settings
-documentclass: book
-site: bookdown::bookdown_site
+documentclass: book # default LaTeX book class
+site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
 output:
   bookdown::gitbook: default
   bookdown::pdf_book:
     template: template.tex
+indent: true # indent new paragraphs, instead of leaving whitespace
+links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
 ---
 
 ```{r, include = FALSE, child = if (knitr::is_html_output()) '_00-preface.Rmd'}
