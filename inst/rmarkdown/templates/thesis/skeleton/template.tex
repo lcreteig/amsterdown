@@ -205,7 +205,7 @@ $endfor$
 
 %% Page I: the half-title / "Franse pagina" %LCR
 \frontmatter
-\pagestyle{empty}
+\thispagestyle{empty}
 \def\drop{.1\textheight}
 
 \vspace*{\drop}
@@ -215,6 +215,7 @@ $endfor$
 
 %% Page II: Colophon %LCR
 \clearpage
+\thispagestyle{empty}
 \vspace*{\fill}
 \begingroup % to change formatting only temporarily
 \small
@@ -235,6 +236,7 @@ $endif$
 
 %% Page III: `Title page' mandated by University of Amsterdam %LCR
 \clearpage
+\thispagestyle{empty}
 \vspace*{\drop}
 \begin{center}
 \Huge\textbf{$if(title)$$title$$else$[… Title Doctoral Thesis…]$endif$}\par
@@ -262,6 +264,7 @@ op $if(date)$$date$$else$[………]dag […date…] […month…] 20[..]$endif$
 
 %% Page IV: info on thesis committee
 \clearpage
+\thispagestyle{empty}
 \noindent\textbf{Promotiecommissie:}\\
 \\
 \noindent\begin{tabular}{@{}lll}
