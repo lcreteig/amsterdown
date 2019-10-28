@@ -260,6 +260,33 @@ op $if(date)$$date$$else$[………]dag […date…] […month…] 20[..]$endif$
 {\large geboren te $if(birthplace)$$birthplace$$if(country_of_birth)$, $country_of_birth$$endif$$else$[…place of birth…]$endif$}
 \end{center}
 
+%% Page IV: info on thesis committee
+\clearpage
+\noindent\textbf{Promotiecommissie:}\\
+\\
+\noindent\begin{tabular}{@{}lll}
+
+$if(one_promotor)$Promotor:$else$Promotores:$endif$
+$for(promotores)$
+& $if(promotores.title)$ $promotores.title$$else$ […full title…]$endif$$if(promotores.initials)$ $promotores.initials$$else$ […initials…]$endif$$if(promotores.surname)$ $promotores.surname$$else$ […surname…]$endif$$if(promotores.affiliation)$ & $promotores.affiliation$$else$ & […affiliation…]$endif$\\
+$endfor$
+
+$if(copromotores)$
+$if(one_copromotor)$Copromotor:$else$Copromotores:$endif$
+$for(copromotores)$
+& $if(copromotores.title)$ $copromotores.title$$else$ […full title…]$endif$$if(copromotores.initials)$ $copromotores.initials$$else$ […initials…]$endif$$if(copromotores.surname)$ $copromotores.surname$$else$ […surname…]$endif$$if(copromotores.affiliation)$ & $copromotores.affiliation$$else$ & […affiliation…]$endif$\\
+$endfor$
+$endif$
+
+\\
+Overige leden:
+$for(members)$
+& $if(members.title)$ $members.title$$else$ […full title…]$endif$$if(members.initials)$ $members.initials$$else$ […initials…]$endif$$if(members.surname)$ $members.surname$$else$ […surname…]$endif$$if(members.affiliation)$ & $members.affiliation$$else$ & […affiliation…]$endif$\\
+$endfor$
+\end{tabular}\\
+
+\noindent Faculteit: $if(faculty)$$faculty$$else$[…name faculty…]$endif$
+
 %%%%%%%%%%%%%%%%%%
 
 $if(abstract)$

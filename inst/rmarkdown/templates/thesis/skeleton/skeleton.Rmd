@@ -12,6 +12,7 @@ time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
 birthplace: "Parijs" # your place of birth, in Dutch
 country_of_birth: "Frankrijk" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
 
+
 ### Colophon 
 # Can be skipped entirely, but if you define FUNDER, this will read: 
 # "The investigations in this thesis were supported by [a] GRANT [from] FUNDER"
@@ -29,6 +30,45 @@ cover: "Designed by Phil Henry Doctor" # optional, otherwise this bit is omitted
 thesis_url: "https://lcreteig.github.io/amsterdown"
 license: "to-be-determined license" # optional, otherwise this bit is omitted
 
+
+### Committee
+# Fill in each of your "promotores" below, corresponding to the form you submitted to the graduate school.
+# Copy-paste the 4 subfields (starting with " - title:") if you have more than two, or delete one entry if you have only one promotor.
+promotores: 
+- title:
+  initials: 
+  surname: 
+  affiliation: 
+# for example:
+- title: prof. dr. # either "prof.dr" for full professors, or "dr." for others
+  initials: X.X.
+  surname: Yeatman
+  affiliation: Universiteit van Amsterdam
+one_promotor: false # set to true if you have only 1 promotor. Then the heading will be "Promotor" (singular), instead of "Promotores".
+# Fill in each of your "copromotores" below, corresponding to the form you submitted to the graduate school.
+# If you don't have a copromotor, simply delete the fields ("copromotores" and its 4 subfields)
+copromotores:
+- title: 
+  initials: 
+  surname: 
+  affiliation: 
+one_copromotor: true # if true the heading will be "Copromotor" (singular), instead of "Copromotores" (assuming there is a copromotor)
+# Fill in each of your committee members below, corresponding to the form you submitted to the graduate school.
+# Copy-paste the 4 subfields (starting with " - title:") as many times as you have committee members.
+members:
+- title: 
+  initials: 
+  surname: 
+  affiliation:
+# for example: 
+- title: dr.
+  initials: A.B.C.
+  surname: Drumpf
+  affiliation: University of Somewhere
+# Finally, the (Dutch) name of your faculty, e.g. "Faculteit der Maatschappij- en Gedragswetenschappen"
+faculty: 
+
+### Book settings
 documentclass: book
 site: bookdown::bookdown_site
 output:
