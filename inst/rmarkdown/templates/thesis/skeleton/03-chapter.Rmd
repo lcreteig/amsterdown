@@ -26,4 +26,4 @@ We did it!
 
 ## Discussion {#discussion3}
 
-Science is better now [ref kording].
+Science is better now [@Mensh2017].
