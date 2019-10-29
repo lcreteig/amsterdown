@@ -1,0 +1,5 @@
+# Summary and discussion
+
+Here's where you would write a summary of your thesis[^summ], along with a general discussion.
+
+[^summ]: You can also put the summary at the end (with the Dutch summary) or even at the beginning.
