@@ -1,0 +1,4 @@
+# Acknowledgments {-}
+\chaptermark{Acknowledgments}
+
+This section is optional, but theses typically include acknowledgments ([_dankwoord_]{lang=nl} in Dutch) at the end. You may want to mix languages to thank people in their native tongue (though most Dutch speakers write it entirely in Dutch). But the standard language of the thesis template is English. You can switch temporarily by wrapping the text in language tags like so: `[Your Dutch text here]{lang=nl}`. This is important for things like hyphenation to work properly.

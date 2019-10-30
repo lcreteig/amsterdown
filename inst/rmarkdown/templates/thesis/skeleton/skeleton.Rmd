@@ -70,6 +70,7 @@ faculty:
 
 ### Book settings
 documentclass: book # default LaTeX book class
+lang: en # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
 output:
   # settings for html output

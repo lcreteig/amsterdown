@@ -1,0 +1,13 @@
+# Nederlandse samenvatting (Summary in Dutch) {-}
+\chaptermark{Summary in Dutch}
+
+::: {lang=nl}
+
+_Replace this with the Dutch title of your thesis_
+
+\bigskip
+<br>
+
+The summary goes here.
+
+:::
