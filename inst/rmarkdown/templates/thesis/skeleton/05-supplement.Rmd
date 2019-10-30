@@ -1,0 +1,43 @@
+# (APPENDIX) Appendix {-}
+
+# Supplement to Chapter 2
+
+What's left to say? How about a nice image then?
+
+```{r echo=FALSE}
+# this will display the .pdf in pdf output, and the .jpg in html output
+knitr::include_graphics("figures/uvalogo_regular_p_en.jpg", auto_pdf = TRUE)
+```
+
+# Supplement to Chapter 3
+
+And now for some tables:
+
+| day| time|  temp| activ|
+|---:|----:|-----:|-----:|
+| 307|  930| 36.58|     0|    
+| 307|  940| 36.73|     0|  
+| 307|  950| 36.93|     0|   
+| 307| 1000| 37.15|     0|         
+| 307| 1010| 37.23|     0|     
+| 307| 1020| 37.24|     0|     
+| 307| 1030| 37.24|     0|  
+| 307| 1040| 36.90|     0|  
+| 307| 1050| 36.95|     0|  
+| 307| 1100| 36.89|     0|  
+| 307| 1110| 36.95|     0|  
+| 307| 1120| 37.00|     0|  
+| 307| 1130| 36.90|     0|  
+| 307| 1140| 36.99|     0|  
+| 307| 1150| 36.99|     0|  
+| 307| 1200| 37.01|     0|  
+
+
+Table: (\#tab:beaver-2) Time series of the body temparature of a beaver. Source: @Reynolds1994
+
+```{r beaver-1, echo=FALSE}
+# let the knitr package generate the table in markdown (from a data frame)
+knitr::kable(head(beaver1,16),
+             caption = "This is another beaver. Seems to be running slightly colder",
+             booktabs = TRUE)
+```
