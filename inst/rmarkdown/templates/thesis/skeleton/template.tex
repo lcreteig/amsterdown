@@ -196,6 +196,10 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 
+%%% This fixes a TexLive 2019 change that broke pandoc template. Will also be fixed in pandoc 2.8
+% https://github.com/jgm/pandoc/issues/5801
+\renewcommand{\linethickness}{0.05em}
+
 $for(header-includes)$
 $header-includes$
 $endfor$
