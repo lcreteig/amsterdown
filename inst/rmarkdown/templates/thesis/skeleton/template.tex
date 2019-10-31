@@ -196,7 +196,7 @@ $endif$
 \let\rmarkdownfootnote\footnote%
 \def\footnote{\protect\rmarkdownfootnote}
 
-%%% This fixes a TexLive 2019 change that broke pandoc template. Will also be fixed in pandoc 2.8
+%%% This fixes a TexLive 2019 change that broke pandoc template. Will also be fixed in pandoc 2.8 %LCR
 % https://github.com/jgm/pandoc/issues/5801
 \renewcommand{\linethickness}{0.05em}
 
@@ -266,7 +266,7 @@ op $if(date)$$date$$else$[………]dag […date…] […month…] 20[..]$endif$
 {\large geboren te $if(birthplace)$$birthplace$$if(country_of_birth)$, $country_of_birth$$endif$$else$[…place of birth…]$endif$}
 \end{center}
 
-%% Page IV: info on thesis committee
+%% Page IV: info on thesis committee %LCR
 \clearpage
 \thispagestyle{empty}
 \noindent\textbf{Promotiecommissie:}\\
