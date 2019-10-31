@@ -74,8 +74,15 @@ lang: en # default language for the thesis. Change to en-GB or en-US if you want
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
 output:
   # settings for html output
-  bookdown::gitbook: default
-    #pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
+  bookdown::gitbook:
+    config:
+      toc: 
+        #this text will print on top ("before") or at the bottom ("after") of the table of contents
+        before: | 
+          <li><a href="./">UvA PhD thesis template</a></li>
+        after: |
+          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+#   pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
   # settings for pdf output
   bookdown::pdf_book: 
     template: template.tex
