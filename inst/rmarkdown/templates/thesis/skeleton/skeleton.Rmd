@@ -70,6 +70,12 @@ faculty:
 
 ### Book settings
 documentclass: book # default LaTeX book class
+book_size: false # "true" if you want to render a pdf for printing as a book; "false" if you want to print loose pages
+           # if book_size is set to false, forces A4 paper size, and the "oneside" classoption
+           # if book_size is set to true, forces standard "thesis B5 size" (170mm wide by 240mm high), and the "twoside" classoption
+# geometry: "left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm" # use this if you want to change the margins
+            # 2.5cm equal margins are the standard, also advised by many printers (so when book_size: true)
+fontsize: 12pt # 12pt is recommened when book_size is false; 10 or 11pt is recommended when book_size is true
 lang: en # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
 output:
@@ -86,6 +92,7 @@ output:
   # settings for pdf output
   bookdown::pdf_book: 
     template: template.tex
+    keep_tex: yes
     #pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
 indent: true # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)

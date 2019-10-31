@@ -3,7 +3,12 @@
 %
 % New additions to the template are marked with "LCR"
 
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+%\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$} %LCR
+$if(book_size)$ % if the book is being rendered for print, force twoside option
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,twoside,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$} %LCR
+$else$ % if not, force the oneside and a4paper options, which seem to be the only reasonable defaults
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$a4paper,oneside,$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$} %LCR
+$endif$
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
@@ -56,9 +61,16 @@ $endif$
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+$if(book_size)$ % LCR
+\usepackage[paperwidth=170mm,paperheight=240mm]{geometry} % LCR %set to standard thesis size
+$endif$
 $if(geometry)$
+$if(book_size)$ % LCR % if we've already invoked geometry
+\geometry{$for(geometry)$$geometry$$sep$,$endfor$} %LCR % don't call usepackage again
+$else$ %LCR
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
+$endif$ %LCR
 \usepackage{hyperref}
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
