@@ -36,4 +36,9 @@ usethis::use_package_doc()
 usethis::use_lifecycle()
 usethis::use_lifecycle_badge("experimental")
 
+# setup package documentation as website
+usethis::use_pkgdown()
+# pkgdown::template_navbar() for adding bookdown output
+# pkgdown::build_favicon()
+pkgdown::build_site()
 

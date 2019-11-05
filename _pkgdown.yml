@@ -1,0 +1,15 @@
+destination: webdocs
+template:
+  params:
+    bootswatch: cosmo
+authors:
+  Leon Reteig:
+    href: https://lcreteig.github.io
+development:
+  mode: devel
+navbar:
+  structure:
+    left:  [home]
+    right: [github]
+  components:
+    reference: ~
