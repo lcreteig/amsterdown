@@ -1,4 +1,6 @@
-# Minimal, Real Functionals over Graphs
+# This is a rather long title for such a small chapter, don't you think?
+<!-- Write a shorter-title in \chaptermark if necessary. This will be used for the page header-->
+\chaptermark{A long title}
 
 __Abstract__
 
