@@ -1,6 +1,6 @@
 # Preface {-}
 
-This is the `html` output of the University of Amsterdam PhD thesis template from the [`amsterdown` package](https://github.com/lcreteig/amsterdown). To see the `pdf` version of the output, click on the <i class="fa fa-file-pdf-o"></i> on the toolbar above.
+This is the `html` output of the University of Amsterdam PhD thesis template from the [`amsterdown` package](https://github.com/lcreteig/amsterdown). You can view access the `pdf` version(s) of the output from the toolbar above.
 
 This section will only show in the `html` version. Here you can add some general info about your thesis that's typically included in the `pdf`. For example:
 

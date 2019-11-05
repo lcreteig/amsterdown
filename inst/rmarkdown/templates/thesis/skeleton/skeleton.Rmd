@@ -35,36 +35,36 @@ license: "to-be-determined license" # optional, otherwise this bit is omitted
 # Fill in each of your "promotores" below, corresponding to the form you submitted to the graduate school.
 # Copy-paste the 4 subfields (starting with " - title:") if you have more than two, or delete one entry if you have only one promotor.
 promotores: 
-- title:
-  initials: 
-  surname: 
-  affiliation: 
 # for example:
 - title: prof. dr. # either "prof.dr" for full professors, or "dr." for others
-  initials: X.X.
-  surname: Yeatman
+  initials: T.
+  surname: Zonnebloem
   affiliation: Universiteit van Amsterdam
+- title: prof. dr.
+  initials: H.
+  surname: Jones
+  affiliation: University of Indiana
 one_promotor: false # set to true if you have only 1 promotor. Then the heading will be "Promotor" (singular), instead of "Promotores".
 # Fill in each of your "copromotores" below, corresponding to the form you submitted to the graduate school.
 # If you don't have a copromotor, simply delete the fields ("copromotores" and its 4 subfields)
 copromotores:
-- title: 
-  initials: 
-  surname: 
-  affiliation: 
+- title: dr. 
+  initials: W.
+  surname: Ho
+  affiliation: University of Gallifrey 
 one_copromotor: true # if true the heading will be "Copromotor" (singular), instead of "Copromotores" (assuming there is a copromotor)
 # Fill in each of your committee members below, corresponding to the form you submitted to the graduate school.
 # Copy-paste the 4 subfields (starting with " - title:") as many times as you have committee members.
 members:
-- title: 
-  initials: 
-  surname: 
-  affiliation:
 # for example: 
-- title: dr.
-  initials: A.B.C.
-  surname: Drumpf
-  affiliation: University of Somewhere
+- title: prof. dr.
+  initials: H.J.
+  surname: Farnsworth
+  affiliation: Mars University
+- title: prof. dr.
+  initials: J.I.Q.N.
+  surname: Frink
+  affiliation: University of Springfield
 # Finally, the (Dutch) name of your faculty, e.g. "Faculteit der Maatschappij- en Gedragswetenschappen"
 faculty: 
 
@@ -74,7 +74,7 @@ book_size: false # "true" if you want to render a pdf for printing as a book; "f
            # if book_size is set to false, forces A4 paper size, and the "oneside" classoption
            # if book_size is set to true, forces standard "thesis B5 size" (170mm wide by 240mm high), and the "twoside" classoption
 # geometry: "left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm" # use this if you want to change the margins
-            # 2.5cm equal margins are the standard, also advised by many printers (so when book_size: true)
+            # 2.5cm equal margins are often recommended by printers (so when book_size: true)
 fontsize: 12pt # 12pt is recommened when book_size is false; 10 or 11pt is recommended when book_size is true
 lang: en # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book

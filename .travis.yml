@@ -3,7 +3,9 @@
 language: R
 cache: packages
 
-after_success: Rscript R/_render.R
+after_success:
+  - R CMD INSTALL . # install the package so we can use it to
+  - Rscript R/_render.R # render the output samples
 
 deploy:
   provider: pages
