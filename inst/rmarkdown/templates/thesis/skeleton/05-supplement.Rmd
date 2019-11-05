@@ -32,7 +32,6 @@ And now for some tables:
 | 307| 1150| 36.99|     0|  
 | 307| 1200| 37.01|     0|  
 
-
 Table: (\#tab:beaver-2) Time series of the body temparature of a beaver. Source: @Reynolds1994
 
 ```{r beaver-1, echo=FALSE}
@@ -41,3 +40,9 @@ knitr::kable(head(beaver1,16),
              caption = "This is another beaver. Seems to be running slightly colder",
              booktabs = TRUE)
 ```
+
+```{r, echo = FALSE}
+mean_temp <- mean(head(beaver1, 16)[,"temp"])
+```
+
+The average body temperature of the 2nd beaver (Table \@ref(tab:beaver-1)) is `r round(mean_temp,1)` (_SD_ = `r round(sd(head(beaver1, 16)[,"temp"]),2)`).

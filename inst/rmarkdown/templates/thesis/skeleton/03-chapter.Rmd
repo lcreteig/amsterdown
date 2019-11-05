@@ -22,7 +22,7 @@ Here's how we did it.
 
 ## Results {#results3}
 
-We did it! Also see the entirely irrelevant supplementary Table \@ref(tab:beaver-2) and \@ref(tab:beaver-1)
+We did it!
 
 ## Discussion {#discussion3}
 
