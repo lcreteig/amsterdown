@@ -9,7 +9,7 @@ development:
   mode: devel
 navbar:
   structure:
-    left:  [home, output]
+    left:  [home, intro, output]
     right: [github]
   components:
     reference: ~
