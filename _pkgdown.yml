@@ -9,7 +9,16 @@ development:
   mode: devel
 navbar:
   structure:
-    left:  [home]
+    left:  [home, output]
     right: [github]
   components:
     reference: ~
+    output:
+      text: Sample output
+      menu:
+      - text: Website (html)
+        href: sample_output/index.html
+      - text: One-sided A4 (pdf)
+        href: sample_output/thesis_A4.pdf
+      - text: Book B5 (pdf)
+        href: sample_output/thesis_B5.pdf
