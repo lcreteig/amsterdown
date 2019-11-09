@@ -61,13 +61,15 @@ Book” from the Build pane to render the thesis to an output format of
 your chosing.
 
 Or, (e.g., if you’re not using the RStudio IDE), run the following lines
-of R code to render the
-template:
+of R code to render the template:
 
 ``` r
-rmarkdown::draft('index.Rmd', template = 'thesis', package = 'amsterdown', create_dir = TRUE, edit = FALSE) # create new draft based off template
+rmarkdown::draft('index.Rmd', # create new draft based off template
+                 template = 'thesis', package = 'amsterdown', 
+                 create_dir = TRUE, edit = FALSE) 
 setwd("index") # navigate to new directory
-bookdown::render_book("index.Rmd", output_format = "all") # render the thesis template to all output formats
+# render the thesis template to all output formats
+bookdown::render_book("index.Rmd", output_format = "all") 
 # or
 #bookdown::render_book("index.Rmd", output_format = 'bookdown::gitbook') # to render to html
 #bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF
