@@ -1,5 +1,5 @@
 ---
-title: "amsterdown"
+title: "Introduction to amsterdown"
 ---
 
 ```{r, include = FALSE}
@@ -20,3 +20,40 @@ For more extensive documentation, please see these other excellent sources on Ma
 * For a quick (R) Markdown reference, check out [RStudio's R Markdown cheat sheet](https://rstudio.com/resources/cheatsheets/).
 * R Markdown uses pandoc-flavored Markdown, the complete reference for which is [pandoc's  documentation](https://pandoc.org/MANUAL.html#pandocs-markdown).
 * The integration of R code is handled by the [knitr package](https://yihui.name/knitr/). Code chunks can be customized with many options  that determine how the ouput is displayed (e.g., whether the code is included; if a plot is generated, what it's size should be, etc.). Check out a complete overview of these options [here](https://yihui.name/knitr/options/).
+
+## Drafting the template
+
+New template in RStudio; `rmarkdown::draft`
+
+## The template files
+
+```{r, echo = FALSE}
+#fs::dir_tree(here::here("inst/rmarkdown/templates/thesis/skeleton"))
+```
+```
+├── 01-introduction.Rmd
+├── 02-chapter.Rmd
+├── 03-chapter.Rmd
+├── 04-discussion.Rmd
+├── 05-supplement.Rmd
+├── 06-references.Rmd
+├── 07-summary-Dutch.Rmd
+├── 08-acknowledgments.Rmd
+├── 09-miscellaneous.Rmd
+├── _00-preface.Rmd
+├── _bookdown.yml
+├── figures
+│   ├── uvalogo_regular_p_en.jpg
+│   └── uvalogo_regular_p_en.pdf
+├── index.Rmd
+├── template.tex
+└── thesis.bib
+```
+
+## YAML variables
+
+List variables in index.Rmd
+
+## Building the thesis
+
+"Build book"; `bookdown::render_book`
