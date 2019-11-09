@@ -1,3 +1,15 @@
 a {
   color: #B53737; /* color links red */
 }
+
+/* TOC colors */
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:white;
+    background-color:#B53737;
+    }
+.nav-pills > li > a:hover {
+  color:black
+}
+.nav-link-color {
+  color: #ffffff;
+}
