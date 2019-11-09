@@ -9,6 +9,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(amsterdown)
-```
+
+The best way to figure out how the template works is to look at [the source files](https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton) and output together, to understand how one is created from the other. Other than how to create headings, italic text and the like, I've included basic examples of things iyou're likely to need whilst writing a thesis, such as citations, tables, plots, and equations.
+
+Or, check out the source files for [my PhD thesis](https://github.com/lcreteig/thesis), or any other PhD thesis templates (e.g. [thesisdown](https://github.com/ismayc/thesisdown), [huskydown](https://github.com/benmarwick/huskydown), or [oxforddown](https://github.com/ulyngs/oxforddown)).
+
+For more extensive documentation, please see these other excellent sources on Markdown syntax, R Markdown, and `bookdown`:
+
+* Almost everything you'll need to know can be found in the [bookdown book](https://bookdown.org/yihui/bookdown/).
+* For a quick (R) Markdown reference, check out [RStudio's R Markdown cheat sheet](https://rstudio.com/resources/cheatsheets/).
+* R Markdown uses pandoc-flavored Markdown, the complete reference for which is [pandoc's  documentation](https://pandoc.org/MANUAL.html#pandocs-markdown).
+* The integration of R code is handled by the [knitr package](https://yihui.name/knitr/). Code chunks can be customized with many options  that determine how the ouput is displayed (e.g., whether the code is included; if a plot is generated, what it's size should be, etc.). Check out a complete overview of these options [here](https://yihui.name/knitr/options/).
