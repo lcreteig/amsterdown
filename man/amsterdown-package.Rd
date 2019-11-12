@@ -7,6 +7,8 @@
 \title{amsterdown: An RMarkdown PhD thesis template for the University of
     Amsterdam}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 An RMarkdown PhD thesis template for the University
     of Amsterdam.  Enables reproducible thesis writing using (R)Markdown,
     with data, code, text, figures, and the like all in one place. Uses
