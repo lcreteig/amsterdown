@@ -23,7 +23,29 @@ For more extensive documentation, please see these other excellent sources on Ma
 
 ## Drafting the template
 
-New template in RStudio; `rmarkdown::draft`
+### Using the RStudio interface
+
+If you're using RStudio (and you've installed the package):
+
+1. Go to "File" in the menu bar, then choose "New File" > "R Markdown...". 
+2. In the following screen (see the screenshot below), click "From Template" in the bar on the left. Then select "UvA thesis" {amsterdown}.
+3. Choose any folder on your computer to store the files (under "Location"). However, make sure to name this directory `index` (under "Name"). This is only to ensure that the main file will be correctly named `index.Rmd`; after the template has been created, feel free to change the name of the directory.
+
+```{r echo = FALSE, out.width='50%'}
+knitr::include_graphics("../man/figures/newrmarkdown.png")
+```
+
+### From the console
+
+You can also use the `rmarkdown::draft()` function to do all of the above:
+
+```{r eval = FALSE}
+rmarkdown::draft('index.Rmd', # create new draft based off template
+                 template = 'thesis', package = 'amsterdown', 
+                 create_dir = TRUE, edit = FALSE) 
+```
+
+Again, this will also create a directory named `index`, but feel free to change that name.
 
 ## The template files
 
@@ -55,5 +77,7 @@ New template in RStudio; `rmarkdown::draft`
 List variables in index.Rmd
 
 ## Building the thesis
+
+To render the PDFs, you'll also need pandoc and a LaTeX distribution
 
 "Build book"; `bookdown::render_book`
