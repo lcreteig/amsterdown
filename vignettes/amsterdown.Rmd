@@ -286,4 +286,25 @@ book_size: false # or true
 
 ## Building the thesis
 
-"Build book"; `bookdown::render_book`
+Choose any of the two methods below to finally render your thesis! It should show up in a subdirectory called  `_book`. RStudio will probably show you a preview of the result, but if not: open `_book/index.hml` if you rendered to html, or `_book/thesis.pdf` if you rendered to pdf.
+
+### Using the RStudio interface {#build-rstudio}
+
+If you created an RStudio project, you should see a "Build Book" button on the "Build" pane. Click the button itself to render the thesis to both html and pdf, or click the little triangle next to it to choose the output format (`bookdown::gitbook` = html; `bookdown::pdf_book` = pdf).
+
+```{r echo = FALSE, out.width='75%'}
+knitr::include_graphics("../man/figures/buildbutton.png")
+```
+
+### From the console
+
+You can also use the `bookdown::render_book()` function to build the book (e.g. if you're not using RStudio):
+
+```{r, eval=FALSE}
+setwd("index") # navigate to the new directory
+# render the thesis template to all output formats
+bookdown::render_book("index.Rmd", output_format = "all") 
+# or
+#bookdown::render_book("index.Rmd", output_format = 'bookdown::gitbook') # to render to html
+#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF
+```
