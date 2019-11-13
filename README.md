@@ -57,9 +57,12 @@ If you’ve installed the package and are using
 [RStudio](https://rstudio.com/), simply navigate to “File” \> “New File”
 \> “R Markdown…” \> “From Template” \> “UvA thesis {amsterdown}”. Use
 `index` for the new directory name (feel free to change this after), so
-that the main file will be called `index.Rmd`, then hit OK. Click “Build
-Book” from the Build pane to render the thesis to an output format of
-your choosing.
+that the main file will be called `index.Rmd`, then hit OK. Then, create
+a new RStudio project by going to “File” \> “New Project…” \> “Existing
+Directory”, then “Browse…” to the directory you just created (`index`,
+or whatever you named it to), and finally hit “Create Project” Click
+“Build Book” from the Build pane to render the thesis to an output
+format of your choosing.
 
 Or, (e.g., if you’re not using the RStudio IDE), run the following lines
 of R code to render the template:

@@ -54,9 +54,25 @@ N.B. If you're working with RStudio, you'll need to restart it after installing 
 knitr::include_graphics("../man/figures/newrmarkdown.png")
 ```
 
+It's good practice to also create an [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) for your thesis. This'll make sure your working directory is set correctly, and it will allow you to use the nifty "Build Book" button to easily render the thesis (see [Building the thesis, Using RStudio](#build-rstudio)). Whenever you want to resume working on the thesis, open the `.Rproj` file that's created in this step.
+
+4. To create an RStudio project, go to "File" in the menu bar, then choose "New Project..."
+
+5. In the following screen (see the screenshot below), select "Existing Directory".
+
+```{r echo = FALSE, out.width='50%'}
+knitr::include_graphics("../man/figures/newproject-1.png")
+```
+
+6. Then click "Browse...", and navigate to the directory you just created (the default name is `index`, but you probably have changed it by now). Finally, click "Create Project".
+
+```{r echo = FALSE, out.width='50%'}
+knitr::include_graphics("../man/figures/newproject-2.png")
+```
+
 ### From the console
 
-You can also use the `rmarkdown::draft()` function to do all of the above (e.g. if you're not using RStudio):
+You can also use the `rmarkdown::draft()` function to create the template files (e.g. if you're not using RStudio):
 
 ```{r eval = FALSE}
 rmarkdown::draft('index.Rmd', # create new draft based off template
