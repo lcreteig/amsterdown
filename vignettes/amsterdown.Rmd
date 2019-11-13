@@ -19,7 +19,7 @@ For more extensive documentation, please see these other excellent sources on Ma
 * Almost everything you'll need to know can be found in the [bookdown book](https://bookdown.org/yihui/bookdown/).
 * For a quick (R) Markdown reference, check out [RStudio's R Markdown cheat sheet](https://rstudio.com/resources/cheatsheets/).
 * R Markdown uses pandoc-flavored Markdown, the complete reference for which is [pandoc's  documentation](https://pandoc.org/MANUAL.html#pandocs-markdown).
-* The integration of R code is handled by the [knitr package](https://yihui.name/knitr/). Code chunks can be customized with many options  that determine how the ouput is displayed (e.g., whether the code is included; if a plot is generated, what it's size should be, etc.). Check out a complete overview of these options [here](https://yihui.name/knitr/options/).
+* The integration of R code is handled by the [knitr package](https://yihui.name/knitr/). Code chunks can be customized with many options  that determine how the output is displayed (e.g., whether the code is included; if a plot is generated, what it's size should be, etc.). Check out a complete overview of these options [here](https://yihui.name/knitr/options/).
 
 ## Before we start
 
@@ -40,7 +40,7 @@ N.B. you __don't__ need to load the package (e.g. with `library(amsterdown)`) in
 tinytex::install_tinytex()
 ```
 
-N.B. If you're working with RStudio, you'll need to restart it after installing TinyTex.
+N.B. If you're working with RStudio, you'll need to restart it after installing TinyTeX.
 
 ## Drafting the template
 
@@ -95,7 +95,7 @@ Your newly created folder with the thesis template should contain the following 
 
 * The `.Rmd` (R Markdown) files each contain a single chapter. The easiest way to keep them in order is by prefixing a number to the file name: this ordering will also determine the order of the chapters in the book. However, this doesn't hold for two of these:
     * `index.Rmd` does not actually contain any R Markdown content, but only YAML options that determine how the book will be rendered. See the [YAML variables](#yaml-variables) section below. The name of this file must be `index.Rmd`, as it will become the "home page" of the HTML version of the thesis (which is only recognized if it is named `index.html`)
-    * `_00-preface.Rmd` will only show in the HTML version of the thesis; it is intended to house some of the info that's in the front matter of the PDF version of the book (e.g. funding info, names of your supervisers, etc.). It does not follow the regular ordering scheme: this will always come first, because it is referred to directly in `index.Rmd`. If you don't want something like this, simply remove the code chunk in `index.Rmd` that references it.
+    * `_00-preface.Rmd` will only show in the HTML version of the thesis; it is intended to house some of the info that's in the front matter of the PDF version of the book (e.g. funding info, names of your supervisors, etc.). It does not follow the regular ordering scheme: this will always come first, because it is referred to directly in `index.Rmd`. If you don't want something like this, simply remove the code chunk in `index.Rmd` that references it.
 * `_bookdown.yml` contains a few more YAML options. See the [bookdown book](https://bookdown.org/yihui/bookdown/) for more info, though you likely won't ever have to change any of these.
 * the `/figures` folder contains some example images included in the template (the UvA logo).
 * `template.tex` is the pandoc LaTeX template that will determine how the PDF output of the thesis will look. If you ever want to change something about the PDF (e.g., the font that's used, where the page numbers are, etc.), you'll likely have to modify this file and add some LaTeX commands. Note that the html version of the thesis also has [a template](https://www.gitbook.com/), but this cannot be modified.

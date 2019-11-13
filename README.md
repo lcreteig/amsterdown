@@ -24,7 +24,7 @@ style](https://en.wikipedia.org/wiki/Notebook_interface) workflow to
 integrate all your text, code, figures, and other output that together
 make up your PhD thesis work. Finally, `bookdown` allows you to easily
 create an html-version of your thesis that you can host online, and to
-harness the power of LaTeX to make a beatifully formatted PDF for
+harness the power of LaTeX to make a beautifully formatted PDF for
 printing your thesis.
 
 This template is an easy way to get started, by:
@@ -59,7 +59,7 @@ If you’ve installed the package and are using
 `index` for the new directory name (feel free to change this after), so
 that the main file will be called `index.Rmd`, then hit OK. Click “Build
 Book” from the Build pane to render the thesis to an output format of
-your chosing.
+your choosing.
 
 Or, (e.g., if you’re not using the RStudio IDE), run the following lines
 of R code to render the template:

@@ -39,7 +39,7 @@ usethis::use_lifecycle_badge("experimental")
 # setup package documentation as website
 usethis::use_pkgdown()
 usethis::use_article("amsterdown")
-# pkgdown::template_navbar() for adding bookdown output
-# pkgdown::build_favicon()
 pkgdown::build_site()
 
+# setup spell checking
+usethis::use_spell_check()
