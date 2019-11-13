@@ -103,10 +103,171 @@ Your newly created folder with the thesis template should contain the following 
 
 ## YAML variables
 
-List variables in index.Rmd
+The output of the template can be controlled by setting various YAML options in `index.Rmd` (and `_bookdown.yml`). Here's a list of all the options that are specific to the `amsterdown` template, which are in `index.Rmd`. There are plenty other YAML options; see the documentation linked at the top of this page for more info on those.
+
+### Title page(s)
+
+The following information will be included in the [title page as mandated by the university](https://www.uva.nl/en/research/phd/doctoral-programme/completion/completion.html). The template will fill in the rest and make sure it is exactly formatted as the university requires.
+
+``` {yaml}
+---
+title: "My Awesome Thesis" 
+subtitle: |
+  | This subtitle is sooooo long 
+  | I'm 'a break it up 
+author: "Phil Henry Doctor"
+aula: true
+date: "maandag 21 oktober 2019"
+time: "14.00" 
+birthplace: "Parijs" 
+country_of_birth: "Frankrijk"
+---
+```
+
+* `title`: The main title of your thesis (not including possible subtitles). This will print on the very first page in the book (the "half-title"), and on the "full" title page as mandated by the university
+* `subtitle` (optional): The subtitle of the thesis. This will only print on the full title page. Note that the example demonstrates how the title/subtitle can be broken into separate lines, in case they are really long
+* `author`: This should be your full name, including any middle names you might have, as it would appear in your passport
+* `aula`: 
+    * If your defense is in the _Aula_ , set this to `true`
+    * If instead your defense is in the _Agnietenkapel_, set to `false` (or leave out altogether)
+* `date`: The date of your defense, in Dutch, in the following format: "weekday DD month YYYY". For example: "maandag 21 oktober 2019" (Monday October 21, 2019)
+* `time`: hh:mm (24h) time of your defense. For example: "14:00", or "10.00"
+* `birthplace`: your place of birth, in Dutch
+* `country_of_birth`:
+    * If you were __not__ born in the Netherlands, fill in the Dutch name of the country as well
+    * If you were born in the Netherlands, delete this field
+
+### Colophon
+
+This is the second page in the book, which often lists information on the printing of the book, copyright, funding info, etc. I've included a couple things here that people generally mention.
+
+This page tends to look slightly differently in each thesis, and is subject to personal preference obviously, so it's hard to make a good template for it. It can be changed by modifying `template.tex`, or feel free to contact me if you don't feel confident doing so.
+
+``` {yaml}
+---
+grant: "Starting grant (111-2-3)" # optional, otherwise this bit is omitted
+funder: "the Non-existent Organization for Space Exploration (NOSE)"
+---
+```
+
+If you define the `funder` option, the colophon page starts with:
+
+> The investigations in this thesis were supported by [a] `grant` [from] `funder`"
+
+* `grant` (optional): title and number of the grant that funded your work. If you omit `grant`, the rest of the sentence will still read well ("_The investigations in this thesis were supported by `funder`_")
+* `funder` (optional): name of the organization that funded your work
+
+``` {yaml}
+---
+ISBN: "xxx-xx-xxxx-xxx-x"
+printing: "Acme Press, Inc."
+cover: "Designed by Phil Henry Doctor"
+---
+```
+
+These options will be preceded with the following sentence:
+
+> This thesis was typeset using (R) Markdown, LaTeX and the `bookdown` R-package
+
+This is the only thing that will always print on the colophon page, to give some credit where it's due.
+
+* `ISBN` (optional): If defined, this will read: "ISBN: [whatever you fill in here]". The [ISBN](https://en.wikipedia.org/wiki/International_Standard_Book_Number) for the printed book. It's not mandatory to have one (and it's not free). You can usually apply for one with the company you print your thesis with.
+* `printing` (optional): If defined, this will read: "Printing: [whatever you fill in here]". The printing company often likes to be mentioned here.
+* `cover` (optional): If defined, this will read: "Cover: [whatever you fill in here]". Many PhD students have their covers created by someone else; this would be the place to acknowledge them.
+
+```{yaml}
+---
+thesis_url: "https://lcreteig.github.io/amsterdown"
+license: "to-be-determined license"
+---
+```
+
+Again, these options can be skipped entirely, but if you define `thesis_url`, the colophon page will end with:
+
+> An online version of this thesis is available at `thesis_url` [,licensed under a `license`.]
+
+* `thesis_url` (optional): This template makes it really easy to also publish your thesis as a website (in html): you basically get it "for free" with the pdf version! See [FIXME: add link] for some tips on how to get it online. 
+* `license` (optional): If you do publish the thesis online for a wider audience, it's always a good idea to add a license. I'd suggest one of the [Creative Commons licenses](https://creativecommons.org/) to maximize the utility of your thesis for others, but you can also keep the copyright to yourself obviously (this will be the default if you don't include an explicit license/copyright statement).
+
+### Committee page
+
+The back of the title page has to contain the name of your faculty, supervisors, and committee members; again in a [special University-mandated format](https://www.uva.nl/en/research/phd/doctoral-programme/completion/completion.html). The template will make sure the table is generated in this format. Make sure the specification here matches the one you sent in to the graduate school!
+
+```{yaml}
+---
+promotores: 
+- title: prof. dr.
+  initials: T.
+  surname: Zonnebloem
+  affiliation: Universiteit van Amsterdam
+- title: prof. dr.
+  initials: H.
+  surname: Jones
+  affiliation: University of Indiana
+one_promotor: false
+---
+```
+
+First, your "promotores", i.e. your supervisors (associate professors and upwards qualify for this role). The `promotores:` field has the following four subfields:
+
+* `title`: either "prof. dr." for full professors, or "dr." for others
+* `initials`: -
+* `surname`: -
+* `affiliation`: the name of the university your promotor works at
+
+If you have more than one promotor, simply copy these four fields (including the "-" in front of `title`!) and fill in the details for each additional promotor. If you only have one promotor, delete the 2nd set of fields, and set the `one_promotor` field to `true`. This will make sure the singular "Promotor" is printed in the table, instead of the plural ("Promotores").
+
+```{yaml}
+---
+copromotores:
+- title: dr. 
+  initials: W.
+  surname: Ho
+  affiliation: University of Gallifrey 
+one_copromotor: true 
+---
+```
+
+The same goes for your "copromotores" (supervisors that are not "promotores", e.g. assistant professors): fill in as many as you have, and set the `one_copromotor` field to `false` if you have more than one. If you don't have any "copromotors", simply delete all of these fields.
+
+```{yaml}
+---
+members:
+- title: prof. dr.
+  initials: H.J.
+  surname: Farnsworth
+  affiliation: Mars University
+- title: prof. dr.
+  initials: J.I.Q.N.
+  surname: Frink
+  affiliation: University of Springfield
+
+---
+```
+
+Then there's the members of your committee: the one who'll be asking you questions during the defense. Usually there'll be around 5 or 6 members; simply copy the fields as many times as needed.
+
+```{yaml}
+---
+faculty: "Faculteit der Natuurwetenschappen, Wiskunde, en Informatica"
+---
+```
+
+Finally, fill in the Dutch name of the faculty you were employed with here.
+
+### PDF settings
+
+There's one additional setting in `amsterdown`, which determines what kind of printed book will be generated as a pdf.
+
+```{yaml}
+---
+book_size: false # or true
+---
+```
+
+* When `book_size` is set to `false`, the pages of the PDF will be A4 sized. The document will also be ["one-sided"](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents), i.e. the headers, page numbers, margins and the like will be the same for even or odd pages. This format might be useful when you submit your thesis to the committee for the first time, because they might print it on loose sheets of A4 paper. If any of your chapters were already (in the process of being) published as journal articles, you'll also likely have optimized them for A4/letter paper, thus saving you some time at this stage.
+* When `book_size` is set to `true`, the pages of the PDF will be the standard size of printed theses in The Netherlands: 170 x 240 mm (which is closest to B5 paper). It's a good idea to stick to this size, as printing companies could charge a lot more for custom formats (and your thesis will literally "stick out" in a stack of others). The document will also be ["two-sided"](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents), i.e. the headers, page numbers, margins and the like will be _different_ for odd pages compared to even pages, as they'll be viewed as a two-page spread (a book). This is the final format for your thesis: the PDF file you would send to the printer. After submitting to the committee, you're still allowed to change the formatting, so most people only do this after their thesis has been approved by the commmittee. Hopefully you won't have to change much, but obviously you might find that some figures/tables will not fit as nicely on these smaller pages.
 
 ## Building the thesis
-
-To render the PDFs, you'll also need pandoc and a LaTeX distribution
 
 "Build book"; `bookdown::render_book`
