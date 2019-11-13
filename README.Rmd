@@ -33,9 +33,9 @@ This template is an easy way to get started, by:
 
 `amsterdown` is not (yet) available on CRAN, so install it from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("lcreteig/amsterdown")
+```{r, eval = FALSE}
+if(!require(devtools)) install.packages("devtools") # devtools package allows installation of packages from github
+devtools::install_github("lcreteig/amsterdown") # install amsterdown from github
 ```
 
 If you just want a peek at the template without installing it as an R package, check out the folder with all the files [here on Github](https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton).

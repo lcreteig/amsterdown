@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
 ```
 
 
-The best way to figure out how the template works is to look at [the source files](https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton) and output together, to understand how one is created from the other. Other than how to create headings, italic text and the like, I've included basic examples of things iyou're likely to need whilst writing a thesis, such as citations, tables, plots, and equations.
+The best way to figure out how the template works is to look at [the source files](https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton) and output together, to understand how one is created from the other. Other than how to create headings, italic text and the like, I've included basic examples of things you're likely to need whilst writing a thesis, such as citations, tables, plots, and equations.
 
 Or, check out the source files for [my PhD thesis](https://github.com/lcreteig/thesis), or any other PhD thesis templates (e.g. [thesisdown](https://github.com/ismayc/thesisdown), [huskydown](https://github.com/benmarwick/huskydown), or [oxforddown](https://github.com/ulyngs/oxforddown)).
 
@@ -21,14 +21,33 @@ For more extensive documentation, please see these other excellent sources on Ma
 * R Markdown uses pandoc-flavored Markdown, the complete reference for which is [pandoc's  documentation](https://pandoc.org/MANUAL.html#pandocs-markdown).
 * The integration of R code is handled by the [knitr package](https://yihui.name/knitr/). Code chunks can be customized with many options  that determine how the ouput is displayed (e.g., whether the code is included; if a plot is generated, what it's size should be, etc.). Check out a complete overview of these options [here](https://yihui.name/knitr/options/).
 
+## Before we start
+
+1. Install the `amsterdown` package from GitHub;
+
+```{r, eval = FALSE}
+if(!require(devtools)) install.packages("devtools") # devtools package allows installation of packages from github
+devtools::install_github("lcreteig/amsterdown") # install amsterdown from github
+```
+
+N.B. you __don't__ need to load the package (e.g. with `library(amsterdown)`) in order to use it; the only reason it's a package is that the package structure is just the easiest way to get the template files and dependencies (the `rmarkdown`, `knitr`, and `bookdown` packages) to you.
+
+2. If you don't have `pandoc`, you'll need to [install that as well](https://pandoc.org/installing.html). Note that [RStudio](https://rstudio.com/) comes bundled with `pandoc`, so if you're using RStudio you should be all set.
+
+3. To make the PDF version of the thesis, you'll also need a LaTeX distribution. If you have one installed already, you should be good to go. If not, I recommend [TinyTeX](https://yihui.name/tinytex/). The `tinytex` package should come bundled with `bookdown` (and thus `amsterdown`), which allows you to easily install the LaTeX distribution from R:
+
+```{r, eval = FALSE}
+tinytex::install_tinytex()
+```
+
+N.B. If you're working with RStudio, you'll need to restart it after installing TinyTex.
+
 ## Drafting the template
 
 ### Using the RStudio interface
 
-If you're using RStudio (and you've installed the package):
-
 1. Go to "File" in the menu bar, then choose "New File" > "R Markdown...". 
-2. In the following screen (see the screenshot below), click "From Template" in the bar on the left. Then select "UvA thesis" {amsterdown}.
+2. In the following screen (see the screenshot below), click "From Template" in the bar on the left. Then select "UvA thesis" {amsterdown}. If you don't see {amsterdown} in this list, but you have (just) installed the package, you may need to restart RStudio.
 3. Choose any folder on your computer to store the files (under "Location"). However, make sure to name this directory `index` (under "Name"). This is only to ensure that the main file will be correctly named `index.Rmd`; after the template has been created, feel free to change the name of the directory.
 
 ```{r echo = FALSE, out.width='50%'}
@@ -37,7 +56,7 @@ knitr::include_graphics("../man/figures/newrmarkdown.png")
 
 ### From the console
 
-You can also use the `rmarkdown::draft()` function to do all of the above:
+You can also use the `rmarkdown::draft()` function to do all of the above (e.g. if you're not using RStudio):
 
 ```{r eval = FALSE}
 rmarkdown::draft('index.Rmd', # create new draft based off template
@@ -79,7 +98,7 @@ Your newly created folder with the thesis template should contain the following 
     * `_00-preface.Rmd` will only show in the HTML version of the thesis; it is intended to house some of the info that's in the front matter of the PDF version of the book (e.g. funding info, names of your supervisers, etc.). It does not follow the regular ordering scheme: this will always come first, because it is referred to directly in `index.Rmd`. If you don't want something like this, simply remove the code chunk in `index.Rmd` that references it.
 * `_bookdown.yml` contains a few more YAML options. See the [bookdown book](https://bookdown.org/yihui/bookdown/) for more info, though you likely won't ever have to change any of these.
 * the `/figures` folder contains some example images included in the template (the UvA logo).
-* `template.tex` is the pandoc LaTeX template that will determine how the PDF output of the thesis will look. If you ever want to change something about the PDF (e.g., the font that's used, where the page numbers are, etc.), you'll likely have to modify this file and add some latex commands.
+* `template.tex` is the pandoc LaTeX template that will determine how the PDF output of the thesis will look. If you ever want to change something about the PDF (e.g., the font that's used, where the page numbers are, etc.), you'll likely have to modify this file and add some LaTeX commands. Note that the html version of the thesis also has [a template](https://www.gitbook.com/), but this cannot be modified.
 * `thesis.bib` is a BibTeX file that contains all the bibliographic information on the cited works in your thesis. Most reference managers (e.g. Mendeley; Zotero) can export such a file based on your library of references. You can change the name or location of this file, as long as you change the `bibliography` field in `index.Rmd` as well.
 
 ## YAML variables

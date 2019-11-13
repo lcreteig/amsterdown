@@ -39,11 +39,12 @@ This template is an easy way to get started, by:
 ## Installation
 
 `amsterdown` is not (yet) available on CRAN, so install it from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/)
+with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("lcreteig/amsterdown")
+if(!require(devtools)) install.packages("devtools") # devtools package allows installation of packages from github
+devtools::install_github("lcreteig/amsterdown") # install amsterdown from github
 ```
 
 If you just want a peek at the template without installing it as an R
