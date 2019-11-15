@@ -1,0 +1,21 @@
+---
+title: "Tips & Tricks"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+* Word output
+* Switching languages
+* Citation styles (pandoc + CSL, latex)
+* `knitr::is_html_output()` & `knitr::is_latex_output()`
+* figures: `knitr::include_graphics(auto_pdf = TRUE)`
+* publishing the website
+* table packages (kable, kableExtra, papaja)
+* float positions
+* inline code
+* `\chaptermark{}` for long headers

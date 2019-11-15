@@ -9,7 +9,7 @@ development:
   mode: devel
 navbar:
   structure:
-    left:  [home, intro, output]
+    left:  [home, intro, articles, output]
     right: [github]
   components:
     reference: ~
@@ -22,3 +22,10 @@ navbar:
         href: sample_output/thesis_A4.pdf
       - text: Book B5 (pdf)
         href: sample_output/thesis_B5.pdf
+    articles:
+      text: Articles
+      menu:
+      - text: Tips & Tricks
+        href: articles/tips-tricks.html
+      - text: Further customization
+        href: articles/customization.html

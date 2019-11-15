@@ -39,6 +39,8 @@ usethis::use_lifecycle_badge("experimental")
 # setup package documentation as website
 usethis::use_pkgdown()
 usethis::use_article("amsterdown")
+usethis::use_article("tips-tricks", title = "Tips & Tricks")
+usethis::use_article("customization", title = "Further customization")
 pkgdown::build_site()
 
 # setup spell checking

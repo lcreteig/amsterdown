@@ -1,0 +1,18 @@
+---
+title: "Further customization"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+* three ways:
+    1. modifying the template
+    2. `includes:`
+    3. raw tex in Rmd's
+* memoir class (e.g. headers)
+* Fonts: TuG, xelatex
+* including the cover
