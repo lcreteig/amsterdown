@@ -48,6 +48,16 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 
 Also see [this entry in `pandoc`'s documentation](https://pandoc.org/MANUAL.html#language-variables) and the examples in the template's Dutch Summary and Acknowledgments chapters. 
 
+## Figures and images
+
+To render image/figure files, I'd recommend `knitr::include_graphics()`.
+
+This allows you to include both bitmap and vector versions of the same figure. Most commonly this would be, a `.png` (bitmap) version of the figure for `html` output, and a `.pdf` (vector) figure for the `pdf` version of the thesis. The `auto_pdf` option will insert the figure in vector format for pdf output automatically, or use the specified figure otherwise (in bitmap). For example:
+
+```{r eval = FALSE}
+knitr::include_graphics("figures/my_figure.png", auto_pdf = TRUE)
+```
+
 * Using Python
 * Citation styles (pandoc + CSL, latex)
 * `knitr::is_html_output()` & `knitr::is_latex_output()`
