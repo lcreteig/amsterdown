@@ -9,7 +9,28 @@ knitr::opts_chunk$set(
 )
 ```
 
-* Word output
+Here's a list of a few extra issues you might run into while writing your thesis, and some potential solutions. Most of this is based on my own experience, so your mileage may vary. If I hear of any additional bottlenecks I'd be happy to include them.
+
+## Microsoft Word
+
+While writing the thesis, you might want to output it to a `.docx` file, say if your supervisors prefer to work with Microsoft Word instead. This is possible, although not all `bookdown` / RMarkdown features are supported. It will get you most of the way there, but you might have to edit the Word file a bit, or inform your supervisors that this is not exactly what the final version will look like.
+
+To render the whole thesis to one Word file, run the following:
+
+```{r eval=FALSE}
+bookdown::render_book("index.Rmd", output_format = "bookdown::word_document2")
+```
+
+You can also render a single chapter (e.g. if you want to send it out for feedback):
+
+```{r eval=FALSE}
+# render chapter 2 to Word
+bookdown::preview_chapter("02-chapter.Rmd", output_format = "bookdown::word_document2")
+```
+
+In both cases, you should now find a `thesis.docx` file in the output folder (`/_book/`) by default.
+
+* Using Python
 * Switching languages
 * Citation styles (pandoc + CSL, latex)
 * `knitr::is_html_output()` & `knitr::is_latex_output()`
