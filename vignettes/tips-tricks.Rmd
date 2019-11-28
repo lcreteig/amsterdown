@@ -30,8 +30,25 @@ bookdown::preview_chapter("02-chapter.Rmd", output_format = "bookdown::word_docu
 
 In both cases, you should now find a `thesis.docx` file in the output folder (`/_book/`) by default.
 
+## Switching languages
+
+Some sections of the thesis will have to be in Dutch (i.e., the Dutch summary). In others (e.g., the acknowledgments), you might want to use another language of your choice. To make sure things like hyphenation will work properly, you should not just start typing in a different language, but encase all non-English text within special language tags. 
+
+Here's how you do it:
+
+```
+This paragraph uses the default language (English).
+
+::: {lang=nl}
+> Deze paragraaf is in het Nederlands.
+:::
+
+This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now back to English.
+```
+
+Also see [this entry in `pandoc`'s documentation](https://pandoc.org/MANUAL.html#language-variables) and the examples in the template's Dutch Summary and Acknowledgments chapters. 
+
 * Using Python
-* Switching languages
 * Citation styles (pandoc + CSL, latex)
 * `knitr::is_html_output()` & `knitr::is_latex_output()`
 * figures: `knitr::include_graphics(auto_pdf = TRUE)`
