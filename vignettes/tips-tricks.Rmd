@@ -58,12 +58,13 @@ This allows you to include both bitmap and vector versions of the same figure. M
 knitr::include_graphics("figures/my_figure.png", auto_pdf = TRUE)
 ```
 
+## Tables
+
+Simpler tables can be inserted in [Markdown](https://pandoc.org/MANUAL.html#tables), or created from R data frames using the `knitr::kable()` function. More complex tables (with row/column-spanners, formatting inside the table, etc.) can be created with R packages such as [papaja](https://github.com/crsh/papaja) (for [APA style](https://apastyle.apa.org/)) or [kableExtra](http://haozhu233.github.io/kableExtra/) (for pretty much anything you might want).
+
 * Using Python
 * Citation styles (pandoc + CSL, latex)
 * `knitr::is_html_output()` & `knitr::is_latex_output()`
-* figures: `knitr::include_graphics(auto_pdf = TRUE)`
-* publishing the website
-* table packages (kable, kableExtra, papaja)
 * float positions
 * inline code
 * `\chaptermark{}` for long headers
