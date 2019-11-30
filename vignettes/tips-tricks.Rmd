@@ -79,8 +79,30 @@ output:
     citation_package: biblatex
 ```
 
-* Using Python
-* `knitr::is_html_output()` & `knitr::is_latex_output()`
+## Conditional output (html vs. pdf)
+
+Sometimes you might want a certain section of the thesis (a paragraph, a figure, or even a whole chapter) to occur only in the html (or pdf) version of the thesis, but not in the other. For example, for the `amsterdown` template, the "Preface" chapter (`_00-preface.Rmd`) is only included in the html version, not in pdf (check out `index.Rmd` to see how this is done).
+
+You can use the `knitr::is_html_output()` and `knitr::is_latex_output()` functions for this purpose. These are conditionals that return `TRUE` only when the output format you are rendering to is html/latex.
+
+For example, to include a section of text only in html, you can use some [Inline R code](#inline-code):
+
+`` `r
+if (knitr::is_html_output()) '
+This text will not show when rendering to pdf
+'` ``
+
+Or, to only run a code chunk (say, that includes a figure) for the pdf version, you can conditionally evaluate it using [chunk options](https://yihui.name/knitr/options/):
+
+````markdown
+`r ''````{r include = knitr::is_latex_output()}
+knitr::include_graphics("my_fig.pdf") # this figure will be omitted from the html
+```
+````
+
+## Inline code
+
 * float positions
 * inline code
+    *  Using Python
 * `\chaptermark{}` for long headers
