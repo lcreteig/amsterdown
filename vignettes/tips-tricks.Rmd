@@ -62,8 +62,24 @@ knitr::include_graphics("figures/my_figure.png", auto_pdf = TRUE)
 
 Simpler tables can be inserted in [Markdown](https://pandoc.org/MANUAL.html#tables), or created from R data frames using the `knitr::kable()` function. More complex tables (with row/column-spanners, formatting inside the table, etc.) can be created with R packages such as [papaja](https://github.com/crsh/papaja) (for [APA style](https://apastyle.apa.org/)) or [kableExtra](http://haozhu233.github.io/kableExtra/) (for pretty much anything you might want).
 
+## Citation styles
+
+Citations are handled by [pandoc](https://pandoc.org/MANUAL.html#citations) (using the `citeproc` extension) by default. The [citation style](https://citationstyles.org/) (e.g., MLA, APA, Chicago, but also according to specific journals) can be customized by downloading the corresponding `.csl` file from the [Zotero Style Repository](https://www.zotero.org/styles). For example, to use APA style (through `apa.csl`, placed in the root directory of your thesis), add the following YAML line to `index.Rmd`, underneath whatever output you want to use the style for (`bookdown::pdf_book()` or `bookdown::gitbook()`):
+
+```{yaml}
+# N.B. the template already contains this line, but it is commented out
+pandoc_args: [ "--csl", "apa.csl" ]
+```
+
+If you want to customize the output further, you could consider using a LaTeX package, such as [biblatex](https://ctan.org/pkg/biblatex?lang=en) instead of `pandoc-citeproc` (Also see [my PhD thesis](https://github.com/lcreteig/thesis), which used `biblatex`). This will offer you much more flexibility, at the expense of complexity, and it will only work for pdf outputs. To do that, add the following line (indented under `bookdown::pdf_book()`) to `index.Rmd` instead:
+
+```yaml
+output:
+  bookdown::pdf_book:
+    citation_package: biblatex
+```
+
 * Using Python
-* Citation styles (pandoc + CSL, latex)
 * `knitr::is_html_output()` & `knitr::is_latex_output()`
 * float positions
 * inline code
