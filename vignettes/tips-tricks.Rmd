@@ -100,9 +100,22 @@ knitr::include_graphics("my_fig.pdf") # this figure will be omitted from the htm
 ```
 ````
 
+## Float positions
+
+LaTeX puts things like figures and tables---that cannot be broken over multiple pages---inside _floating environments_, or _floats_ for short. LaTeX is smart about figuring out the best positions for _floats_, but it's bound to not always work: once in a while it's gonna place a figure earlier or later than you'd like.
+
+You can use the `fig.pos` chunk option to guide the placement of figures in floats. See a list of all the _placement specifiers_ [here](https://www.overleaf.com/learn/latex/Positioning_of_Figures). For tables, you'll have to use a package like [kableExtra](http://haozhu233.github.io/kableExtra/) to achieve the same.
+
+For example, to try and place a figure "here" (i.e., close to where you put the command in the source text), try the `h` option:
+
+````markdown
+`r ''````{r fig.cap='test', out.width='100%', fig.pos='h'}
+knitr::include_graphics("my_fig.png")
+```
+````
+
+(Note that you may need to also specify [some other chunk options](https://stackoverflow.com/a/43245550) for `fig.pos` to become active)
 ## Inline code
 
-* float positions
 * inline code
     *  Using Python
-* `\chaptermark{}` for long headers
