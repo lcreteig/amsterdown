@@ -115,6 +115,13 @@ knitr::include_graphics("my_fig.png")
 ````
 
 (Note that you may need to also specify [some other chunk options](https://stackoverflow.com/a/43245550) for `fig.pos` to become active)
+
+## Long titles in page headers
+
+A book-style document usually has the current chapter/section title in the upper portion of the page (the "header"). If the title of a particular chapter is really long, this might cause the title to run off the page in the header. 
+
+To fix this, you can use the LaTeX `\chaptermark{}` command and put it beneath the title of the chapter (see the example in Chapter 2 of the template). Specify a shorter title for the chapter within the curly braces: this short title will then be used for the headers.
+
 ## Inline code
 
 * inline code
