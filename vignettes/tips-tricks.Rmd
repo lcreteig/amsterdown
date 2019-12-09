@@ -124,5 +124,18 @@ To fix this, you can use the LaTeX `\chaptermark{}` command and put it beneath t
 
 ## Inline code
 
-* inline code
-    *  Using Python
+Inline code allows you to include the output of your R code (e.g. statistical tests) within the text of your thesis. It is a lot easier and more reproducible than inserting results by hand!
+
+You can do this using the following syntax: `` ``r ''`r <your R code here>` ``. 
+
+For example:
+
+```markdown
+We included ``r ''`r 3/12*100`% of patients...
+```
+
+will read:
+
+> We included `r 3/12*100`% of patients...
+
+Often the result you'll you want to insert will already be assigned to a variable, in which case you can simply call the variable in your inline code: `` ``r ''`r <your variable>` ``. Checkout the [papaja](https://github.com/crsh/papaja) package for some awesome functions that will insert statistical results in APA style.
