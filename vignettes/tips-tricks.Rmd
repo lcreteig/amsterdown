@@ -139,3 +139,28 @@ will read:
 > We included `r 3/12*100`% of patients...
 
 Often the result you'll you want to insert will already be assigned to a variable, in which case you can simply call the variable in your inline code: `` ``r ''`r <your variable>` ``. Checkout the [papaja](https://github.com/crsh/papaja) package for some awesome functions that will insert statistical results in APA style.
+
+## Non-R code (e.g. Python)
+
+If you want to run code in other languages in a chunk (e.g. Python), all you need to do is replace `r` in the chunk options with [another language engine](https://bookdown.org/yihui/rmarkdown/language-engines.html):
+
+````markdown
+`r ''````{python}
+python_number = 20+4
+print(python_number)
+```
+````
+
+```{python, include = FALSE}
+python_number = 20+4
+print(python_number)
+```
+
+If you're using Python, definitely checkout the [reticulate](https://rstudio.github.io/reticulate/) package, which provides a lot of functionality for using Python in R. For example, you can access Python variables (like the one we created above) within your R session using the `py$<my variable>` syntax:
+
+```{r message=FALSE, warning=FALSE}
+library(reticulate)
+py$python_number
+```
+
+You can also use this principle to insert [Inline code](#inline-code): `` ``r ''`r py$python_number` ``
