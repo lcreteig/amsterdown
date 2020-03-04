@@ -7,7 +7,7 @@
 \title{amsterdown: An RMarkdown PhD thesis template for the University of
     Amsterdam}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 An RMarkdown PhD thesis template for the University
     of Amsterdam.  Enables reproducible thesis writing using (R)Markdown,
@@ -25,7 +25,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Leon Reteig \email{leonreteig@gmail.com} (0000-0002-5814-0992)
+\strong{Maintainer}: Leon Reteig \email{leonreteig@gmail.com} (\href{https://orcid.org/0000-0002-5814-0992}{ORCID})
 
 }
 \keyword{internal}
