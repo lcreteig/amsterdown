@@ -1,5 +1,5 @@
 ---
-title: "Further customization"
+title: "Further customization (PDF)"
 ---
 
 ```{r, include = FALSE}
@@ -9,10 +9,57 @@ knitr::opts_chunk$set(
 )
 ```
 
-* three ways:
-    1. modifying the template
-    2. `includes:`
-    3. raw tex in Rmd's
-* memoir class (e.g. headers)
-* Fonts: TuG, xelatex
-* including the cover
+## Three ways to modify the PDF output
+
+Although this template provides a basic skeleton for a UvA thesis, at some point you're bound to run into its limitations. Maybe you're in a field that has some specific formatting requirements, or you simply want to make it more your own. There are few things you can do[^htmlmod]:
+
+[^htmlmod]: Note that all of these concern changes to the PDF outputs only. The `bookdown` html template is basically fixed and cannot be customized much (but see [this package](https://github.com/hebrewseniorlife/bookdownThemeEditor) for an easy way to make some customizations by changing the underlying css).
+
+### 1. Modifying the template
+
+After you drafted the template, there should be a `template.tex` file in the folder (check it out on GitHub [here](https://github.com/lcreteig/amsterdown/blob/master/inst/rmarkdown/templates/thesis/skeleton/template.tex)). This file holds all of the LaTeX formatting commands that determine the look of the thesis, and can be changed at your will.
+
+### 2. The `includes` option
+
+If you just want to add a few LaTeX commands, you might not have to change the template itself. Instead, you could create a new file and *include* it so that the commands will be executed. For example, you could include the LaTeX `caption` package to customize the look of your figure/table captions. You would then save the command `\usepackage{caption}` (along with any other commands) in a file (typically called `preamble.tex`) in the thesis template folder. Then, to include the file, specify the following YAML options in your `index.Rmd` file:
+
+```yaml
+output:
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+```
+
+For more, see [this section](https://bookdown.org/yihui/bookdown/yaml-options.html) of the bookdown manual, and check out the `preamble.tex` file I used in [my own thesis](https://github.com/lcreteig/thesis/blob/master/tex/preamble.tex).
+
+### 3. Raw LaTeX commands
+
+Sometimes you're after a small local fix, not a general change to the format of the thesis. In that case you can simply insert the raw LaTeX code in your `.Rmd` file, and it should be automatically interpreted. If this ever goes wrong (i.e. the raw TeX is still included the output), or if you want to write a more extensive section of LaTeX, try explicitly indicating that it should be interpreted as LaTeX code, by enclosing your code within a LaTex code block: 
+
+````markdown
+```{=latex}
+Your TeX here
+```
+````
+
+You'll find examples of raw TeX strewn throughout the template. For example, you can quickly insert some white space with `\bigskip`, or change the font size to small with `\small`.
+
+## Typical modifications
+
+### LaTeX document class
+
+One of the easiest ways to change the overall look of your thesis is to change the document class. By default, the template use one of the standard classes: `book` (others include e.g. `article` or `report`, which are less suitable for a PhD thesis). Many universities have written their own document class for PhD theses, according to their own formatting guidelines, but as far as I know, the UvA has not. However, there are other LaTeX packages that provide custom classes which are easier to customize than the standard `book` class.
+
+For my thesis, I used the `memoir` class from the [memoir package](https://ctan.org/pkg/memoir?lang=en). Memoir provides multiple good-looking default styles that are very easy to apply. For example, to change the *chapter style* (the look of your chapter headings) to that of the [LaTeX Companion](https://www.latex-project.org/help/books/bookpart_tlc2-ch0.pdf) book, all you'd have to do is include `\chapterstyle{companion}` (e.g. in your `preamble.tex` file). Tweaking these styles or making your own is also comparatively easy with Memoir, as the package provides lots of useful commands to do so. Memoir also has an [incredibly detailed manual](http://texdoc.net/texmf-dist/doc/latex/memoir/memman.pdf), that even provides some general advice on typesetting and the like. 
+
+To change the document class, simply change the YAML option in `index.Rmd` to one of your choosing, e.g.:
+
+```yaml
+documentclass: memoir # the default is book
+```
+
+Note that there are also other good options for the document class than `book` or `memoir`, such as the classes from the [koma-script package](https://ctan.org/pkg/koma-script).
+
+### Fonts
+
+

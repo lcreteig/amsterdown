@@ -40,7 +40,7 @@ usethis::use_lifecycle_badge("experimental")
 usethis::use_pkgdown()
 usethis::use_article("amsterdown")
 usethis::use_article("tips-tricks", title = "Tips & Tricks")
-usethis::use_article("customization", title = "Further customization")
+usethis::use_article("customization", title = "Further customization (PDF)")
 pkgdown::build_site()
 
 # setup spell checking
