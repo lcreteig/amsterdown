@@ -1,0 +1,18 @@
+---
+title: "Publishing your thesis online (HMTL)"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+* netlify https://app.netlify.com/drop
+
+* bookdown.org https://bookdown.org/yihui/bookdown/rstudio-connect.html
+
+* github https://bookdown.org/yihui/bookdown/github.html
+
+

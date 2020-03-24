@@ -41,6 +41,7 @@ usethis::use_pkgdown()
 usethis::use_article("amsterdown")
 usethis::use_article("tips-tricks", title = "Tips & Tricks")
 usethis::use_article("customization", title = "Further customization (PDF)")
+usethis::use_article("publishing", title = "Publishing your thesis online (HMTL)")
 pkgdown::build_site()
 
 # setup spell checking

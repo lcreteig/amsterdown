@@ -29,3 +29,5 @@ navbar:
         href: articles/tips-tricks.html
       - text: Further customization (PDF)
         href: articles/customization.html
+      - text: Publishing your thesis online (HTML)
+        href: articles/publishing.html

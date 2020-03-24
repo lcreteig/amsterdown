@@ -9,3 +9,4 @@
 ^webdocs$
 ^pkgdown$
 ^vignettes$
+^vignettes/publishing\.Rmd$
