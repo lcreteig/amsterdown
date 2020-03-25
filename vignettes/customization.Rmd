@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 
 ## Three ways to modify the PDF output
 
-Although this template provides a basic skeleton for a UvA thesis, at some point you're bound to run into its limitations. Maybe you're in a field that has some specific formatting requirements, or you simply want to make it more your own. There are few things you can do[^htmlmod]:
+Although this template provides a basic skeleton for a UvA thesis, at some point you're bound to run into its limitations. Maybe you're in a field that has some specific formatting requirements, or you simply want to make it more your own. There are a few things you can do[^htmlmod]:
 
 [^htmlmod]: Note that all of these concern changes to the PDF outputs only. The `bookdown` html template is basically fixed and cannot be customized much (but see [this package](https://github.com/hebrewseniorlife/bookdownThemeEditor) for an easy way to make some customizations by changing the underlying css).
 
@@ -62,4 +62,13 @@ Note that there are also other good options for the document class than `book` o
 
 ### Fonts
 
+The surest way to change the font of your thesis is to pick one of the freely available fonts from the [LaTeX Font Catalogue](https://tug.org/FontCatalogue/). For example, to change the font to (EB) Garamond, just add the `\usepackage{ebgaramond}` command (e.g. in your `preamble.tex` file).
 
+But you can in principle use any font you have installed on your system. To do that, you will have to switch the LaTeX engine from the default (`pdflatex`) to `xelatex` for instance. This also gives you access to the `mainfont` yaml option (as well as a few others; see the [pandoc documentation](https://pandoc.org/MANUAL.html#variables-for-latex)), where you can specify the name of the font you want to use, e.g.:
+
+```yaml
+output:
+  bookdown::pdf_book:
+    latex_engine: xelatex
+mainfont: Times New Roman
+```
