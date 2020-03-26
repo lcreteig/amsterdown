@@ -9,10 +9,26 @@ knitr::opts_chunk$set(
 )
 ```
 
-* netlify https://app.netlify.com/drop
+One of the nice things about `bookdown` is that, next to the pdf version of your thesis that you'll need for printing anyway, you get a html version as well, with little to no extra effort! You can easily share this version of your thesis online [^1]. There are an infinite number of possibilities to make a website of course nowadays, but here's three ways to get your thesis online with as little fuss as possible.
 
-* bookdown.org https://bookdown.org/yihui/bookdown/rstudio-connect.html
+### 1. Netlify (drag-and-drop)
 
-* github https://bookdown.org/yihui/bookdown/github.html
+After rendering your thesis, you should have a `/_book` folder containing a lot of html files. If you go to https://app.netlify.com/drop, you can simply drag and drop this folder from your computer to this site. That's it, your thesis is now online! The only thing that's left is to make an account on Netlify, to claim the site as your own and to get a more stable url.
 
+### 2. Bookdown server
 
+There's also a dedicated RStudio server for hosting books made with `bookdown` at https://bookdown.org/. All you have to do is sign-up at https://bookdown.org/connect/. Afterwards, run the `bookdown::publish_book()` function from the root folder of your thesis, and you should be all set. See [this page in the bookdown manual](https://bookdown.org/yihui/bookdown/rstudio-connect.html) for more information.
+
+### 3. GitHub Pages
+
+Writing your thesis as a `bookdown` book makes it very suitable to version control, as all the `.Rmd` and associated files that make up the thesis are simply plain text files. If you're a bit familiar with git and/or GitHub, I'd therefore highly recommend to create a git repository for your thesis: it can be very nice to easily switch back to a previous version.
+
+If you're using git/GitHub for your thesis anyway, it's only a small extra step to publish the thesis via GitHub Pages. Again, see the [bookdown manual](https://bookdown.org/yihui/bookdown/github.html
+) for more info, but it boils down to the following steps:
+
+1. Add the line `output_dir: "docs"` to your `_bookdown.yml` file, which will put the rendered version of your thesis into a directory called `/docs` (instead of the default `/_book`). 
+2. In the `docs` folder, create an empty file called `.nojekyll`. This tells GitHub Pages not to try and use its [Jekyll](https://jekyllrb.com/) framework to create the site; we don't need that if we're using `bookdown`.
+3. Render your book and push to GitHub.
+4. Go to your GitHub repository in a web browser (e.g. `github.com/<username>/<repository>`). Click "Settings", scroll down to the "GitHub Pages" section, and under "Source", select `master branch /docs folder`. Give it a little bit of time, and then a website with your thesis should be live at `<username>.github.io/<repository>`!
+
+[^1]: Of course, you can put the pdf online as well (e.g. in a place like https://thesiscommons.org/), and in fact you have to publicly archive the pdf in the [UvA-DARE repository](https://dare.uva.nl/). But the html is much nicer to browse through digitally.
