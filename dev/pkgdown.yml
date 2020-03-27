@@ -1,0 +1,10 @@
+pandoc: '2.2'
+pkgdown: 1.5.0
+pkgdown_sha: ~
+articles:
+  amsterdown: amsterdown.html
+  customization: customization.html
+  publishing: publishing.html
+  tips-tricks: tips-tricks.html
+last_built: 2020-03-27T08:25Z
+
