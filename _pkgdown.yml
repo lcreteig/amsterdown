@@ -1,4 +1,4 @@
-destination: webdocs
+destination: docs
 template:
   params:
     bootswatch: cosmo

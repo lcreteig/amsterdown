@@ -3,8 +3,11 @@
 language: R
 cache: packages
 
+before_cache:
+  - Rscript -e 'remotes::install_cran("pkgdown")' # package for building documentation
 after_success:
-  - R CMD INSTALL . # install the package so we can use it to
+  - R CMD INSTALL . # install the package so we can use it to...
+  - Rscript -e 'pkgdown::build_site()' # build documentation
   - Rscript R/_render.R # render the output samples
 
 deploy:
