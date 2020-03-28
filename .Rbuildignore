@@ -6,7 +6,6 @@
 ^R/_render\.r$
 ^R/_usethis\.R$
 ^_pkgdown\.yml$
-^webdocs$
+^docs$
 ^pkgdown$
 ^vignettes$
-^vignettes/publishing\.Rmd$
