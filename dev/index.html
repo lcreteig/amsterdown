@@ -129,7 +129,7 @@
 <p>This template is an easy way to get started, by:</p>
 <ul>
 <li>Providing a common and complete structure for the thesis, including appendices, acknowledgments, etc.</li>
-<li>Removing the need to write any LaTeX commands yourself (or at least, prolonging it as along as possible).</li>
+<li>Removing the need to write any LaTeX commands yourself (or at least, prolonging it as long as possible).</li>
 <li>Making sure you adhere to the University of Amsterdam thesis requirements.</li>
 </ul>
 <div id="installation" class="section level2">
@@ -143,7 +143,7 @@
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>If you’ve installed the package and are using <a href="https://rstudio.com/">RStudio</a>, simply navigate to “File” &gt; “New File” &gt; “R Markdown…” &gt; “From Template” &gt; “UvA thesis {amsterdown}”. Use <code>index</code> for the new directory name (feel free to change this after), so that the main file will be called <code>index.Rmd</code>, then hit OK. Then, create a new RStudio project by going to “File” &gt; “New Project…” &gt; “Existing Directory”, then “Browse…” to the directory you just created (<code>index</code>, or whatever you named it to), and finally hit “Create Project” Click “Build Book” from the Build pane to render the thesis to an output format of your choosing.</p>
+<p>If you’ve installed the package and are using <a href="https://rstudio.com/">RStudio</a>, simply navigate to “File” &gt; “New File” &gt; “R Markdown…” &gt; “From Template” &gt; “UvA thesis {amsterdown}”. Use <code>index</code> for the new directory name (feel free to change this after), so that the main file will be called <code>index.Rmd</code>, then hit OK. Then, create a new RStudio project by going to “File” &gt; “New Project…” &gt; “Existing Directory”, then “Browse…” to the directory you just created (<code>index</code>, or whatever you named it to), and finally hit “Create Project”. Click “Build Book” from the Build pane to render the thesis to an output format of your choosing.</p>
 <p>Or, (e.g., if you’re not using the RStudio IDE), run the following lines of R code to render the template:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">draft</a></span>(<span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
                  <span class="kw">template</span> <span class="kw">=</span> <span class="st">'thesis'</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">'amsterdown'</span>,

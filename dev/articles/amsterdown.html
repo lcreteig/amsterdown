@@ -316,7 +316,7 @@
 </blockquote>
 <ul>
 <li>
-<code>thesis_url</code> (optional): This template makes it really easy to also publish your thesis as a website (in html): you basically get it “for free” with the pdf version! See [FIXME: add link] for some tips on how to get it online.</li>
+<code>thesis_url</code> (optional): This template makes it really easy to also publish your thesis as a website (in html): you basically get it “for free” with the pdf version! See the <a href="articles/publishing.html">“Publishing” article</a> for some tips on how to get it online.</li>
 <li>
 <code>license</code> (optional): If you do publish the thesis online for a wider audience, it’s always a good idea to add a license. I’d suggest one of the <a href="https://creativecommons.org/">Creative Commons licenses</a> to maximize the utility of your thesis for others, but you can also keep the copyright to yourself obviously (this will be the default if you don’t include an explicit license/copyright statement).</li>
 </ul>
@@ -357,7 +357,7 @@
 <a class="sourceLine" id="cb10-6" data-line-number="6">  <span class="fu">affiliation:</span><span class="at"> University of Gallifrey </span></a>
 <a class="sourceLine" id="cb10-7" data-line-number="7"><span class="fu">one_copromotor:</span><span class="at"> true </span></a>
 <a class="sourceLine" id="cb10-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
-<p>The same goes for your “copromotores” (supervisors that are not “promotores”, e.g. assistant professors): fill in as many as you have, and set the <code>one_copromotor</code> field to <code>false</code> if you have more than one. If you don’t have any “copromotors”, simply delete all of these fields.</p>
+<p>The same goes for your “copromotores” (supervisors that are not “promotores”, e.g. assistant professors): fill in as many as you have, and set the <code>one_copromotor</code> field to <code>false</code> if you have more than one. If you don’t have any “copromotores”, simply delete all of these fields.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="ot">---</span></a>
 <a class="sourceLine" id="cb11-2" data-line-number="2"><span class="fu">members:</span></a>
 <a class="sourceLine" id="cb11-3" data-line-number="3"><span class="kw">-</span> <span class="fu">title:</span><span class="at"> prof. dr.</span></a>
@@ -385,14 +385,14 @@
 <a class="sourceLine" id="cb13-3" data-line-number="3"><span class="ot">---</span></a></code></pre></div>
 <ul>
 <li>When <code>book_size</code> is set to <code>false</code>, the pages of the PDF will be A4 sized. The document will also be <a href="https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents">“one-sided”</a>, i.e. the headers, page numbers, margins and the like will be the same for even or odd pages. This format might be useful when you submit your thesis to the committee for the first time, because they might print it on loose sheets of A4 paper. If any of your chapters were already (in the process of being) published as journal articles, you’ll also likely have optimized them for A4/letter paper, thus saving you some time at this stage.</li>
-<li>When <code>book_size</code> is set to <code>true</code>, the pages of the PDF will be the standard size of printed theses in The Netherlands: 170 x 240 mm (which is closest to B5 paper). It’s a good idea to stick to this size, as printing companies could charge a lot more for custom formats (and your thesis will literally “stick out” in a stack of others). The document will also be <a href="https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents">“two-sided”</a>, i.e. the headers, page numbers, margins and the like will be <em>different</em> for odd pages compared to even pages, as they’ll be viewed as a two-page spread (a book). This is the final format for your thesis: the PDF file you would send to the printer. After submitting to the committee, you’re still allowed to change the formatting, so most people only do this after their thesis has been approved by the commmittee. Hopefully you won’t have to change much, but obviously you might find that some figures/tables will not fit as nicely on these smaller pages.</li>
+<li>When <code>book_size</code> is set to <code>true</code>, the pages of the PDF will be the standard size of printed theses in The Netherlands: 170 x 240 mm (which is closest to B5 paper). It’s a good idea to stick to this size, as printing companies could charge a lot more for custom formats (and your thesis will literally “stick out” in a stack of others). The document will also be <a href="https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents">“two-sided”</a>, i.e. the headers, page numbers, margins and the like will be <em>different</em> for odd pages compared to even pages, as they’ll be viewed as a two-page spread (a book). This is the final format for your thesis: the PDF file you would send to the printer. After submitting to the committee, you’re still allowed to change the formatting, so most people only do this after their thesis has been approved by the committee. Hopefully you won’t have to change much, but obviously you might find that some figures/tables will not fit as nicely on these smaller pages.</li>
 </ul>
 </div>
 </div>
 <div id="building-the-thesis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#building-the-thesis" class="anchor"></a>Building the thesis</h2>
-<p>Choose any of the two methods below to finally render your thesis! It should show up in a subdirectory called <code>_book</code>. RStudio will probably show you a preview of the result, but if not: open <code>_book/index.hml</code> if you rendered to html, or <code>_book/thesis.pdf</code> if you rendered to pdf.</p>
+<p>Choose any of the two methods below to finally render your thesis! It should show up in a subdirectory called <code>_book</code>. RStudio will probably show you a preview of the result, but if not: open <code>_book/index.html</code> if you rendered to html, or <code>_book/thesis.pdf</code> if you rendered to pdf.</p>
 <div id="build-rstudio" class="section level3">
 <h3 class="hasAnchor">
 <a href="#build-rstudio" class="anchor"></a>Using the RStudio interface</h3>
