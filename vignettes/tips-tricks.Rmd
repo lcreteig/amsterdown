@@ -146,21 +146,17 @@ If you want to run code in other languages in a chunk (e.g. Python), all you nee
 
 ````markdown
 `r ''````{python}
+# Now you can write python code
 python_number = 20+4
-print(python_number)
 ```
 ````
 
-```{python, include = FALSE}
-python_number = 20+4
-print(python_number)
-```
-
 If you're using Python, definitely checkout the [reticulate](https://rstudio.github.io/reticulate/) package, which provides a lot of functionality for using Python in R. For example, you can access Python variables (like the one we created above) within your R session using the `py$<my variable>` syntax:
 
-```{r message=FALSE, warning=FALSE}
+```{r eval=FALSE}
 library(reticulate)
 py$python_number
+#> [1] 24
 ```
 
 You can also use this principle to insert [Inline code](#inline-code): `` ``r ''`r py$python_number` ``
