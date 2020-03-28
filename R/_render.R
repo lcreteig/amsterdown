@@ -3,7 +3,7 @@
 rmarkdown::draft('index.Rmd', template = 'thesis', package = 'amsterdown', create_dir = TRUE, edit = FALSE) # create new draft based off template
 setwd("index")
 
-target_dir <- "../docs/dev/sample_output"
+target_dir <- "../docs/sample_output"
 
 # pdfs first, so they get linked in the html; move to ouput folder in root
 bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book', output_dir = target_dir, clean_envir = FALSE)
