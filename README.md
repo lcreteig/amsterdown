@@ -87,11 +87,11 @@ for more detailed instructions and further information.
 
 The template supports `html` and `pdf` outputs. To inspect the outputs
 as produced by the latest version of the template, see here:
-[html](https://lcreteig.github.io/amsterdown/sample_ouput/index.html),
+[html](https://lcreteig.github.io/amsterdown/sample_output/index.html),
 [pdf
-(A4)](https://lcreteig.github.io/amsterdown/sample_ouput/thesis_A4.pdf),
+(A4)](https://lcreteig.github.io/amsterdown/sample_output/thesis_A4.pdf),
 [pdf
-(book)](https://lcreteig.github.io/amsterdown/sample_ouput/thesis_B5.pdf)
+(book)](https://lcreteig.github.io/amsterdown/sample_output/thesis_B5.pdf)
 
 ## Requirements
 
