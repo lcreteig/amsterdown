@@ -18,10 +18,7 @@ License: CC0
 URL: https://github.com/lcreteig/amsterdown
 BugReports: https://github.com/lcreteig/amsterdown/issues
 Imports: 
-    bookdown,
-    lifecycle
-RdMacros: 
-    lifecycle
+    bookdown
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
