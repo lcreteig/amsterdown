@@ -32,7 +32,7 @@ This template is an easy way to get started, by:
   - Providing a common and complete structure for the thesis, including
     appendices, acknowledgments, etc.
   - Removing the need to write any LaTeX commands yourself (or at least,
-    prolonging it as along as possible).
+    prolonging it as long as possible).
   - Making sure you adhere to the University of Amsterdam thesis
     requirements.
 
@@ -60,7 +60,7 @@ If you’ve installed the package and are using
 that the main file will be called `index.Rmd`, then hit OK. Then, create
 a new RStudio project by going to “File” \> “New Project…” \> “Existing
 Directory”, then “Browse…” to the directory you just created (`index`,
-or whatever you named it to), and finally hit “Create Project” Click
+or whatever you named it to), and finally hit “Create Project”. Click
 “Build Book” from the Build pane to render the thesis to an output
 format of your choosing.
 

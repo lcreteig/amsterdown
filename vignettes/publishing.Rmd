@@ -1,5 +1,5 @@
 ---
-title: "Publishing your thesis online (HMTL)"
+title: "Publishing your thesis online (HTML)"
 ---
 
 ```{r, include = FALSE}

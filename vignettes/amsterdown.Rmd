@@ -202,7 +202,7 @@ Again, these options can be skipped entirely, but if you define `thesis_url`, th
 
 > An online version of this thesis is available at `thesis_url` [,licensed under a `license`.]
 
-* `thesis_url` (optional): This template makes it really easy to also publish your thesis as a website (in html): you basically get it "for free" with the pdf version! See [FIXME: add link] for some tips on how to get it online. 
+* `thesis_url` (optional): This template makes it really easy to also publish your thesis as a website (in html): you basically get it "for free" with the pdf version! See the ["Publishing" article](articles/publishing.html) for some tips on how to get it online. 
 * `license` (optional): If you do publish the thesis online for a wider audience, it's always a good idea to add a license. I'd suggest one of the [Creative Commons licenses](https://creativecommons.org/) to maximize the utility of your thesis for others, but you can also keep the copyright to yourself obviously (this will be the default if you don't include an explicit license/copyright statement).
 
 ### Committee page
@@ -244,7 +244,7 @@ one_copromotor: true
 ---
 ```
 
-The same goes for your "copromotores" (supervisors that are not "promotores", e.g. assistant professors): fill in as many as you have, and set the `one_copromotor` field to `false` if you have more than one. If you don't have any "copromotors", simply delete all of these fields.
+The same goes for your "copromotores" (supervisors that are not "promotores", e.g. assistant professors): fill in as many as you have, and set the `one_copromotor` field to `false` if you have more than one. If you don't have any "copromotores", simply delete all of these fields.
 
 ```{yaml}
 ---
@@ -282,11 +282,11 @@ book_size: false # or true
 ```
 
 * When `book_size` is set to `false`, the pages of the PDF will be A4 sized. The document will also be ["one-sided"](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents), i.e. the headers, page numbers, margins and the like will be the same for even or odd pages. This format might be useful when you submit your thesis to the committee for the first time, because they might print it on loose sheets of A4 paper. If any of your chapters were already (in the process of being) published as journal articles, you'll also likely have optimized them for A4/letter paper, thus saving you some time at this stage.
-* When `book_size` is set to `true`, the pages of the PDF will be the standard size of printed theses in The Netherlands: 170 x 240 mm (which is closest to B5 paper). It's a good idea to stick to this size, as printing companies could charge a lot more for custom formats (and your thesis will literally "stick out" in a stack of others). The document will also be ["two-sided"](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents), i.e. the headers, page numbers, margins and the like will be _different_ for odd pages compared to even pages, as they'll be viewed as a two-page spread (a book). This is the final format for your thesis: the PDF file you would send to the printer. After submitting to the committee, you're still allowed to change the formatting, so most people only do this after their thesis has been approved by the commmittee. Hopefully you won't have to change much, but obviously you might find that some figures/tables will not fit as nicely on these smaller pages.
+* When `book_size` is set to `true`, the pages of the PDF will be the standard size of printed theses in The Netherlands: 170 x 240 mm (which is closest to B5 paper). It's a good idea to stick to this size, as printing companies could charge a lot more for custom formats (and your thesis will literally "stick out" in a stack of others). The document will also be ["two-sided"](https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents), i.e. the headers, page numbers, margins and the like will be _different_ for odd pages compared to even pages, as they'll be viewed as a two-page spread (a book). This is the final format for your thesis: the PDF file you would send to the printer. After submitting to the committee, you're still allowed to change the formatting, so most people only do this after their thesis has been approved by the committee. Hopefully you won't have to change much, but obviously you might find that some figures/tables will not fit as nicely on these smaller pages.
 
 ## Building the thesis
 
-Choose any of the two methods below to finally render your thesis! It should show up in a subdirectory called  `_book`. RStudio will probably show you a preview of the result, but if not: open `_book/index.hml` if you rendered to html, or `_book/thesis.pdf` if you rendered to pdf.
+Choose any of the two methods below to finally render your thesis! It should show up in a subdirectory called  `_book`. RStudio will probably show you a preview of the result, but if not: open `_book/index.html` if you rendered to html, or `_book/thesis.pdf` if you rendered to pdf.
 
 ### Using the RStudio interface {#build-rstudio}
 
