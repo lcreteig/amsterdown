@@ -9,6 +9,8 @@
 status](https://travis-ci.com/lcreteig/amsterdown.svg?branch=master)](https://travis-ci.com/lcreteig/amsterdown)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Launch Rstudio
+Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio)
 <!-- badges: end -->
 
 `amsterdown` is an RMarkdown PhD thesis template for the University of
@@ -51,17 +53,26 @@ If you just want a peek at the template without installing it as an R
 package, check out the folder with all the files [here on
 Github](https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton).
 
+Alternatively, to try out using the template without having to install
+anything locally, click this button to launch an RStudio session with
+everything you need pre-installed: [![Launch Rstudio
+Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio).
+Then simply follow the [Usage](#usage) instructions below.
+
 ## Usage
 
 If you’ve installed the package and are using
 [RStudio](https://rstudio.com/), simply navigate to “File” \> “New File”
 \> “R Markdown…” \> “From Template” \> “UvA thesis {amsterdown}”. Use
 `index` for the new directory name (feel free to change this after), so
-that the main file will be called `index.Rmd`, then hit OK. Then, create
-a new RStudio project by going to “File” \> “New Project…” \> “Existing
-Directory”, then “Browse…” to the directory you just created (`index`,
-or whatever you named it to), and finally hit “Create Project”. Click
-“Build Book” from the Build pane to render the thesis to an output
+that the main file will be called `index.Rmd`, then hit OK.
+
+Then, create a new RStudio project by going to “File” \> “New Project…”
+\> “Existing Directory”, then “Browse…” to the directory you just
+created (`index`, or whatever you named it to), and finally hit “Create
+Project”.
+
+Click “Build Book” from the Build pane to render the thesis to an output
 format of your choosing.
 
 Or, (e.g., if you’re not using the RStudio IDE), run the following lines
