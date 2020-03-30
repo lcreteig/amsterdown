@@ -11,6 +11,7 @@ status](https://travis-ci.com/lcreteig/amsterdown.svg?branch=master)](https://tr
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Launch Rstudio
 Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3733132.svg)](https://doi.org/10.5281/zenodo.3733132)
 <!-- badges: end -->
 
 `amsterdown` is an RMarkdown PhD thesis template for the University of
@@ -56,7 +57,7 @@ Github](https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templa
 Alternatively, to try out using the template without having to install
 anything locally, click this button to launch an RStudio session with
 everything you need pre-installed: [![Launch Rstudio
-Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio).
+Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio)
 Then simply follow the [Usage](#usage) instructions below.
 
 ## Usage
