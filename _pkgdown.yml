@@ -1,5 +1,15 @@
 destination: docs
+home:
+  title: amsterdown
+  description: An RMarkdown PhD thesis template for the University of Amsterdam
 template:
+  opengraph:
+    image:
+      src: man/figures/logo.png
+      alt: "amsterdown: An RMarkdown PhD thesis template for the University of Amsterdam"
+    twitter:
+      creator: "@leonreteig"
+      card: summary
   params:
     bootswatch: cosmo
 authors:
