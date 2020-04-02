@@ -9,7 +9,7 @@ Authors@R:
            email = "leonreteig@gmail.com",
            comment = c(ORCID = "0000-0002-5814-0992"))
 Description: An RMarkdown PhD thesis template for the University
-    of Amsterdam.  Enables reproducible thesis writing using (R)Markdown,
+    of Amsterdam. Enables reproducible thesis writing using (R)Markdown,
     with data, code, text, figures, and the like all in one place. Uses
     the bookdown package to convert the (R)Markdown files to pdf or html
     outputs. A modification of the default LaTeX template ensures the PhD

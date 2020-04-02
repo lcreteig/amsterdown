@@ -10,7 +10,7 @@
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 An RMarkdown PhD thesis template for the University
-    of Amsterdam.  Enables reproducible thesis writing using (R)Markdown,
+    of Amsterdam. Enables reproducible thesis writing using (R)Markdown,
     with data, code, text, figures, and the like all in one place. Uses
     the bookdown package to convert the (R)Markdown files to pdf or html
     outputs. A modification of the default LaTeX template ensures the PhD
