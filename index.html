@@ -5,8 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>An RMarkdown PhD thesis template for the University of
-    Amsterdam • amsterdown</title>
+<title>amsterdown • amsterdown</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -19,15 +18,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
-<meta property="og:title" content="An RMarkdown PhD thesis template for the University of
-    Amsterdam">
-<meta property="og:description" content="An RMarkdown PhD thesis template for the University
-    of Amsterdam.  Enables reproducible thesis writing using (R)Markdown,
-    with data, code, text, figures, and the like all in one place. Uses
-    the bookdown package to convert the (R)Markdown files to pdf or html
-    outputs. A modification of the default LaTeX template ensures the PhD
-    thesis conforms to the University of Amsterdam requirements.">
+<meta property="og:title" content="amsterdown">
+<meta property="og:description" content="An RMarkdown PhD thesis template for the University of Amsterdam">
 <meta property="og:image" content="/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@leonreteig">
+<meta name="twitter:site" content="@leonreteig">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -123,7 +119,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p><code>amsterdown</code> is an RMarkdown PhD thesis template for the University of Amsterdam. It’s based on <a href="https://github.com/lcreteig/thesis">my PhD thesis</a> that I wrote with the <a href="https://bookdown.org/yihui/bookdown/">bookdown package</a>.</p>
+<p><code>amsterdown</code> is an RMarkdown PhD thesis template for the University of Amsterdam. Itâs based on <a href="https://github.com/lcreteig/thesis">my PhD thesis</a> that I wrote with the <a href="https://bookdown.org/yihui/bookdown/">bookdown package</a>.</p>
 <p>(R)Markdown enables you to write a reproducible PhD thesis using the lightweight and plain-text <a href="https://daringfireball.net/projects/markdown/">Markdown</a> formatting. It forms a great <a href="https://en.wikipedia.org/wiki/Notebook_interface">notebook style</a> workflow to integrate all your text, code, figures, and other output that together make up your PhD thesis work. Finally, <code>bookdown</code> allows you to easily create an html-version of your thesis that you can host online, and to harness the power of LaTeX to make a beautifully formatted PDF for printing your thesis.</p>
 <p>This template is an easy way to get started, by:</p>
 <ul>
@@ -143,10 +139,10 @@
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>If you’ve installed the package and are using <a href="https://rstudio.com/">RStudio</a>, simply navigate to “File” &gt; “New File” &gt; “R Markdown…” &gt; “From Template” &gt; “UvA thesis {amsterdown}”. Use <code>index</code> for the new directory name (feel free to change this after), so that the main file will be called <code>index.Rmd</code>, then hit OK.</p>
-<p>Then, create a new RStudio project by going to “File” &gt; “New Project…” &gt; “Existing Directory”, then “Browse…” to the directory you just created (<code>index</code>, or whatever you named it to), and finally hit “Create Project”.</p>
-<p>Click “Build Book” from the Build pane to render the thesis to an output format of your choosing.</p>
-<p>Or, (e.g., if you’re not using the RStudio IDE), run the following lines of R code to render the template:</p>
+<p>If youâve installed the package and are using <a href="https://rstudio.com/">RStudio</a>, simply navigate to âFileâ &gt; âNew Fileâ &gt; âR Markdownâ¦â &gt; âFrom Templateâ &gt; âUvA thesis {amsterdown}â. Use <code>index</code> for the new directory name (feel free to change this after), so that the main file will be called <code>index.Rmd</code>, then hit OK.</p>
+<p>Then, create a new RStudio project by going to âFileâ &gt; âNew Projectâ¦â &gt; âExisting Directoryâ, then âBrowseâ¦â to the directory you just created (<code>index</code>, or whatever you named it to), and finally hit âCreate Projectâ.</p>
+<p>Click âBuild Bookâ from the Build pane to render the thesis to an output format of your choosing.</p>
+<p>Or, (e.g., if youâre not using the RStudio IDE), run the following lines of R code to render the template:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">draft</a></span>(<span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
                  <span class="kw">template</span> <span class="kw">=</span> <span class="st">'thesis'</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">'amsterdown'</span>,
                  <span class="kw">create_dir</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">edit</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
@@ -166,17 +162,17 @@
 <div id="requirements" class="section level2">
 <h2 class="hasAnchor">
 <a href="#requirements" class="anchor"></a>Requirements</h2>
-<p>If you’re using <a href="https://rstudio.com/">RStudio</a>, all you should have to do is install the <code>amsterdown</code> package (the <code>bookdown</code> package will be installed along with it). You’ll also need a <a href="https://www.latex-project.org/">LaTeX</a> distribution to be able to create the <code>pdf</code> outputs. If you don’t have one yet, I’d recommend <a href="https://yihui.name/tinytex/">TinyTeX</a>.</p>
-<p>If you don’t have RStudio installed, you’ll also need to install <a href="https://pandoc.org/">pandoc</a> if you don’t have it already (in addition to a LaTex distribution).</p>
+<p>If youâre using <a href="https://rstudio.com/">RStudio</a>, all you should have to do is install the <code>amsterdown</code> package (the <code>bookdown</code> package will be installed along with it). Youâll also need a <a href="https://www.latex-project.org/">LaTeX</a> distribution to be able to create the <code>pdf</code> outputs. If you donât have one yet, Iâd recommend <a href="https://yihui.name/tinytex/">TinyTeX</a>.</p>
+<p>If you donât have RStudio installed, youâll also need to install <a href="https://pandoc.org/">pandoc</a> if you donât have it already (in addition to a LaTex distribution).</p>
 </div>
 <div id="attribution" class="section level2">
 <h2 class="hasAnchor">
 <a href="#attribution" class="anchor"></a>Attribution</h2>
 <p>This project was inspired by other RMarkdown PhD thesis templates that use <a href="https://bookdown.org/yihui/bookdown/"><code>bookdown</code></a>, notably:</p>
 <ul>
-<li>Chester Ismay’s <a href="https://github.com/ismayc/thesisdown">thesisdown</a> for Reed College</li>
-<li>Ben Marwick’s <a href="https://github.com/benmarwick/huskydown">huskydown</a> for the University of Washington</li>
-<li>Ulrik Lyng’s <a href="https://github.com/ulyngs/oxforddown">oxforddown</a> for Oxford University</li>
+<li>Chester Ismayâs <a href="https://github.com/ismayc/thesisdown">thesisdown</a> for Reed College</li>
+<li>Ben Marwickâs <a href="https://github.com/benmarwick/huskydown">huskydown</a> for the University of Washington</li>
+<li>Ulrik Lyngâs <a href="https://github.com/ulyngs/oxforddown">oxforddown</a> for Oxford University</li>
 </ul>
 </div>
 </div>
