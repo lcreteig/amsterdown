@@ -4,6 +4,7 @@ language: R
 cache: packages
 
 before_cache:
+  - sudo apt-get install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
   - Rscript -e 'remotes::install_cran("pkgdown")' # package for building documentation
 after_success:
   - R CMD INSTALL . # install the package so we can use it to...
