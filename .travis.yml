@@ -2,6 +2,7 @@
 
 language: R
 cache: packages
+pandoc_version: 2.3
 
 before_cache:
   - sudo apt-get install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
