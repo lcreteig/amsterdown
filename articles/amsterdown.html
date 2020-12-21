@@ -51,7 +51,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,7 +98,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/lcreteig/amsterdown/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -140,14 +140,16 @@
 <ol style="list-style-type: decimal">
 <li>Install the <code>amsterdown</code> package from GitHub;</li>
 </ol>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="kw">if</span>(!<span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">devtools</span>)) <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>) <span class="co"># devtools package allows installation of packages from github</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"lcreteig/amsterdown"</span>) <span class="co"># install amsterdown from github</span></pre></body></html></div>
-<p>N.B. you <strong>don’t</strong> need to load the package (e.g. with <code><a href="https://rdrr.io/pkg/amsterdown/man">library(amsterdown)</a></code>) in order to use it; the only reason it’s a package is that the package structure is just the easiest way to get the template files and dependencies (the <code>rmarkdown</code>, <code>knitr</code>, and <code>bookdown</code> packages) to you.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va">devtools</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> <span class="co"># devtools package allows installation of packages from github</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lcreteig/amsterdown"</span><span class="op">)</span> <span class="co"># install amsterdown from github</span></code></pre></div>
+<p>N.B. you <strong>don’t</strong> need to load the package (e.g. with <code><a href="https://github.com/lcreteig/amsterdown">library(amsterdown)</a></code>) in order to use it; the only reason it’s a package is that the package structure is just the easiest way to get the template files and dependencies (the <code>rmarkdown</code>, <code>knitr</code>, and <code>bookdown</code> packages) to you.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>If you don’t have <code>pandoc</code>, you’ll need to <a href="https://pandoc.org/installing.html">install that as well</a>. Note that <a href="https://rstudio.com/">RStudio</a> comes bundled with <code>pandoc</code>, so if you’re using RStudio you should be all set.</p></li>
 <li><p>To make the PDF version of the thesis, you’ll also need a LaTeX distribution. If you have one installed already, you should be good to go. If not, I recommend <a href="https://yihui.name/tinytex/">TinyTeX</a>. The <code>tinytex</code> package should come bundled with <code>bookdown</code> (and thus <code>amsterdown</code>), which allows you to easily install the LaTeX distribution from R:</p></li>
 </ol>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="kw pkg">tinytex</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span>()</pre></body></html></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">tinytex</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tinytex/man/install_tinytex.html">install_tinytex</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>N.B. If you’re working with RStudio, you’ll need to restart it after installing TinyTeX.</p>
 </div>
 <div id="drafting-the-template" class="section level2">
@@ -177,9 +179,10 @@
 <h3 class="hasAnchor">
 <a href="#from-the-console" class="anchor"></a>From the console</h3>
 <p>You can also use the <code><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">rmarkdown::draft()</a></code> function to create the template files (e.g. if you’re not using RStudio):</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">draft</a></span>(<span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
-                 <span class="kw">template</span> <span class="kw">=</span> <span class="st">'thesis'</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">'amsterdown'</span>,
-                 <span class="kw">create_dir</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">edit</span> <span class="kw">=</span> <span class="fl">FALSE</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
+                 template <span class="op">=</span> <span class="st">'thesis'</span>, package <span class="op">=</span> <span class="st">'amsterdown'</span>, 
+                 create_dir <span class="op">=</span> <span class="cn">TRUE</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> </code></pre></div>
 <p>Again, this will also create a directory named <code>index</code>, but feel free to change that name.</p>
 </div>
 </div>
@@ -406,12 +409,13 @@
 <h3 class="hasAnchor">
 <a href="#from-the-console-1" class="anchor"></a>From the console</h3>
 <p>You can also use the <code><a href="https://rdrr.io/pkg/bookdown/man/render_book.html">bookdown::render_book()</a></code> function to build the book (e.g. if you’re not using RStudio):</p>
-<div class="sourceCode" id="cb14"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span>(<span class="st">"index"</span>) <span class="co"># navigate to the new directory</span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"index"</span><span class="op">)</span> <span class="co"># navigate to the new directory</span>
 <span class="co"># render the thesis template to all output formats</span>
-<span class="kw pkg">bookdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/bookdown/man/render_book.html">render_book</a></span>(<span class="st">"index.Rmd"</span>, <span class="kw">output_format</span> <span class="kw">=</span> <span class="st">"all"</span>)
+<span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/bookdown/man/render_book.html">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> 
 <span class="co"># or</span>
 <span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::gitbook') # to render to html</span>
-<span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF</span></pre></body></html></div>
+<span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF</span></code></pre></div>
 </div>
 </div>
   </div>
@@ -431,7 +435,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

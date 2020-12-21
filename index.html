@@ -51,7 +51,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,7 +98,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/lcreteig/amsterdown/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -120,7 +120,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p><code>amsterdown</code> is an RMarkdown PhD thesis template for the University of Amsterdam. Itâs based on <a href="https://github.com/lcreteig/thesis">my PhD thesis</a> that I wrote with the <a href="https://bookdown.org/yihui/bookdown/">bookdown package</a>.</p>
+<p><code>amsterdown</code> is an RMarkdown PhD thesis template for the University of Amsterdam. It’s based on <a href="https://github.com/lcreteig/thesis">my PhD thesis</a> that I wrote with the <a href="https://bookdown.org/yihui/bookdown/">bookdown package</a>.</p>
 <p>(R)Markdown enables you to write a reproducible PhD thesis using the lightweight and plain-text <a href="https://daringfireball.net/projects/markdown/">Markdown</a> formatting. It forms a great <a href="https://en.wikipedia.org/wiki/Notebook_interface">notebook style</a> workflow to integrate all your text, code, figures, and other output that together make up your PhD thesis work. Finally, <code>bookdown</code> allows you to easily create an html-version of your thesis that you can host online, and to harness the power of LaTeX to make a beautifully formatted PDF for printing your thesis.</p>
 <p>This template is an easy way to get started, by:</p>
 <ul>
@@ -132,27 +132,29 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p><code>amsterdown</code> is not (yet) available on CRAN, so install it from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if</span>(!<span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">devtools</span>)) <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>) <span class="co"># devtools package allows installation of packages from github</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"lcreteig/amsterdown"</span>) <span class="co"># install amsterdown from github</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va">devtools</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> <span class="co"># devtools package allows installation of packages from github</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lcreteig/amsterdown"</span><span class="op">)</span> <span class="co"># install amsterdown from github</span></code></pre></div>
 <p>If you just want a peek at the template without installing it as an R package, check out the folder with all the files <a href="https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton">here on Github</a>.</p>
 <p>Alternatively, to try out using the template without having to install anything locally, click this button to launch an RStudio session with everything you need pre-installed: <a href="https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio"><img src="http://mybinder.org/badge_logo.svg" alt="Launch Rstudio Binder"></a> Then simply follow the <a href="#usage">Usage</a> instructions below.</p>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>If youâve installed the package and are using <a href="https://rstudio.com/">RStudio</a>, simply navigate to âFileâ &gt; âNew Fileâ &gt; âR Markdownâ¦â &gt; âFrom Templateâ &gt; âUvA thesis {amsterdown}â. Use <code>index</code> for the new directory name (feel free to change this after), so that the main file will be called <code>index.Rmd</code>, then hit OK.</p>
-<p>Then, create a new RStudio project by going to âFileâ &gt; âNew Projectâ¦â &gt; âExisting Directoryâ, then âBrowseâ¦â to the directory you just created (<code>index</code>, or whatever you named it to), and finally hit âCreate Projectâ.</p>
-<p>Click âBuild Bookâ from the Build pane to render the thesis to an output format of your choosing.</p>
-<p>Or, (e.g., if youâre not using the RStudio IDE), run the following lines of R code to render the template:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">draft</a></span>(<span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
-                 <span class="kw">template</span> <span class="kw">=</span> <span class="st">'thesis'</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">'amsterdown'</span>,
-                 <span class="kw">create_dir</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">edit</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span>(<span class="st">"index"</span>) <span class="co"># navigate to new directory</span>
+<p>If you’ve installed the package and are using <a href="https://rstudio.com/">RStudio</a>, simply navigate to “File” &gt; “New File” &gt; “R Markdown…” &gt; “From Template” &gt; “UvA thesis {amsterdown}”. Use <code>index</code> for the new directory name (feel free to change this after), so that the main file will be called <code>index.Rmd</code>, then hit OK.</p>
+<p>Then, create a new RStudio project by going to “File” &gt; “New Project…” &gt; “Existing Directory”, then “Browse…” to the directory you just created (<code>index</code>, or whatever you named it to), and finally hit “Create Project”.</p>
+<p>Click “Build Book” from the Build pane to render the thesis to an output format of your choosing.</p>
+<p>Or, (e.g., if you’re not using the RStudio IDE), run the following lines of R code to render the template:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/draft.html">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
+                 template <span class="op">=</span> <span class="st">'thesis'</span>, package <span class="op">=</span> <span class="st">'amsterdown'</span>, 
+                 create_dir <span class="op">=</span> <span class="cn">TRUE</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> 
+<span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"index"</span><span class="op">)</span> <span class="co"># navigate to new directory</span>
 <span class="co"># render the thesis template to all output formats</span>
-<span class="kw pkg">bookdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/bookdown/man/render_book.html">render_book</a></span>(<span class="st">"index.Rmd"</span>, <span class="kw">output_format</span> <span class="kw">=</span> <span class="st">"all"</span>)
+<span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/bookdown/man/render_book.html">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> 
 <span class="co"># or</span>
 <span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::gitbook') # to render to html</span>
-<span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF</span></pre></div>
+<span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF</span></code></pre></div>
 <p>See the <a href="https://lcreteig.github.io/amsterdown/articles/amsterdown.html">package documentation</a> for more detailed instructions and further information.</p>
 </div>
 <div id="example-output" class="section level2">
@@ -163,17 +165,17 @@
 <div id="requirements" class="section level2">
 <h2 class="hasAnchor">
 <a href="#requirements" class="anchor"></a>Requirements</h2>
-<p>If youâre using <a href="https://rstudio.com/">RStudio</a>, all you should have to do is install the <code>amsterdown</code> package (the <code>bookdown</code> package will be installed along with it). Youâll also need a <a href="https://www.latex-project.org/">LaTeX</a> distribution to be able to create the <code>pdf</code> outputs. If you donât have one yet, Iâd recommend <a href="https://yihui.name/tinytex/">TinyTeX</a>.</p>
-<p>If you donât have RStudio installed, youâll also need to install <a href="https://pandoc.org/">pandoc</a> if you donât have it already (in addition to a LaTex distribution).</p>
+<p>If you’re using <a href="https://rstudio.com/">RStudio</a>, all you should have to do is install the <code>amsterdown</code> package (the <code>bookdown</code> package will be installed along with it). You’ll also need a <a href="https://www.latex-project.org/">LaTeX</a> distribution to be able to create the <code>pdf</code> outputs. If you don’t have one yet, I’d recommend <a href="https://yihui.name/tinytex/">TinyTeX</a>.</p>
+<p>If you don’t have RStudio installed, you’ll also need to install <a href="https://pandoc.org/">pandoc</a> if you don’t have it already (in addition to a LaTex distribution).</p>
 </div>
 <div id="attribution" class="section level2">
 <h2 class="hasAnchor">
 <a href="#attribution" class="anchor"></a>Attribution</h2>
 <p>This project was inspired by other RMarkdown PhD thesis templates that use <a href="https://bookdown.org/yihui/bookdown/"><code>bookdown</code></a>, notably:</p>
 <ul>
-<li>Chester Ismayâs <a href="https://github.com/ismayc/thesisdown">thesisdown</a> for Reed College</li>
-<li>Ben Marwickâs <a href="https://github.com/benmarwick/huskydown">huskydown</a> for the University of Washington</li>
-<li>Ulrik Lyngâs <a href="https://github.com/ulyngs/oxforddown">oxforddown</a> for Oxford University</li>
+<li>Chester Ismay’s <a href="https://github.com/ismayc/thesisdown">thesisdown</a> for Reed College</li>
+<li>Ben Marwick’s <a href="https://github.com/benmarwick/huskydown">huskydown</a> for the University of Washington</li>
+<li>Ulrik Lyng’s <a href="https://github.com/ulyngs/oxforddown">oxforddown</a> for Oxford University</li>
 </ul>
 </div>
 </div>
@@ -222,7 +224,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
