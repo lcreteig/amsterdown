@@ -115,7 +115,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="amsterdown_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Introduction to amsterdown</h1>
@@ -129,7 +129,7 @@
     
     
 <p>The best way to figure out how the template works is to look at <a href="https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton">the source files</a> and output together, to understand how one is created from the other. Other than how to create headings, italic text and the like, I’ve included basic examples of things you’re likely to need whilst writing a thesis, such as citations, tables, plots, and equations.</p>
-<p>Or, check out the source files for <a href="https://github.com/lcreteig/thesis">my PhD thesis</a>, or any other PhD thesis templates (e.g. <a href="https://github.com/ismayc/thesisdown">thesisdown</a>, <a href="https://github.com/benmarwick/huskydown">huskydown</a>, or <a href="https://github.com/ulyngs/oxforddown">oxforddown</a>).</p>
+<p>Or, check out the source files for <a href="https://github.com/lcreteig/thesis">my PhD thesis</a>, or any other PhD thesis templates (e.g. <a href="https://github.com/ismayc/thesisdown">thesisdown</a>, <a href="https://github.com/benmarwick/huskydown">huskydown</a>, or <a href="https://github.com/ulyngs/oxforddown">oxforddown</a>).</p>
 <p>For more extensive documentation, please see these other excellent sources on Markdown syntax, R Markdown, and <code>bookdown</code>:</p>
 <ul>
 <li>Almost everything you’ll need to know can be found in the <a href="https://bookdown.org/yihui/bookdown/">bookdown book</a>.</li>
@@ -236,18 +236,18 @@
 <h3 class="hasAnchor">
 <a href="#title-pages" class="anchor"></a>Title page(s)</h3>
 <p>The following information will be included in the <a href="https://www.uva.nl/en/research/phd/doctoral-programme/completion/completion.html">title page as mandated by the university</a>. The template will fill in the rest and make sure it is exactly formatted as the university requires.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">"My Awesome Thesis"</span><span class="er"> </span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="fu">subtitle:</span><span class="at"> |</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">  | This subtitle is sooooo long </a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">  | I<span class="st">'m '</span>a break it up </a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="fu">author:</span><span class="at"> </span><span class="st">"Phil Henry Doctor"</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="fu">aula:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="fu">date:</span><span class="at"> </span><span class="st">"maandag 21 oktober 2019"</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="fu">time:</span><span class="at"> </span><span class="st">"14.00"</span><span class="er"> </span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="fu">birthplace:</span><span class="at"> </span><span class="st">"Parijs"</span><span class="er"> </span></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="fu">country_of_birth:</span><span class="at"> </span><span class="st">"Frankrijk"</span></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="pp">---</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Awesome Thesis"</span><span class="at"> </span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">subtitle</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>  | This subtitle is sooooo long </span>
+<span id="cb5-5"><a href="#cb5-5"></a>  | I'm 'a break it up </span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Phil Henry Doctor"</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="fu">aula</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"maandag 21 oktober 2019"</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="fu">time</span><span class="kw">:</span><span class="at"> </span><span class="st">"14.00"</span><span class="at"> </span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="fu">birthplace</span><span class="kw">:</span><span class="at"> </span><span class="st">"Parijs"</span><span class="at"> </span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="fu">country_of_birth</span><span class="kw">:</span><span class="at"> </span><span class="st">"Frankrijk"</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="pp">---</span></span></code></pre></div>
 <ul>
 <li>
 <code>title</code>: The main title of your thesis (not including possible subtitles). This will print on the very first page in the book (the “half-title”), and on the “full” title page as mandated by the university</li>
@@ -283,10 +283,10 @@
 <a href="#colophon" class="anchor"></a>Colophon</h3>
 <p>This is the second page in the book, which often lists information on the printing of the book, copyright, funding info, etc. I’ve included a couple things here that people generally mention.</p>
 <p>This page tends to look slightly differently in each thesis, and is subject to personal preference obviously, so it’s hard to make a good template for it. It can be changed by modifying <code>template.tex</code>, or feel free to contact me if you don’t feel confident doing so.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="fu">grant:</span><span class="at"> </span><span class="st">"Starting grant (111-2-3)"</span><span class="er"> # optional, otherwise this bit is omitted</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="fu">funder:</span><span class="at"> </span><span class="st">"the Non-existent Organization for Space Exploration (NOSE)"</span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="pp">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">grant</span><span class="kw">:</span><span class="at"> </span><span class="st">"Starting grant (111-2-3)"</span><span class="co"> # optional, otherwise this bit is omitted</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">funder</span><span class="kw">:</span><span class="at"> </span><span class="st">"the Non-existent Organization for Space Exploration (NOSE)"</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="pp">---</span></span></code></pre></div>
 <p>If you define the <code>funder</code> option, the colophon page starts with:</p>
 <blockquote>
 <p>The investigations in this thesis were supported by [a] <code>grant</code> [from] <code>funder</code>"</p>
@@ -297,11 +297,11 @@
 <li>
 <code>funder</code> (optional): name of the organization that funded your work</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="fu">ISBN:</span><span class="at"> </span><span class="st">"xxx-xx-xxxx-xxx-x"</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="fu">printing:</span><span class="at"> </span><span class="st">"Acme Press, Inc."</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="fu">cover:</span><span class="at"> </span><span class="st">"Designed by Phil Henry Doctor"</span></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1"></a><span class="pp">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">ISBN</span><span class="kw">:</span><span class="at"> </span><span class="st">"xxx-xx-xxxx-xxx-x"</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">printing</span><span class="kw">:</span><span class="at"> </span><span class="st">"Acme Press, Inc."</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">cover</span><span class="kw">:</span><span class="at"> </span><span class="st">"Designed by Phil Henry Doctor"</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="pp">---</span></span></code></pre></div>
 <p>These options will be preceded with the following sentence:</p>
 <blockquote>
 <p>This thesis was typeset using (R) Markdown, LaTeX and the <code>bookdown</code> R-package</p>
@@ -315,10 +315,10 @@
 <li>
 <code>cover</code> (optional): If defined, this will read: “Cover: [whatever you fill in here]”. Many PhD students have their covers created by someone else; this would be the place to acknowledge them.</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="fu">thesis_url:</span><span class="at"> </span><span class="st">"https://lcreteig.github.io/amsterdown"</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="fu">license:</span><span class="at"> </span><span class="st">"to-be-determined license"</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1"></a><span class="pp">---</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">thesis_url</span><span class="kw">:</span><span class="at"> </span><span class="st">"https://lcreteig.github.io/amsterdown"</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">license</span><span class="kw">:</span><span class="at"> </span><span class="st">"to-be-determined license"</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="pp">---</span></span></code></pre></div>
 <p>Again, these options can be skipped entirely, but if you define <code>thesis_url</code>, the colophon page will end with:</p>
 <blockquote>
 <p>An online version of this thesis is available at <code>thesis_url</code> [,licensed under a <code>license</code>.]</p>
@@ -334,18 +334,18 @@
 <h3 class="hasAnchor">
 <a href="#committee-page" class="anchor"></a>Committee page</h3>
 <p>The back of the title page has to contain the name of your faculty, supervisors, and committee members; again in a <a href="https://www.uva.nl/en/research/phd/doctoral-programme/completion/completion.html">special University-mandated format</a>. The template will make sure the table is generated in this format. Make sure the specification here matches the one you sent in to the graduate school!</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="fu">promotores:</span><span class="at"> </span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="kw">-</span> <span class="fu">title:</span><span class="at"> prof. dr.</span></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4">  <span class="fu">initials:</span><span class="at"> T.</span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5">  <span class="fu">surname:</span><span class="at"> Zonnebloem</span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6">  <span class="fu">affiliation:</span><span class="at"> Universiteit van Amsterdam</span></a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="kw">-</span> <span class="fu">title:</span><span class="at"> prof. dr.</span></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8">  <span class="fu">initials:</span><span class="at"> H.</span></a>
-<a class="sourceLine" id="cb9-9" data-line-number="9">  <span class="fu">surname:</span><span class="at"> Jones</span></a>
-<a class="sourceLine" id="cb9-10" data-line-number="10">  <span class="fu">affiliation:</span><span class="at"> University of Indiana</span></a>
-<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="fu">one_promotor:</span><span class="at"> false</span></a>
-<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1"></a><span class="pp">---</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">promotores</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> prof. dr.</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="at">  </span><span class="fu">initials</span><span class="kw">:</span><span class="at"> T.</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="at">  </span><span class="fu">surname</span><span class="kw">:</span><span class="at"> Zonnebloem</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="at">  </span><span class="fu">affiliation</span><span class="kw">:</span><span class="at"> Universiteit van Amsterdam</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> prof. dr.</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="at">  </span><span class="fu">initials</span><span class="kw">:</span><span class="at"> H.</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="at">  </span><span class="fu">surname</span><span class="kw">:</span><span class="at"> Jones</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="at">  </span><span class="fu">affiliation</span><span class="kw">:</span><span class="at"> University of Indiana</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="fu">one_promotor</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="pp">---</span></span></code></pre></div>
 <p>First, your “promotores”, i.e. your supervisors (associate professors and upwards qualify for this role). The <code>promotores:</code> field has the following four subfields:</p>
 <ul>
 <li>
@@ -358,40 +358,40 @@
 <code>affiliation</code>: the name of the university your promotor works at</li>
 </ul>
 <p>If you have more than one promotor, simply copy these four fields (including the “-” in front of <code>title</code>!) and fill in the details for each additional promotor. If you only have one promotor, delete the 2nd set of fields, and set the <code>one_promotor</code> field to <code>true</code>. This will make sure the singular “Promotor” is printed in the table, instead of the plural (“Promotores”).</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="fu">copromotores:</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">-</span> <span class="fu">title:</span><span class="at"> dr. </span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4">  <span class="fu">initials:</span><span class="at"> W.</span></a>
-<a class="sourceLine" id="cb10-5" data-line-number="5">  <span class="fu">surname:</span><span class="at"> Ho</span></a>
-<a class="sourceLine" id="cb10-6" data-line-number="6">  <span class="fu">affiliation:</span><span class="at"> University of Gallifrey </span></a>
-<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="fu">one_copromotor:</span><span class="at"> true </span></a>
-<a class="sourceLine" id="cb10-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1"></a><span class="pp">---</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">copromotores</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> dr. </span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="at">  </span><span class="fu">initials</span><span class="kw">:</span><span class="at"> W.</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="at">  </span><span class="fu">surname</span><span class="kw">:</span><span class="at"> Ho</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="at">  </span><span class="fu">affiliation</span><span class="kw">:</span><span class="at"> University of Gallifrey </span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="fu">one_copromotor</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="at"> </span></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="pp">---</span></span></code></pre></div>
 <p>The same goes for your “copromotores” (supervisors that are not “promotores”, e.g. assistant professors): fill in as many as you have, and set the <code>one_copromotor</code> field to <code>false</code> if you have more than one. If you don’t have any “copromotores”, simply delete all of these fields.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="fu">members:</span></a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="kw">-</span> <span class="fu">title:</span><span class="at"> prof. dr.</span></a>
-<a class="sourceLine" id="cb11-4" data-line-number="4">  <span class="fu">initials:</span><span class="at"> H.J.</span></a>
-<a class="sourceLine" id="cb11-5" data-line-number="5">  <span class="fu">surname:</span><span class="at"> Farnsworth</span></a>
-<a class="sourceLine" id="cb11-6" data-line-number="6">  <span class="fu">affiliation:</span><span class="at"> Mars University</span></a>
-<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="kw">-</span> <span class="fu">title:</span><span class="at"> prof. dr.</span></a>
-<a class="sourceLine" id="cb11-8" data-line-number="8">  <span class="fu">initials:</span><span class="at"> J.I.Q.N.</span></a>
-<a class="sourceLine" id="cb11-9" data-line-number="9">  <span class="fu">surname:</span><span class="at"> Frink</span></a>
-<a class="sourceLine" id="cb11-10" data-line-number="10">  <span class="fu">affiliation:</span><span class="at"> University of Springfield</span></a>
-<a class="sourceLine" id="cb11-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb11-12" data-line-number="12"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1"></a><span class="pp">---</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">members</span><span class="kw">:</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> prof. dr.</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="at">  </span><span class="fu">initials</span><span class="kw">:</span><span class="at"> H.J.</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="at">  </span><span class="fu">surname</span><span class="kw">:</span><span class="at"> Farnsworth</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="at">  </span><span class="fu">affiliation</span><span class="kw">:</span><span class="at"> Mars University</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> prof. dr.</span></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="at">  </span><span class="fu">initials</span><span class="kw">:</span><span class="at"> J.I.Q.N.</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a><span class="at">  </span><span class="fu">surname</span><span class="kw">:</span><span class="at"> Frink</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a><span class="at">  </span><span class="fu">affiliation</span><span class="kw">:</span><span class="at"> University of Springfield</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a></span>
+<span id="cb11-12"><a href="#cb11-12"></a><span class="pp">---</span></span></code></pre></div>
 <p>Then there’s the members of your committee: the one who’ll be asking you questions during the defense. Usually there’ll be around 5 or 6 members; simply copy the fields as many times as needed.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="fu">faculty:</span><span class="at"> </span><span class="st">"Faculteit der Natuurwetenschappen, Wiskunde, en Informatica"</span></a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1"></a><span class="pp">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">faculty</span><span class="kw">:</span><span class="at"> </span><span class="st">"Faculteit der Natuurwetenschappen, Wiskunde, en Informatica"</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="pp">---</span></span></code></pre></div>
 <p>Finally, fill in the Dutch name of the faculty you were employed with here.</p>
 </div>
 <div id="pdf-settings" class="section level3">
 <h3 class="hasAnchor">
 <a href="#pdf-settings" class="anchor"></a>PDF settings</h3>
 <p>There’s one additional setting in <code>amsterdown</code>, which determines what kind of printed book will be generated as a pdf.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="fu">book_size:</span><span class="at"> false </span><span class="co"># or true</span></a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1"></a><span class="pp">---</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">book_size</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co"> # or true</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="pp">---</span></span></code></pre></div>
 <ul>
 <li>When <code>book_size</code> is set to <code>false</code>, the pages of the PDF will be A4 sized. The document will also be <a href="https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents">“one-sided”</a>, i.e. the headers, page numbers, margins and the like will be the same for even or odd pages. This format might be useful when you submit your thesis to the committee for the first time, because they might print it on loose sheets of A4 paper. If any of your chapters were already (in the process of being) published as journal articles, you’ll also likely have optimized them for A4/letter paper, thus saving you some time at this stage.</li>
 <li>When <code>book_size</code> is set to <code>true</code>, the pages of the PDF will be the standard size of printed theses in The Netherlands: 170 x 240 mm (which is closest to B5 paper). It’s a good idea to stick to this size, as printing companies could charge a lot more for custom formats (and your thesis will literally “stick out” in a stack of others). The document will also be <a href="https://www.overleaf.com/learn/latex/Single_sided_and_double_sided_documents">“two-sided”</a>, i.e. the headers, page numbers, margins and the like will be <em>different</em> for odd pages compared to even pages, as they’ll be viewed as a two-page spread (a book). This is the final format for your thesis: the PDF file you would send to the printer. After submitting to the committee, you’re still allowed to change the formatting, so most people only do this after their thesis has been approved by the committee. Hopefully you won’t have to change much, but obviously you might find that some figures/tables will not fit as nicely on these smaller pages.</li>

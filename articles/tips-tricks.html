@@ -115,7 +115,7 @@
 
       
 
-      </header><div class="row">
+      </header><script src="tips-tricks_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Tips &amp; Tricks</h1>
@@ -173,24 +173,24 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 <h2 class="hasAnchor">
 <a href="#citation-styles" class="anchor"></a>Citation styles</h2>
 <p>Citations are handled by <a href="https://pandoc.org/MANUAL.html#citations">pandoc</a> (using the <code>citeproc</code> extension) by default. The <a href="https://citationstyles.org/">citation style</a> (e.g., MLA, APA, Chicago, but also according to specific journals) can be customized by downloading the corresponding <code>.csl</code> file from the <a href="https://www.zotero.org/styles">Zotero Style Repository</a>. For example, to use APA style (through <code>apa.csl</code>, placed in the root directory of your thesis), add the following YAML line to <code>index.Rmd</code>, underneath whatever output you want to use the style for (<code><a href="https://rdrr.io/pkg/bookdown/man/pdf_book.html">bookdown::pdf_book()</a></code> or <code><a href="https://rdrr.io/pkg/bookdown/man/gitbook.html">bookdown::gitbook()</a></code>):</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># N.B. the template already contains this line, but it is commented out</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="fu">pandoc_args:</span><span class="at"> </span><span class="kw">[</span> <span class="st">"--csl"</span><span class="kw">,</span> <span class="st">"apa.csl"</span> <span class="kw">]</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># N.B. the template already contains this line, but it is commented out</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">pandoc_args</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> </span><span class="st">"--csl"</span><span class="kw">,</span><span class="at"> </span><span class="st">"apa.csl"</span><span class="at"> </span><span class="kw">]</span></span></code></pre></div>
 <p>If you want to customize the output further, you could consider using a LaTeX package, such as <a href="https://ctan.org/pkg/biblatex?lang=en">biblatex</a> instead of <code>pandoc-citeproc</code> (Also see <a href="https://github.com/lcreteig/thesis">my PhD thesis</a>, which used <code>biblatex</code>). This will offer you much more flexibility, at the expense of complexity, and it will only work for pdf outputs. To do that, add the following line (indented under <code><a href="https://rdrr.io/pkg/bookdown/man/pdf_book.html">bookdown::pdf_book()</a></code>) to <code>index.Rmd</code> instead:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="fu">bookdown:</span><span class="at">:pdf_book:</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="fu">citation_package:</span><span class="at"> biblatex</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="at">  bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="at">    </span><span class="fu">citation_package</span><span class="kw">:</span><span class="at"> biblatex</span></span></code></pre></div>
 </div>
-<div id="conditional-output-html-vs-pdf" class="section level2">
+<div id="conditional-output-html-vs--pdf" class="section level2">
 <h2 class="hasAnchor">
-<a href="#conditional-output-html-vs-pdf" class="anchor"></a>Conditional output (html vs. pdf)</h2>
+<a href="#conditional-output-html-vs--pdf" class="anchor"></a>Conditional output (html vs. pdf)</h2>
 <p>Sometimes you might want a certain section of the thesis (a paragraph, a figure, or even a whole chapter) to occur only in the html (or pdf) version of the thesis, but not in the other. For example, for the <code>amsterdown</code> template, the “Preface” chapter (<code>_00-preface.Rmd</code>) is only included in the html version, not in pdf (check out <code>index.Rmd</code> to see how this is done).</p>
 <p>You can use the <code><a href="https://rdrr.io/pkg/knitr/man/output_type.html">knitr::is_html_output()</a></code> and <code><a href="https://rdrr.io/pkg/knitr/man/output_type.html">knitr::is_latex_output()</a></code> functions for this purpose. These are conditionals that return <code>TRUE</code> only when the output format you are rendering to is html/latex.</p>
 <p>For example, to include a section of text only in html, you can use some <a href="#inline-code">Inline R code</a>:</p>
 <p><code>`r if (knitr::is_html_output()) ' This text will not show when rendering to pdf '`</code></p>
 <p>Or, to only run a code chunk (say, that includes a figure) for the pdf version, you can conditionally evaluate it using <a href="https://yihui.name/knitr/options/">chunk options</a>:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="bn">```{r include = knitr::is_latex_output()}</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="bn">knitr::include_graphics("my_fig.pdf") # this figure will be omitted from the html</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="bn">```{r include = knitr::is_latex_output()}</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="bn">knitr::include_graphics("my_fig.pdf") # this figure will be omitted from the html</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="bn">```</span></span></code></pre></div>
 </div>
 <div id="float-positions" class="section level2">
 <h2 class="hasAnchor">
@@ -198,9 +198,9 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 <p>LaTeX puts things like figures and tables—that cannot be broken over multiple pages—inside <em>floating environments</em>, or <em>floats</em> for short. LaTeX is smart about figuring out the best positions for <em>floats</em>, but it’s bound to not always work: once in a while it’s gonna place a figure earlier or later than you’d like.</p>
 <p>You can use the <code>fig.pos</code> chunk option to guide the placement of figures in floats. See a list of all the <em>placement specifiers</em> <a href="https://www.overleaf.com/learn/latex/Positioning_of_Figures">here</a>. For tables, you’ll have to use a package like <a href="http://haozhu233.github.io/kableExtra/">kableExtra</a> to achieve the same.</p>
 <p>For example, to try and place a figure “here” (i.e., close to where you put the command in the source text), try the <code>h</code> option:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="bn">```{r fig.cap='test', out.width='100%', fig.pos='h'}</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="bn">knitr::include_graphics("my_fig.png")</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="bn">```{r fig.cap='test', out.width='100%', fig.pos='h'}</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="bn">knitr::include_graphics("my_fig.png")</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="bn">```</span></span></code></pre></div>
 <p>(Note that you may need to also specify <a href="https://stackoverflow.com/a/43245550">some other chunk options</a> for <code>fig.pos</code> to become active)</p>
 </div>
 <div id="long-titles-in-page-headers" class="section level2">
@@ -215,21 +215,21 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 <p>Inline code allows you to include the output of your R code (e.g. statistical tests) within the text of your thesis. It is a lot easier and more reproducible than inserting results by hand!</p>
 <p>You can do this using the following syntax: <code>`r &lt;your R code here&gt;`</code>.</p>
 <p>For example:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" data-line-number="1">We included <span class="bn">`r 3/12*100`</span>% of patients...</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a>We included <span class="bn">`r 3/12*100`</span>% of patients...</span></code></pre></div>
 <p>will read:</p>
 <blockquote>
 <p>We included 25% of patients…</p>
 </blockquote>
 <p>Often the result you’ll you want to insert will already be assigned to a variable, in which case you can simply call the variable in your inline code: <code>`r &lt;your variable&gt;`</code>. Checkout the <a href="https://github.com/crsh/papaja">papaja</a> package for some awesome functions that will insert statistical results in APA style.</p>
 </div>
-<div id="non-r-code-e-g-python" class="section level2">
+<div id="non-r-code-e-g--python" class="section level2">
 <h2 class="hasAnchor">
-<a href="#non-r-code-e-g-python" class="anchor"></a>Non-R code (e.g. Python)</h2>
+<a href="#non-r-code-e-g--python" class="anchor"></a>Non-R code (e.g. Python)</h2>
 <p>If you want to run code in other languages in a chunk (e.g. Python), all you need to do is replace <code>r</code> in the chunk options with <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html">another language engine</a>:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="bn">```{python}</span></a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="bn"># Now you can write python code</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="bn">python_number = 20+4</span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="bn">```{python}</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="bn"># Now you can write python code</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="bn">python_number = 20+4</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="bn">```</span></span></code></pre></div>
 <p>If you’re using Python, definitely checkout the <a href="https://rstudio.github.io/reticulate/">reticulate</a> package, which provides a lot of functionality for using Python in R. For example, you can access Python variables (like the one we created above) within your R session using the <code>py$&lt;my variable&gt;</code> syntax:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">reticulate</span><span class="op">)</span>
