@@ -4,7 +4,7 @@ on:
       - main
       - master
 
-name: pkgdown
+name: docs
 
 jobs:
   pkgdown:
@@ -13,10 +13,14 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false # add for deployment to work correctly
 
       - uses: r-lib/actions/setup-r@v1
 
       - uses: r-lib/actions/setup-pandoc@v1
+
+      - uses: r-lib/actions/setup-tinytex@v1 # add tinytex to render pdf output
 
       - name: Query dependencies
         run: |
@@ -41,8 +45,16 @@ jobs:
       - name: Install package
         run: R CMD INSTALL .
 
-      - name: Deploy package
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
+      - name: Build site # build pkgdown site in separate step
+        run: Rscript -e 'pkgdown::build_site()'
+
+      - name: Render output samples # then render the output samples
+        run: Rscript R/_render.R
+
+      - name: Deploy # deploy the docs folder to gh-pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs
+          CLEAN: true
