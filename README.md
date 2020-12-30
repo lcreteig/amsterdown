@@ -5,8 +5,7 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/lcreteig/amsterdown.svg?branch=master)](https://travis-ci.com/lcreteig/amsterdown)
+[![R-CMD-check](https://github.com/lcreteig/amsterdown/workflows/R-CMD-check/badge.svg)](https://github.com/lcreteig/amsterdown/actions)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Launch Rstudio

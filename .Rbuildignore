@@ -10,3 +10,4 @@
 ^pkgdown$
 ^vignettes$
 ^.binder$
+^\.github$
