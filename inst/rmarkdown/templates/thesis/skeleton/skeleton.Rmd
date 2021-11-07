@@ -93,11 +93,11 @@ output:
   bookdown::pdf_book: 
     template: template.tex
     keep_tex: yes
-    #pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
+    #pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from
+    citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output. https://www.zotero.org/styles, then fill in here
 indent: true # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
 bibliography: thesis.bib # bib-file containing bibliographic information on all works you want to cite
-citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output.
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
 ---
 
