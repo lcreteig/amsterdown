@@ -31,6 +31,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -50,16 +52,10 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../articles/amsterdown.html">Get started</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -77,7 +73,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sample output
      
     <span class="caret"></span>
@@ -94,13 +90,10 @@
     </li>
   </ul>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/lcreteig/amsterdown/">
+  <a href="https://github.com/lcreteig/amsterdown/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -121,7 +114,7 @@
       <h1 data-toc-skip>Tips &amp; Tricks</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/lcreteig/amsterdown/blob/master/vignettes/tips-tricks.Rmd"><code>vignettes/tips-tricks.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/lcreteig/amsterdown/blob/HEAD/vignettes/tips-tricks.Rmd" class="external-link"><code>vignettes/tips-tricks.Rmd</code></a></small>
       <div class="hidden name"><code>tips-tricks.Rmd</code></div>
 
     </div>
@@ -129,22 +122,22 @@
     
     
 <p>Here’s a list of a few extra issues you might run into while writing your thesis, and some potential solutions. Most of this is based on my own experience, so your mileage may vary. If I hear of any additional bottlenecks I’d be happy to include them.</p>
-<div id="microsoft-word" class="section level2">
-<h2 class="hasAnchor">
-<a href="#microsoft-word" class="anchor"></a>Microsoft Word</h2>
+<div class="section level2">
+<h2 id="microsoft-word">Microsoft Word<a class="anchor" aria-label="anchor" href="#microsoft-word"></a>
+</h2>
 <p>While writing the thesis, you might want to output it to a <code>.docx</code> file, say if your supervisors prefer to work with Microsoft Word instead. This is possible, although not all <code>bookdown</code> / RMarkdown features are supported. It will get you most of the way there, but you might have to edit the Word file a bit, or inform your supervisors that this is not exactly what the final version will look like.</p>
 <p>To render the whole thesis to one Word file, run the following:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"bookdown::word_document2"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html" class="external-link">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"bookdown::word_document2"</span><span class="op">)</span></code></pre></div>
 <p>You can also render a single chapter (e.g. if you want to send it out for feedback):</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># render chapter 2 to Word</span>
-<span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html">preview_chapter</a></span><span class="op">(</span><span class="st">"02-chapter.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"bookdown::word_document2"</span><span class="op">)</span></code></pre></div>
+<span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html" class="external-link">preview_chapter</a></span><span class="op">(</span><span class="st">"02-chapter.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"bookdown::word_document2"</span><span class="op">)</span></code></pre></div>
 <p>In both cases, you should now find a <code>thesis.docx</code> file in the output folder (<code>/_book/</code>) by default.</p>
 </div>
-<div id="switching-languages" class="section level2">
-<h2 class="hasAnchor">
-<a href="#switching-languages" class="anchor"></a>Switching languages</h2>
+<div class="section level2">
+<h2 id="switching-languages">Switching languages<a class="anchor" aria-label="anchor" href="#switching-languages"></a>
+</h2>
 <p>Some sections of the thesis will have to be in Dutch (i.e., the Dutch summary). In others (e.g., the acknowledgments), you might want to use another language of your choice. To make sure things like hyphenation will work properly, you should not just start typing in a different language, but encase all non-English text within special language tags.</p>
 <p>Here’s how you do it:</p>
 <pre><code>This paragraph uses the default language (English).
@@ -154,64 +147,64 @@
 :::
 
 This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now back to English.</code></pre>
-<p>Also see <a href="https://pandoc.org/MANUAL.html#language-variables">this entry in <code>pandoc</code>’s documentation</a> and the examples in the template’s Dutch Summary and Acknowledgments chapters.</p>
+<p>Also see <a href="https://pandoc.org/MANUAL.html#language-variables" class="external-link">this entry in <code>pandoc</code>’s documentation</a> and the examples in the template’s Dutch Summary and Acknowledgments chapters.</p>
 </div>
-<div id="figures-and-images" class="section level2">
-<h2 class="hasAnchor">
-<a href="#figures-and-images" class="anchor"></a>Figures and images</h2>
-<p>To render image/figure files, I’d recommend <code><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">knitr::include_graphics()</a></code>.</p>
+<div class="section level2">
+<h2 id="figures-and-images">Figures and images<a class="anchor" aria-label="anchor" href="#figures-and-images"></a>
+</h2>
+<p>To render image/figure files, I’d recommend <code><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html" class="external-link">knitr::include_graphics()</a></code>.</p>
 <p>This allows you to include both bitmap and vector versions of the same figure. Most commonly this would be, a <code>.png</code> (bitmap) version of the figure for <code>html</code> output, and a <code>.pdf</code> (vector) figure for the <code>pdf</code> version of the thesis. The <code>auto_pdf</code> option will insert the figure in vector format for pdf output automatically, or use the specified figure otherwise (in bitmap). For example:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html">include_graphics</a></span><span class="op">(</span><span class="st">"figures/my_figure.png"</span>, auto_pdf <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html" class="external-link">include_graphics</a></span><span class="op">(</span><span class="st">"figures/my_figure.png"</span>, auto_pdf <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="tables" class="section level2">
-<h2 class="hasAnchor">
-<a href="#tables" class="anchor"></a>Tables</h2>
-<p>Simpler tables can be inserted in <a href="https://pandoc.org/MANUAL.html#tables">Markdown</a>, or created from R data frames using the <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">knitr::kable()</a></code> function. More complex tables (with row/column-spanners, formatting inside the table, etc.) can be created with R packages such as <a href="https://github.com/crsh/papaja">papaja</a> (for <a href="https://apastyle.apa.org/">APA style</a>) or <a href="http://haozhu233.github.io/kableExtra/">kableExtra</a> (for pretty much anything you might want).</p>
+<div class="section level2">
+<h2 id="tables">Tables<a class="anchor" aria-label="anchor" href="#tables"></a>
+</h2>
+<p>Simpler tables can be inserted in <a href="https://pandoc.org/MANUAL.html#tables" class="external-link">Markdown</a>, or created from R data frames using the <code><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">knitr::kable()</a></code> function. More complex tables (with row/column-spanners, formatting inside the table, etc.) can be created with R packages such as <a href="https://github.com/crsh/papaja" class="external-link">papaja</a> (for <a href="https://apastyle.apa.org/" class="external-link">APA style</a>) or <a href="http://haozhu233.github.io/kableExtra/" class="external-link">kableExtra</a> (for pretty much anything you might want).</p>
 </div>
-<div id="citation-styles" class="section level2">
-<h2 class="hasAnchor">
-<a href="#citation-styles" class="anchor"></a>Citation styles</h2>
-<p>Citations are handled by <a href="https://pandoc.org/MANUAL.html#citations">pandoc</a> (using the <code>citeproc</code> extension) by default. The <a href="https://citationstyles.org/">citation style</a> (e.g., MLA, APA, Chicago, but also according to specific journals) can be customized by downloading the corresponding <code>.csl</code> file from the <a href="https://www.zotero.org/styles">Zotero Style Repository</a>. For example, to use APA style (through <code>apa.csl</code>, placed in the root directory of your thesis), add the following YAML line to <code>index.Rmd</code>, underneath whatever output you want to use the style for (<code><a href="https://pkgs.rstudio.com/bookdown/reference/pdf_book.html">bookdown::pdf_book()</a></code> or <code><a href="https://pkgs.rstudio.com/bookdown/reference/gitbook.html">bookdown::gitbook()</a></code>):</p>
+<div class="section level2">
+<h2 id="citation-styles">Citation styles<a class="anchor" aria-label="anchor" href="#citation-styles"></a>
+</h2>
+<p>Citations are handled by <a href="https://pandoc.org/MANUAL.html#citations" class="external-link">pandoc</a> (using the <code>citeproc</code> extension) by default. The <a href="https://citationstyles.org/" class="external-link">citation style</a> (e.g., MLA, APA, Chicago, but also according to specific journals) can be customized by downloading the corresponding <code>.csl</code> file from the <a href="https://www.zotero.org/styles" class="external-link">Zotero Style Repository</a>. For example, to use APA style (through <code>apa.csl</code>, placed in the root directory of your thesis), add the following YAML line to <code>index.Rmd</code>, underneath whatever output you want to use the style for (<code><a href="https://pkgs.rstudio.com/bookdown/reference/pdf_book.html" class="external-link">bookdown::pdf_book()</a></code> or <code><a href="https://pkgs.rstudio.com/bookdown/reference/gitbook.html" class="external-link">bookdown::gitbook()</a></code>):</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># N.B. the template already contains this line, but it is commented out</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="fu">pandoc_args</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> </span><span class="st">"--csl"</span><span class="kw">,</span><span class="at"> </span><span class="st">"apa.csl"</span><span class="at"> </span><span class="kw">]</span></span></code></pre></div>
-<p>If you want to customize the output further, you could consider using a LaTeX package, such as <a href="https://ctan.org/pkg/biblatex?lang=en">biblatex</a> instead of <code>pandoc-citeproc</code> (Also see <a href="https://github.com/lcreteig/thesis">my PhD thesis</a>, which used <code>biblatex</code>). This will offer you much more flexibility, at the expense of complexity, and it will only work for pdf outputs. To do that, add the following line (indented under <code><a href="https://pkgs.rstudio.com/bookdown/reference/pdf_book.html">bookdown::pdf_book()</a></code>) to <code>index.Rmd</code> instead:</p>
+<p>If you want to customize the output further, you could consider using a LaTeX package, such as <a href="https://ctan.org/pkg/biblatex?lang=en" class="external-link">biblatex</a> instead of <code>pandoc-citeproc</code> (Also see <a href="https://github.com/lcreteig/thesis" class="external-link">my PhD thesis</a>, which used <code>biblatex</code>). This will offer you much more flexibility, at the expense of complexity, and it will only work for pdf outputs. To do that, add the following line (indented under <code><a href="https://pkgs.rstudio.com/bookdown/reference/pdf_book.html" class="external-link">bookdown::pdf_book()</a></code>) to <code>index.Rmd</code> instead:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">output</span><span class="kw">:</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="at">  bookdown:</span><span class="fu">:pdf_book</span><span class="kw">:</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="at">    </span><span class="fu">citation_package</span><span class="kw">:</span><span class="at"> biblatex</span></span></code></pre></div>
 </div>
-<div id="conditional-output-html-vs--pdf" class="section level2">
-<h2 class="hasAnchor">
-<a href="#conditional-output-html-vs--pdf" class="anchor"></a>Conditional output (html vs. pdf)</h2>
+<div class="section level2">
+<h2 id="conditional-output-html-vs--pdf">Conditional output (html vs. pdf)<a class="anchor" aria-label="anchor" href="#conditional-output-html-vs--pdf"></a>
+</h2>
 <p>Sometimes you might want a certain section of the thesis (a paragraph, a figure, or even a whole chapter) to occur only in the html (or pdf) version of the thesis, but not in the other. For example, for the <code>amsterdown</code> template, the “Preface” chapter (<code>_00-preface.Rmd</code>) is only included in the html version, not in pdf (check out <code>index.Rmd</code> to see how this is done).</p>
-<p>You can use the <code><a href="https://rdrr.io/pkg/knitr/man/output_type.html">knitr::is_html_output()</a></code> and <code><a href="https://rdrr.io/pkg/knitr/man/output_type.html">knitr::is_latex_output()</a></code> functions for this purpose. These are conditionals that return <code>TRUE</code> only when the output format you are rendering to is html/latex.</p>
+<p>You can use the <code><a href="https://rdrr.io/pkg/knitr/man/output_type.html" class="external-link">knitr::is_html_output()</a></code> and <code><a href="https://rdrr.io/pkg/knitr/man/output_type.html" class="external-link">knitr::is_latex_output()</a></code> functions for this purpose. These are conditionals that return <code>TRUE</code> only when the output format you are rendering to is html/latex.</p>
 <p>For example, to include a section of text only in html, you can use some <a href="#inline-code">Inline R code</a>:</p>
 <p><code>`r if (knitr::is_html_output()) ' This text will not show when rendering to pdf '`</code></p>
-<p>Or, to only run a code chunk (say, that includes a figure) for the pdf version, you can conditionally evaluate it using <a href="https://yihui.name/knitr/options/">chunk options</a>:</p>
+<p>Or, to only run a code chunk (say, that includes a figure) for the pdf version, you can conditionally evaluate it using <a href="https://yihui.name/knitr/options/" class="external-link">chunk options</a>:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="bn">```{r include = knitr::is_latex_output()}</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="bn">knitr::include_graphics("my_fig.pdf") # this figure will be omitted from the html</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="bn">```</span></span></code></pre></div>
 </div>
-<div id="float-positions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#float-positions" class="anchor"></a>Float positions</h2>
+<div class="section level2">
+<h2 id="float-positions">Float positions<a class="anchor" aria-label="anchor" href="#float-positions"></a>
+</h2>
 <p>LaTeX puts things like figures and tables—that cannot be broken over multiple pages—inside <em>floating environments</em>, or <em>floats</em> for short. LaTeX is smart about figuring out the best positions for <em>floats</em>, but it’s bound to not always work: once in a while it’s gonna place a figure earlier or later than you’d like.</p>
-<p>You can use the <code>fig.pos</code> chunk option to guide the placement of figures in floats. See a list of all the <em>placement specifiers</em> <a href="https://www.overleaf.com/learn/latex/Positioning_of_Figures">here</a>. For tables, you’ll have to use a package like <a href="http://haozhu233.github.io/kableExtra/">kableExtra</a> to achieve the same.</p>
+<p>You can use the <code>fig.pos</code> chunk option to guide the placement of figures in floats. See a list of all the <em>placement specifiers</em> <a href="https://www.overleaf.com/learn/latex/Positioning_of_Figures" class="external-link">here</a>. For tables, you’ll have to use a package like <a href="http://haozhu233.github.io/kableExtra/" class="external-link">kableExtra</a> to achieve the same.</p>
 <p>For example, to try and place a figure “here” (i.e., close to where you put the command in the source text), try the <code>h</code> option:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="bn">```{r fig.cap='test', out.width='100%', fig.pos='h'}</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="bn">knitr::include_graphics("my_fig.png")</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="bn">```</span></span></code></pre></div>
-<p>(Note that you may need to also specify <a href="https://stackoverflow.com/a/43245550">some other chunk options</a> for <code>fig.pos</code> to become active)</p>
+<p>(Note that you may need to also specify <a href="https://stackoverflow.com/a/43245550" class="external-link">some other chunk options</a> for <code>fig.pos</code> to become active)</p>
 </div>
-<div id="long-titles-in-page-headers" class="section level2">
-<h2 class="hasAnchor">
-<a href="#long-titles-in-page-headers" class="anchor"></a>Long titles in page headers</h2>
+<div class="section level2">
+<h2 id="long-titles-in-page-headers">Long titles in page headers<a class="anchor" aria-label="anchor" href="#long-titles-in-page-headers"></a>
+</h2>
 <p>A book-style document usually has the current chapter/section title in the upper portion of the page (the “header”). If the title of a particular chapter is really long, this might cause the title to run off the page in the header.</p>
 <p>To fix this, you can use the LaTeX <code>\chaptermark{}</code> command and put it beneath the title of the chapter (see the example in Chapter 2 of the template). Specify a shorter title for the chapter within the curly braces: this short title will then be used for the headers.</p>
 </div>
-<div id="inline-code" class="section level2">
-<h2 class="hasAnchor">
-<a href="#inline-code" class="anchor"></a>Inline code</h2>
+<div class="section level2">
+<h2 id="inline-code">Inline code<a class="anchor" aria-label="anchor" href="#inline-code"></a>
+</h2>
 <p>Inline code allows you to include the output of your R code (e.g. statistical tests) within the text of your thesis. It is a lot easier and more reproducible than inserting results by hand!</p>
 <p>You can do this using the following syntax: <code>`r &lt;your R code here&gt;`</code>.</p>
 <p>For example:</p>
@@ -220,19 +213,19 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 <blockquote>
 <p>We included 25% of patients…</p>
 </blockquote>
-<p>Often the result you’ll you want to insert will already be assigned to a variable, in which case you can simply call the variable in your inline code: <code>`r &lt;your variable&gt;`</code>. Checkout the <a href="https://github.com/crsh/papaja">papaja</a> package for some awesome functions that will insert statistical results in APA style.</p>
+<p>Often the result you’ll you want to insert will already be assigned to a variable, in which case you can simply call the variable in your inline code: <code>`r &lt;your variable&gt;`</code>. Checkout the <a href="https://github.com/crsh/papaja" class="external-link">papaja</a> package for some awesome functions that will insert statistical results in APA style.</p>
 </div>
-<div id="non-r-code-e-g--python" class="section level2">
-<h2 class="hasAnchor">
-<a href="#non-r-code-e-g--python" class="anchor"></a>Non-R code (e.g. Python)</h2>
-<p>If you want to run code in other languages in a chunk (e.g. Python), all you need to do is replace <code>r</code> in the chunk options with <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html">another language engine</a>:</p>
+<div class="section level2">
+<h2 id="non-r-code-e-g--python">Non-R code (e.g. Python)<a class="anchor" aria-label="anchor" href="#non-r-code-e-g--python"></a>
+</h2>
+<p>If you want to run code in other languages in a chunk (e.g. Python), all you need to do is replace <code>r</code> in the chunk options with <a href="https://bookdown.org/yihui/rmarkdown/language-engines.html" class="external-link">another language engine</a>:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1"></a><span class="bn">```{python}</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="bn"># Now you can write python code</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="bn">python_number = 20+4</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a><span class="bn">```</span></span></code></pre></div>
-<p>If you’re using Python, definitely checkout the <a href="https://rstudio.github.io/reticulate/">reticulate</a> package, which provides a lot of functionality for using Python in R. For example, you can access Python variables (like the one we created above) within your R session using the <code>py$&lt;my variable&gt;</code> syntax:</p>
+<p>If you’re using Python, definitely checkout the <a href="https://rstudio.github.io/reticulate/" class="external-link">reticulate</a> package, which provides a lot of functionality for using Python in R. For example, you can access Python variables (like the one we created above) within your R session using the <code>py$&lt;my variable&gt;</code> syntax:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/reticulate">reticulate</a></span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/reticulate/" class="external-link">reticulate</a></span><span class="op">)</span>
 <span class="va">py</span><span class="op">$</span><span class="va">python_number</span>
 <span class="co">#&gt; [1] 24</span></code></pre></div>
 <p>You can also use this principle to insert <a href="#inline-code">Inline code</a>: <code>`r py$python_number`</code></p>
@@ -250,11 +243,13 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://lcreteig.github.io">Leon Reteig</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://lcreteig.github.io" class="external-link">Leon Reteig</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -262,6 +257,8 @@ This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now b
 
   
 
+
+  
 
   </body>
 </html>

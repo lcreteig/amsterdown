@@ -1,10 +1,10 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1
+pkgdown: 2.0.3
 pkgdown_sha: ~
 articles:
   amsterdown: amsterdown.html
   customization: customization.html
   publishing: publishing.html
   tips-tricks: tips-tricks.html
-last_built: 2021-11-07T16:10Z
+last_built: 2022-05-14T12:33Z
 

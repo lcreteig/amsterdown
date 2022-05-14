@@ -31,6 +31,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -50,16 +52,10 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../articles/amsterdown.html">Get started</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -77,7 +73,7 @@
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Sample output
      
     <span class="caret"></span>
@@ -94,13 +90,10 @@
     </li>
   </ul>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/lcreteig/amsterdown/">
+  <a href="https://github.com/lcreteig/amsterdown/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -121,7 +114,7 @@
       <h1 data-toc-skip>Publishing your thesis online (HTML)</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/lcreteig/amsterdown/blob/master/vignettes/publishing.Rmd"><code>vignettes/publishing.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/lcreteig/amsterdown/blob/HEAD/vignettes/publishing.Rmd" class="external-link"><code>vignettes/publishing.Rmd</code></a></small>
       <div class="hidden name"><code>publishing.Rmd</code></div>
 
     </div>
@@ -129,24 +122,24 @@
     
     
 <p>One of the nice things about <code>bookdown</code> is that, next to the pdf version of your thesis that you’ll need for printing anyway, you get a html version as well, with little to no extra effort! You can easily share this version of your thesis online <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. There are an infinite number of possibilities to make a website of course nowadays, but here’s three ways to get your thesis online with as little fuss as possible.</p>
-<div id="netlify-drag-and-drop" class="section level3">
-<h3 class="hasAnchor">
-<a href="#netlify-drag-and-drop" class="anchor"></a>1. Netlify (drag-and-drop)</h3>
-<p>After rendering your thesis, you should have a <code>/_book</code> folder containing a lot of html files. If you go to <a href="https://app.netlify.com/drop" class="uri">https://app.netlify.com/drop</a>, you can simply drag and drop this folder from your computer to this site. That’s it, your thesis is now online! The only thing that’s left is to make an account on Netlify, to claim the site as your own and to get a more stable url.</p>
+<div class="section level3">
+<h3 id="netlify-drag-and-drop">1. Netlify (drag-and-drop)<a class="anchor" aria-label="anchor" href="#netlify-drag-and-drop"></a>
+</h3>
+<p>After rendering your thesis, you should have a <code>/_book</code> folder containing a lot of html files. If you go to <a href="https://app.netlify.com/drop" class="external-link uri">https://app.netlify.com/drop</a>, you can simply drag and drop this folder from your computer to this site. That’s it, your thesis is now online! The only thing that’s left is to make an account on Netlify, to claim the site as your own and to get a more stable url.</p>
 </div>
-<div id="bookdown-server" class="section level3">
-<h3 class="hasAnchor">
-<a href="#bookdown-server" class="anchor"></a>2. Bookdown server</h3>
-<p>There’s also a dedicated RStudio server for hosting books made with <code>bookdown</code> at <a href="https://bookdown.org/" class="uri">https://bookdown.org/</a>. All you have to do is sign-up at <a href="https://bookdown.org/connect/" class="uri">https://bookdown.org/connect/</a>. Afterwards, run the <code><a href="https://pkgs.rstudio.com/bookdown/reference/publish_book.html">bookdown::publish_book()</a></code> function from the root folder of your thesis, and you should be all set. See <a href="https://bookdown.org/yihui/bookdown/rstudio-connect.html">this page in the bookdown manual</a> for more information.</p>
+<div class="section level3">
+<h3 id="bookdown-server">2. Bookdown server<a class="anchor" aria-label="anchor" href="#bookdown-server"></a>
+</h3>
+<p>There’s also a dedicated RStudio server for hosting books made with <code>bookdown</code> at <a href="https://bookdown.org/" class="external-link uri">https://bookdown.org/</a>. All you have to do is sign-up at <a href="https://bookdown.org/connect/" class="external-link uri">https://bookdown.org/connect/</a>. Afterwards, run the <code><a href="https://pkgs.rstudio.com/bookdown/reference/publish_book.html" class="external-link">bookdown::publish_book()</a></code> function from the root folder of your thesis, and you should be all set. See <a href="https://bookdown.org/yihui/bookdown/rstudio-connect.html" class="external-link">this page in the bookdown manual</a> for more information.</p>
 </div>
-<div id="github-pages" class="section level3">
-<h3 class="hasAnchor">
-<a href="#github-pages" class="anchor"></a>3. GitHub Pages</h3>
+<div class="section level3">
+<h3 id="github-pages">3. GitHub Pages<a class="anchor" aria-label="anchor" href="#github-pages"></a>
+</h3>
 <p>Writing your thesis as a <code>bookdown</code> book makes it very suitable to version control, as all the <code>.Rmd</code> and associated files that make up the thesis are simply plain text files. If you’re a bit familiar with git and/or GitHub, I’d therefore highly recommend to create a git repository for your thesis: it can be very nice to easily switch back to a previous version.</p>
-<p>If you’re using git/GitHub for your thesis anyway, it’s only a small extra step to publish the thesis via GitHub Pages. Again, see the <a href="https://bookdown.org/yihui/bookdown/github.html">bookdown manual</a> for more info, but it boils down to the following steps:</p>
+<p>If you’re using git/GitHub for your thesis anyway, it’s only a small extra step to publish the thesis via GitHub Pages. Again, see the <a href="https://bookdown.org/yihui/bookdown/github.html" class="external-link">bookdown manual</a> for more info, but it boils down to the following steps:</p>
 <ol style="list-style-type: decimal">
 <li>Add the line <code>output_dir: "docs"</code> to your <code>_bookdown.yml</code> file, which will put the rendered version of your thesis into a directory called <code>/docs</code> (instead of the default <code>/_book</code>).</li>
-<li>In the <code>docs</code> folder, create an empty file called <code>.nojekyll</code>. This tells GitHub Pages not to try and use its <a href="https://jekyllrb.com/">Jekyll</a> framework to create the site; we don’t need that if we’re using <code>bookdown</code>.</li>
+<li>In the <code>docs</code> folder, create an empty file called <code>.nojekyll</code>. This tells GitHub Pages not to try and use its <a href="https://jekyllrb.com/" class="external-link">Jekyll</a> framework to create the site; we don’t need that if we’re using <code>bookdown</code>.</li>
 <li>Render your book and push to GitHub.</li>
 <li>Go to your GitHub repository in a web browser (e.g. <code>github.com/&lt;username&gt;/&lt;repository&gt;</code>). Click “Settings”, scroll down to the “GitHub Pages” section, and under “Source”, select <code>master branch /docs folder</code>. Give it a little bit of time, and then a website with your thesis should be live at <code>&lt;username&gt;.github.io/&lt;repository&gt;</code>!</li>
 </ol>
@@ -154,7 +147,7 @@
 <div class="footnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Of course, you can put the pdf online as well (e.g. in a place like <a href="https://thesiscommons.org/" class="uri">https://thesiscommons.org/</a>), and in fact you have to publicly archive the pdf in the <a href="https://dare.uva.nl/">UvA-DARE repository</a>. But the html is much nicer to browse through digitally.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Of course, you can put the pdf online as well (e.g. in a place like <a href="https://thesiscommons.org/" class="external-link uri">https://thesiscommons.org/</a>), and in fact you have to publicly archive the pdf in the <a href="https://dare.uva.nl/" class="external-link">UvA-DARE repository</a>. But the html is much nicer to browse through digitally.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
   </div>
@@ -168,11 +161,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://lcreteig.github.io">Leon Reteig</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://lcreteig.github.io" class="external-link">Leon Reteig</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -180,6 +175,8 @@
 
   
 
+
+  
 
   </body>
 </html>
