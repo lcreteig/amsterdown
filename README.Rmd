@@ -86,3 +86,12 @@ This project was inspired by other RMarkdown PhD thesis templates that use [`boo
 * Chester Ismay's [thesisdown](https://github.com/ismayc/thesisdown) for Reed College 
 * Ben Marwick's [huskydown](https://github.com/benmarwick/huskydown) for the University of Washington
 * Ulrik Lyng's [oxforddown](https://github.com/ulyngs/oxforddown) for Oxford University
+
+## PhD theses that have used this template
+
+| **User** :nerd_face:                              | **University** :school:   | **Link** :link:                                                          |         
+|---------------------------------------------------|---------------------------|--------------------------------------------------------------------------|
+| [noorseijdel](https://github.com/noorseijdel)     | University of Amsterdam   | [noorseijdel.github.io/thesis](https://noorseijdel.github.io/thesis)     |
+| [LDSamson](https://github.com/LDSamson)           | University of Groningen   | [ldsamson.github.io/Thesis/](https://ldsamson.github.io/Thesis/)         |
+| [lukassnoek](https://github.com/lukassnoek)       | University of Amsterdam   | [lukassnoek/thesis](https://github.com/lukassnoek/thesis)                |
+| [BenGoudsmit](https://github.com/BenGoudsmit)     | University of Leiden      | [BenGoudsmit/Thesis](https://github.com/BenGoudsmit/Thesis)              |

@@ -32,18 +32,17 @@ printing your thesis.
 
 This template is an easy way to get started, by:
 
-  - Providing a common and complete structure for the thesis, including
+-   Providing a common and complete structure for the thesis, including
     appendices, acknowledgments, etc.
-  - Removing the need to write any LaTeX commands yourself (or at least,
+-   Removing the need to write any LaTeX commands yourself (or at least,
     prolonging it as long as possible).
-  - Making sure you adhere to the University of Amsterdam thesis
+-   Making sure you adhere to the University of Amsterdam thesis
     requirements.
 
 ## Installation
 
 `amsterdown` is not (yet) available on CRAN, so install it from
-[GitHub](https://github.com/)
-with:
+[GitHub](https://github.com/) with:
 
 ``` r
 if(!require(devtools)) install.packages("devtools") # devtools package allows installation of packages from github
@@ -123,9 +122,18 @@ to a LaTex distribution).
 This project was inspired by other RMarkdown PhD thesis templates that
 use [`bookdown`](https://bookdown.org/yihui/bookdown/), notably:
 
-  - Chester Ismay’s [thesisdown](https://github.com/ismayc/thesisdown)
+-   Chester Ismay’s [thesisdown](https://github.com/ismayc/thesisdown)
     for Reed College
-  - Ben Marwick’s [huskydown](https://github.com/benmarwick/huskydown)
+-   Ben Marwick’s [huskydown](https://github.com/benmarwick/huskydown)
     for the University of Washington
-  - Ulrik Lyng’s [oxforddown](https://github.com/ulyngs/oxforddown) for
+-   Ulrik Lyng’s [oxforddown](https://github.com/ulyngs/oxforddown) for
     Oxford University
+
+## PhD theses that have used this template
+
+| **User** :nerd_face:                          | **University** :school: | **Link** :link:                                                      |
+|-----------------------------------------------|-------------------------|----------------------------------------------------------------------|
+| [noorseijdel](https://github.com/noorseijdel) | University of Amsterdam | [noorseijdel.github.io/thesis](https://noorseijdel.github.io/thesis) |
+| [LDSamson](https://github.com/LDSamson)       | University of Groningen | [ldsamson.github.io/Thesis/](https://ldsamson.github.io/Thesis/)     |
+| [lukassnoek](https://github.com/lukassnoek)   | University of Amsterdam | [lukassnoek/thesis](https://github.com/lukassnoek/thesis)            |
+| [BenGoudsmit](https://github.com/BenGoudsmit) | University of Leiden    | [BenGoudsmit/Thesis](https://github.com/BenGoudsmit/Thesis)          |
