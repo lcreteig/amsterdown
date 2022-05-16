@@ -204,37 +204,38 @@ $if(dir)$
 \fi
 $endif$
 
-% LCR fix for new required cslreferences environment in pandoc
-% from https://github.com/rstudio/rticles/pull/335/commits/a9937b6
-% originally proposed by LS: https://github.com/LDSamson/amsterdown/commit/4d9841e
-% Pandoc citation processing
+% LCR: fix for new required cslreferences environment in pandoc
+% from https://github.com/rstudio/rticles/blob/81bb6816a42797f66fbbc6d7c92ffd8216783ed3/inst/rmarkdown/templates/elsevier/resources/template.tex#L146-L177
 $if(csl-refs)$
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
+% Pandoc citation processing
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
 % for Pandoc 2.8 to 2.10.1
 \newenvironment{cslreferences}%
   {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
   {\par}
 % For Pandoc 2.11+
-\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry sp
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set line spacing
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#3\baselineskip}
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
   \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
  }%
  {}
-\usepackage{calc} % for \widthof, \maxof
+\usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth}{#1}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 $endif$
 
