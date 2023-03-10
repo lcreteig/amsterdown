@@ -127,8 +127,8 @@
 </h2>
 <p><code>amsterdown</code> is not (yet) available on CRAN, so install it from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> <span class="co"># devtools package allows installation of packages from github</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lcreteig/amsterdown"</span><span class="op">)</span> <span class="co"># install amsterdown from github</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span> <span class="co"># devtools package allows installation of packages from github</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lcreteig/amsterdown"</span><span class="op">)</span> <span class="co"># install amsterdown from github</span></span></code></pre></div>
 <p>If you just want a peek at the template without installing it as an R package, check out the folder with all the files <a href="https://github.com/lcreteig/amsterdown/tree/master/inst/rmarkdown/templates/thesis/skeleton" class="external-link">here on Github</a>.</p>
 <p>Alternatively, to try out using the template without having to install anything locally, click this button to launch an RStudio session with everything you need pre-installed: <a href="https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio" class="external-link"><img src="http://mybinder.org/badge_logo.svg" alt="Launch Rstudio Binder"></a> Then simply follow the <a href="#usage">Usage</a> instructions below.</p>
 </div>
@@ -140,15 +140,15 @@
 <p>Click “Build Book” from the Build pane to render the thesis to an output format of your choosing.</p>
 <p>Or, (e.g., if you’re not using the RStudio IDE), run the following lines of R code to render the template:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span>
-                 template <span class="op">=</span> <span class="st">'thesis'</span>, package <span class="op">=</span> <span class="st">'amsterdown'</span>, 
-                 create_dir <span class="op">=</span> <span class="cn">TRUE</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> 
-<span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="st">"index"</span><span class="op">)</span> <span class="co"># navigate to new directory</span>
-<span class="co"># render the thesis template to all output formats</span>
-<span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html" class="external-link">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> 
-<span class="co"># or</span>
-<span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::gitbook') # to render to html</span>
-<span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/draft.html" class="external-link">draft</a></span><span class="op">(</span><span class="st">'index.Rmd'</span>, <span class="co"># create new draft based off template</span></span>
+<span>                 template <span class="op">=</span> <span class="st">'thesis'</span>, package <span class="op">=</span> <span class="st">'amsterdown'</span>, </span>
+<span>                 create_dir <span class="op">=</span> <span class="cn">TRUE</span>, edit <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="st">"index"</span><span class="op">)</span> <span class="co"># navigate to new directory</span></span>
+<span><span class="co"># render the thesis template to all output formats</span></span>
+<span><span class="fu">bookdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/bookdown/reference/render_book.html" class="external-link">render_book</a></span><span class="op">(</span><span class="st">"index.Rmd"</span>, output_format <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> </span>
+<span><span class="co"># or</span></span>
+<span><span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::gitbook') # to render to html</span></span>
+<span><span class="co">#bookdown::render_book("index.Rmd", output_format = 'bookdown::pdf_book') # to render to PDF</span></span></code></pre></div>
 <p>See the <a href="https://lcreteig.github.io/amsterdown/articles/amsterdown.html" class="external-link">package documentation</a> for more detailed instructions and further information.</p>
 </div>
 <div class="section level2">
@@ -206,6 +206,16 @@
 <td><a href="https://github.com/BenGoudsmit" class="external-link">BenGoudsmit</a></td>
 <td>University of Leiden</td>
 <td><a href="https://github.com/BenGoudsmit/Thesis" class="external-link">BenGoudsmit/Thesis</a></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/Leo4Luffy" class="external-link">Leo4Luffy</a></td>
+<td>Universitat Autònoma de Barcelona</td>
+<td><a href="https://leo4luffy.github.io/Repo_TFM/Escrito/TFM.pdf" class="external-link">Leo4Luffy/Repo_TFM</a></td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/lynnsoerensen" class="external-link">lynnsoerensen</a></td>
+<td>University of Amsterdam</td>
+<td><a href="https://dare.uva.nl/search?identifier=4f39681f-920d-4334-9bcf-f5d2b6ec1322" class="external-link">UvA-DARE</a></td>
 </tr>
 </tbody>
 </table>
@@ -268,7 +278,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
