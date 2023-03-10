@@ -32,12 +32,12 @@ printing your thesis.
 
 This template is an easy way to get started, by:
 
--   Providing a common and complete structure for the thesis, including
-    appendices, acknowledgments, etc.
--   Removing the need to write any LaTeX commands yourself (or at least,
-    prolonging it as long as possible).
--   Making sure you adhere to the University of Amsterdam thesis
-    requirements.
+- Providing a common and complete structure for the thesis, including
+  appendices, acknowledgments, etc.
+- Removing the need to write any LaTeX commands yourself (or at least,
+  prolonging it as long as possible).
+- Making sure you adhere to the University of Amsterdam thesis
+  requirements.
 
 ## Installation
 
@@ -122,18 +122,20 @@ to a LaTex distribution).
 This project was inspired by other RMarkdown PhD thesis templates that
 use [`bookdown`](https://bookdown.org/yihui/bookdown/), notably:
 
--   Chester Ismay’s [thesisdown](https://github.com/ismayc/thesisdown)
-    for Reed College
--   Ben Marwick’s [huskydown](https://github.com/benmarwick/huskydown)
-    for the University of Washington
--   Ulrik Lyng’s [oxforddown](https://github.com/ulyngs/oxforddown) for
-    Oxford University
+- Chester Ismay’s [thesisdown](https://github.com/ismayc/thesisdown) for
+  Reed College
+- Ben Marwick’s [huskydown](https://github.com/benmarwick/huskydown) for
+  the University of Washington
+- Ulrik Lyng’s [oxforddown](https://github.com/ulyngs/oxforddown) for
+  Oxford University
 
 ## PhD theses that have used this template
 
-| **User** :nerd_face:                          | **University** :school: | **Link** :link:                                                      |
-|-----------------------------------------------|-------------------------|----------------------------------------------------------------------|
-| [noorseijdel](https://github.com/noorseijdel) | University of Amsterdam | [noorseijdel.github.io/thesis](https://noorseijdel.github.io/thesis) |
-| [LDSamson](https://github.com/LDSamson)       | University of Groningen | [ldsamson.github.io/Thesis/](https://ldsamson.github.io/Thesis/)     |
-| [lukassnoek](https://github.com/lukassnoek)   | University of Amsterdam | [lukassnoek/thesis](https://github.com/lukassnoek/thesis)            |
-| [BenGoudsmit](https://github.com/BenGoudsmit) | University of Leiden    | [BenGoudsmit/Thesis](https://github.com/BenGoudsmit/Thesis)          |
+| **User** :nerd_face:                              | **University** :school:           | **Link** :link:                                                                        |
+|---------------------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------|
+| [noorseijdel](https://github.com/noorseijdel)     | University of Amsterdam           | [noorseijdel.github.io/thesis](https://noorseijdel.github.io/thesis)                   |
+| [LDSamson](https://github.com/LDSamson)           | University of Groningen           | [ldsamson.github.io/Thesis/](https://ldsamson.github.io/Thesis/)                       |
+| [lukassnoek](https://github.com/lukassnoek)       | University of Amsterdam           | [lukassnoek/thesis](https://github.com/lukassnoek/thesis)                              |
+| [BenGoudsmit](https://github.com/BenGoudsmit)     | University of Leiden              | [BenGoudsmit/Thesis](https://github.com/BenGoudsmit/Thesis)                            |
+| [Leo4Luffy](https://github.com/Leo4Luffy)         | Universitat Autònoma de Barcelona | [Leo4Luffy/Repo_TFM](https://leo4luffy.github.io/Repo_TFM/Escrito/TFM.pdf)             |
+| [lynnsoerensen](https://github.com/lynnsoerensen) | University of Amsterdam           | [UvA-DARE](https://dare.uva.nl/search?identifier=4f39681f-920d-4334-9bcf-f5d2b6ec1322) |
