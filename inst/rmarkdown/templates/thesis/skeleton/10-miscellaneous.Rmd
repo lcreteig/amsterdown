@@ -1,0 +1,6 @@
+# Miscellaneous {-}
+\chaptermark{Miscellaneous}
+
+Sometimes more chapters are added to the back matter, such as a short CV of the author, or a list of publications that did not make it into the thesis (but that you've co-authored, for instance).
+
+I've included the latter in [my PhD thesis](https://lcreteig.github.io/thesis/), if you're looking for some inspiration (or check out [any of the other theses](https://github.com/lcreteig/amsterdown#phd-theses-that-have-used-this-template) that have used `amsterdown`).

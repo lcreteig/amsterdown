@@ -1,0 +1,30 @@
+# Contributions to the chapters {-}
+\chaptermark{Contributions to chapters}
+\setlength{\parindent}{0pt}
+
+_If your thesis consists of or contains articles that have co-authors, you have to include a page with a reference list, which names all of the contributing authors and specifies their contribution. See an example below, where the contributions are specified according to the_ CRediT _system_ [Contributor Roles Taxonomy; <https://www.casrai.org/credit.html>; @Brand2015].
+
+---
+
+__Chapter \@ref(math-stuff)__, published as:
+
+Doctor, P.H. & Zonnebloem, T. (2017). A rather short paper. _Journal of Illustrious Numbers, 43_, 737–777.
+
+- __P.H. Doctor__: Conceptualization, Formal Analysis, Project Administration, Resources, Writing - original draft.
+- __T. Zonnebloem__: Conceptualization, Funding Acquisition, Project Administration, Supervision, Writing - review & editing.
+
+`\begin{list}{}{\leftmargin=1.5em\rightmargin=0pt}`{=latex}
+`\item`{=latex}
+  I also thank Professor Oak for providing useful feedback on the pre-publication manuscript.
+`\end{list}`{=latex}
+
+__Chapter \@ref(science-is-better-now)__, in preparation as:
+
+Doctor, P.H., Jones, H., Wortel, W. & Zonnebleom, T. (2018). Science is better now. _Frontiers in Science_ 14:905.
+
+- __P.H. Doctor__: Conceptualization, Methodology, Project administration, Validation, Visualization, Writing - original draft. 
+- __H. Jones__: Methodology, Supervision, Validation, Writing - review & editing.
+- __W. Wortel__: Resources, Writing - review & editing.
+- __T. Zonnebloem__: Funding acquisition, Project administration, Supervision, Writing - review & editing.
+
+\setlength{\parindent}{1.5em}
