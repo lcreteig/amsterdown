@@ -1,4 +1,4 @@
-# This is a rather long title for such a small chapter, don't you think?
+# This is a rather long title for such a small chapter, don't you think? {#math-stuff}
 <!-- Write a shorter-title in \chaptermark if necessary. This will be used for the page header-->
 \chaptermark{A long title}
 
