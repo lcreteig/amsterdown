@@ -10,8 +10,6 @@ date: "maandag 21 oktober 2019" # Your defense date in Dutch: "[weekday] [day in
 aula: true # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
 time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
 birthplace: "Parijs" # your place of birth, in Dutch
-country_of_birth: "Frankrijk" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
-
 
 ### Colophon 
 # Can be skipped entirely, but if you define FUNDER, this will read: 
