@@ -1,3 +1,5 @@
+# amsterdown (development version)
+
 # amsterdown 0.1.0
 
 Update of the template with (new) thesis requirements (#18):
