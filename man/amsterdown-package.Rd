@@ -4,17 +4,11 @@
 \name{amsterdown-package}
 \alias{amsterdown}
 \alias{amsterdown-package}
-\title{amsterdown: An RMarkdown PhD thesis template for the University of
-    Amsterdam}
+\title{amsterdown: An RMarkdown PhD thesis template for the University of Amsterdam}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-An RMarkdown PhD thesis template for the University
-    of Amsterdam. Enables reproducible thesis writing using (R)Markdown,
-    with data, code, text, figures, and the like all in one place. Uses
-    the bookdown package to convert the (R)Markdown files to pdf or html
-    outputs. A modification of the default LaTeX template ensures the PhD
-    thesis conforms to the University of Amsterdam requirements.
+An RMarkdown PhD thesis template for the University of Amsterdam. Enables reproducible thesis writing using (R)Markdown, with data, code, text, figures, and the like all in one place. Uses the bookdown package to convert the (R)Markdown files to pdf or html outputs. A modification of the default LaTeX template ensures the PhD thesis conforms to the University of Amsterdam requirements.
 }
 \seealso{
 Useful links:
