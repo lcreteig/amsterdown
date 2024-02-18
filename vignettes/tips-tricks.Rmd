@@ -46,7 +46,19 @@ This paragraph uses the default language (English).
 This sentence is in English. ['Dieser Satz ist auf Deutsch.']{lang=de} And now back to English.
 ```
 
-Also see [this entry in `pandoc`'s documentation](https://pandoc.org/MANUAL.html#language-variables) and the examples in the template's Dutch Summary and Acknowledgments chapters. 
+Note though that to use the proper Dutch hyphenation rules, you'll need to install the additional LaTeX package `hyphen-dutch`. This cannot be auto-detected, so you'll have to add it manually:
+
+```bash
+tlmgr install hyphen-dutch
+```
+
+Or from R, using `tinytex`:
+
+```r
+tinytex::tlmgr_install("hyphen-dutch")
+```
+
+Also see [this entry in `pandoc`'s documentation](https://pandoc.org/MANUAL.html#language-variables) and the examples in the template's Dutch Summary and Acknowledgments chapters.
 
 ## Figures and images
 
