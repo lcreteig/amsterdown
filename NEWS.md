@@ -1,5 +1,7 @@
 # amsterdown (development version)
 
+* Fixed issue with babel not loading language files (#25)
+
 # amsterdown 0.1.0
 
 Update of the template with (new) thesis requirements (#18):
