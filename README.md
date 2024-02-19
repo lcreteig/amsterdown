@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/lcreteig/amsterdown/workflows/R-CMD-check/badge.svg)](https://github.com/lcreteig/amsterdown/actions)
+[![R-CMD-check](https://github.com/lcreteig/amsterdown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lcreteig/amsterdown/actions/workflows/R-CMD-check.yaml)
 [![docs](https://github.com/lcreteig/amsterdown/workflows/docs/badge.svg)](https://github.com/lcreteig/amsterdown/actions)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)

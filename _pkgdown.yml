@@ -16,7 +16,7 @@ authors:
   Leon Reteig:
     href: https://lcreteig.github.io
 development:
-  mode: auto
+  mode: release
 navbar:
   structure:
     left:  [home, intro, articles, output, news]

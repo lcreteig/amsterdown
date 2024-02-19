@@ -15,8 +15,8 @@ knitr::opts_chunk$set(
 # amsterdown <img src="man/figures/logo.png" align="right" width="120" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/lcreteig/amsterdown/workflows/R-CMD-check/badge.svg)](https://github.com/lcreteig/amsterdown/actions)
-[![docs](https://github.com/lcreteig/amsterdown/workflows/docs/badge.svg)](https://github.com/lcreteig/amsterdown/actions)
+[![R-CMD-check](https://github.com/lcreteig/amsterdown/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/lcreteig/amsterdown/actions/workflows/R-CMD-check.yaml)
+[![docs](https://github.com/lcreteig/amsterdown/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/lcreteig/amsterdown/actions/workflows/pkgdown.yaml)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lcreteig/amsterdown/master?urlpath=rstudio)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3733132.svg)](https://doi.org/10.5281/zenodo.3733132)
