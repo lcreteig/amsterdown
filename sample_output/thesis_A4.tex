@@ -5,7 +5,7 @@
 
 %\documentclass[12pt,english,]{book} %LCR
  % if not, force the oneside and a4paper options, which seem to be the only reasonable defaults
-\documentclass[12pt,english,a4paper,oneside,]{book} %LCR
+\documentclass[12pt,a4paper,oneside,]{book} %LCR
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -38,15 +38,16 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[shorthands=off,dutch,main=english]{babel}
-  \newcommand{\textdutch}[2][]{\foreignlanguage{dutch}{#2}}
-  \newenvironment{dutch}[2][]{\begin{otherlanguage}{dutch}}{\end{otherlanguage}}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
 \else
-  \usepackage{polyglossia}
-  \setmainlanguage[]{english}
-  \setotherlanguage[]{dutch}
+\usepackage[bidi=default]{babel}
 \fi
+\babelprovide[main,import]{english}
+\babelprovide[import]{dutch}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -75,6 +76,35 @@
 
 % LCR: fix for new required cslreferences environment in pandoc
 % from https://github.com/rstudio/rticles/blob/81bb6816a42797f66fbbc6d7c92ffd8216783ed3/inst/rmarkdown/templates/elsevier/resources/template.tex#L146-L177
+% Pandoc citation processing
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 %%% Use protect on footnotes to avoid problems with footnotes in titles
 \let\rmarkdownfootnote\footnote%
@@ -83,7 +113,6 @@
 %%% This fixes a TexLive 2019 change that broke pandoc template. Will also be fixed in pandoc 2.8 %LCR
 % https://github.com/jgm/pandoc/issues/5801
 \renewcommand{\linethickness}{0.05em}
-
 
 %%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%
 \usepackage{amsthm}
@@ -150,7 +179,7 @@ op gezag van de Rector Magnificus\\
 prof. dr. ir. P.P.C.C. Verbeek\\ % make sure this is the current rector magnificus
 \mbox{ten overstaan van een door het College voor Promoties ingestelde commissie,}\\
 in het openbaar te verdedigen in de Aula der Universiteit\\
-op maandag 21 oktober 2019, te 14 uur \\ }\par %
+op maandag 21 oktober 2019, te 14.00 uur \\ }\par %
 \vspace{\baselineskip}
 {\large door}\par
 \vspace{\baselineskip}
@@ -291,13 +320,13 @@ This chapter presents some important new work. Earlier papers did not consider t
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-It was Germain who first asked whether graphs can be classified. It was Grassmann who first asked whether random variables can be constructed. Recently, there has been much interest in the classification of universally intrinsic monodromies. A useful survey of the subject can be found in Miller (\protect\hyperlink{ref-Miller2002}{2002}). Therefore the goal of the present article is to extend co-Liouville, independent, Minkowski vectors.
+It was Germain who first asked whether graphs can be classified. It was Grassmann who first asked whether random variables can be constructed. Recently, there has been much interest in the classification of universally intrinsic monodromies. A useful survey of the subject can be found in Q. Miller (\protect\hyperlink{ref-Miller2002}{2002}). Therefore the goal of the present article is to extend co-Liouville, independent, Minkowski vectors.
 
-We wish to extend the results of Miller (\protect\hyperlink{ref-Miller2002}{2002}) to completely injective, measurable subrings. In Miller and Borel (\protect\hyperlink{ref-Miller2009}{2009}), the main result was the derivation of almost everywhere convex planes. So here, naturality is obviously a concern. Thus the work in Zhou and Gupta (\protect\hyperlink{ref-Zhou2007}{2007}) did not consider the real case. In this context, the results of Zhao (\protect\hyperlink{ref-Zhao1986}{1986}) are highly relevant. Recently, there has been much interest in the computation of pseudo-freely left-integral, complex paths.
+We wish to extend the results of Q. Miller (\protect\hyperlink{ref-Miller2002}{2002}) to completely injective, measurable subrings. In U. Y. Miller and Borel (\protect\hyperlink{ref-Miller2009}{2009}), the main result was the derivation of almost everywhere convex planes. So here, naturality is obviously a concern. Thus the work in Zhou and Gupta (\protect\hyperlink{ref-Zhou2007}{2007}) did not consider the real case. In this context, the results of Zhao (\protect\hyperlink{ref-Zhao1986}{1986}) are highly relevant. Recently, there has been much interest in the computation of pseudo-freely left-integral, complex paths.
 
 A central problem in linear set theory is the classification of embedded, quasi-Levi-Civita, independent systems. Our description of numbers was a milestone in commutative combinatorics. It is essential to consider that it may be right-Chebyshev. Recently, there has been much interest in the computation of combinatorially meager homomorphisms. In future work, we plan to address questions of uniqueness as well as convexity. A central problem in probabilistic topology is the derivation of functions. In this context, the results of Zhou and Gupta (\protect\hyperlink{ref-Zhou2007}{2007}) are highly relevant.
 
-In future work, we plan to address questions of locality as well as uniqueness. It is not yet known whether the Riemann hypothesis holds, although the issue of positivity has been addressed (Kobayashi \protect\hyperlink{ref-Kobayashi1994}{1994}; Lee and Martin \protect\hyperlink{ref-Lee1997}{1997}; Lee and Lastname \protect\hyperlink{ref-Lee1999}{1999}).
+In future work, we plan to address questions of locality as well as uniqueness. It is not yet known whether the Riemann hypothesis holds, although the issue of positivity has been addressed (\protect\hyperlink{ref-Kobayashi1994}{Kobayashi 1994}; \protect\hyperlink{ref-Lee1997}{T. Lee and Martin 1997}; \protect\hyperlink{ref-Lee1999}{X. Lee and Lastname 1999}).
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -335,7 +364,7 @@ Note that if Siegel's condition is satisfied then \(f = e\). Hence \(G > | P' |\
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
 
-Is it possible to construct almost surely contra-covariant arrows? In this setting, the ability to derive quasiuniversally left-Jacobi fields is essential (Moore \protect\hyperlink{ref-Moore2011}{2011}; White, Thomas, and Raman \protect\hyperlink{ref-White1994}{1994}; Garcia \protect\hyperlink{ref-Garcia1998}{1998}). Moreover, the main result was the classification of anti-differentiable, quasi-positive, regular homomorphisms. Therefore this reduces the results of Lee and Martin (\protect\hyperlink{ref-Lee1997}{1997}) to an easy exercise. This could shed important light on a conjecture of Euclid.
+Is it possible to construct almost surely contra-covariant arrows? In this setting, the ability to derive quasiuniversally left-Jacobi fields is essential (\protect\hyperlink{ref-Moore2011}{Moore 2011}; \protect\hyperlink{ref-White1994}{White, Thomas, and Raman 1994}; \protect\hyperlink{ref-Garcia1998}{Garcia 1998}). Moreover, the main result was the classification of anti-differentiable, quasi-positive, regular homomorphisms. Therefore this reduces the results of T. Lee and Martin (\protect\hyperlink{ref-Lee1997}{1997}) to an easy exercise. This could shed important light on a conjecture of Euclid.
 
 \hypertarget{science-is-better-now}{%
 \chapter{Yet another chapter}\label{science-is-better-now}}
@@ -371,7 +400,7 @@ We did it!
 \hypertarget{discussion3}{%
 \section{Discussion}\label{discussion3}}
 
-Science is better now (Mensh and Kording \protect\hyperlink{ref-Mensh2017}{2017}).
+Science is better now (\protect\hyperlink{ref-Mensh2017}{Mensh and Kording 2017}).
 
 \hypertarget{summary-and-discussion}{%
 \chapter{Summary and discussion}\label{summary-and-discussion}}
@@ -396,31 +425,31 @@ And now for some tables:
 
 \begin{longtable}[]{@{}rrrr@{}}
 \caption{\label{tab:beaver-2} Time series of the body temparature of a beaver. Source: Reynolds (\protect\hyperlink{ref-Reynolds1994}{1994})}\tabularnewline
-\toprule
-day & time & temp & activ\tabularnewline
-\midrule
+\toprule()
+day & time & temp & activ \\
+\midrule()
 \endfirsthead
-\toprule
-day & time & temp & activ\tabularnewline
-\midrule
+\toprule()
+day & time & temp & activ \\
+\midrule()
 \endhead
-307 & 930 & 36.58 & 0\tabularnewline
-307 & 940 & 36.73 & 0\tabularnewline
-307 & 950 & 36.93 & 0\tabularnewline
-307 & 1000 & 37.15 & 0\tabularnewline
-307 & 1010 & 37.23 & 0\tabularnewline
-307 & 1020 & 37.24 & 0\tabularnewline
-307 & 1030 & 37.24 & 0\tabularnewline
-307 & 1040 & 36.90 & 0\tabularnewline
-307 & 1050 & 36.95 & 0\tabularnewline
-307 & 1100 & 36.89 & 0\tabularnewline
-307 & 1110 & 36.95 & 0\tabularnewline
-307 & 1120 & 37.00 & 0\tabularnewline
-307 & 1130 & 36.90 & 0\tabularnewline
-307 & 1140 & 36.99 & 0\tabularnewline
-307 & 1150 & 36.99 & 0\tabularnewline
-307 & 1200 & 37.01 & 0\tabularnewline
-\bottomrule
+307 & 930 & 36.58 & 0 \\
+307 & 940 & 36.73 & 0 \\
+307 & 950 & 36.93 & 0 \\
+307 & 1000 & 37.15 & 0 \\
+307 & 1010 & 37.23 & 0 \\
+307 & 1020 & 37.24 & 0 \\
+307 & 1030 & 37.24 & 0 \\
+307 & 1040 & 36.90 & 0 \\
+307 & 1050 & 36.95 & 0 \\
+307 & 1100 & 36.89 & 0 \\
+307 & 1110 & 36.95 & 0 \\
+307 & 1120 & 37.00 & 0 \\
+307 & 1130 & 36.90 & 0 \\
+307 & 1140 & 36.99 & 0 \\
+307 & 1150 & 36.99 & 0 \\
+307 & 1200 & 37.01 & 0 \\
+\bottomrule()
 \end{longtable}
 
 \begin{table}
@@ -471,74 +500,77 @@ The average body temperature of the 2nd beaver (Table \ref{tab:beaver-1}) is 36.
 \setlength{\parskip}{0pt}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-Brand2015}{}%
-Brand, Amy, Liz Allen, Micah Altman, Marjorie Hlava, and Jo Scott. 2015. ``Beyond authorship: attribution, contribution, collaboration, and credit.'' \emph{Learned Publishing} 28 (2): 151--55. \url{https://doi.org/10.1087/20150211}.
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Brand2015}{}}%
+Brand, Amy, Liz Allen, Micah Altman, Marjorie Hlava, and Jo Scott. 2015. {``{Beyond authorship: attribution, contribution, collaboration, and credit}.''} \emph{Learned Publishing} 28 (2): 151--55. \url{https://doi.org/10.1087/20150211}.
 
-\leavevmode\hypertarget{ref-Brophy1998}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Brophy1998}{}}%
 Brophy, R. Q. 1998. \emph{Socialist Realism in the Works of Eco}. Harvard University Press.
 
-\leavevmode\hypertarget{ref-Buxton1984}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Buxton1984}{}}%
 Buxton, R. H. Y. 1984. \emph{The Discourse of Meaninglessness: Socialist Realism and Sontagist Camp}. University of Oregon Press.
 
-\leavevmode\hypertarget{ref-Cameron1975}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Cameron1975}{}}%
 Cameron, N. I. 1975. \emph{Reading Bataille: Socialist Realism in the Works of Spelling}. Schlangekraft.
 
-\leavevmode\hypertarget{ref-Dietrich1999}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Dietrich1999}{}}%
 Dietrich, O. D. 1999. \emph{Socialist Realism in the Works of Burroughs}. And/Or Press.
 
-\leavevmode\hypertarget{ref-Garcia1998}{}%
-Garcia, K. 1998. ``Functions over Local Homeomorphisms.'' \emph{Oceanian Journal of Classical Potential Theory} 2 (March): 84--107.
+\leavevmode\vadjust pre{\hypertarget{ref-Garcia1998}{}}%
+Garcia, K. 1998. {``Functions over Local Homeomorphisms.''} \emph{{O}ceanian {J}ournal of Classical Potential Theory} 2 (March): 84--107.
 
-\leavevmode\hypertarget{ref-Kobayashi1994}{}%
-Kobayashi, E. G. 1994. \emph{Elliptic K-Theory}. De Gruyter.
+\leavevmode\vadjust pre{\hypertarget{ref-Kobayashi1994}{}}%
+Kobayashi, E. G. 1994. \emph{Elliptic {K}-Theory}. De Gruyter.
 
-\leavevmode\hypertarget{ref-Lee1997}{}%
-Lee, T., and C. Martin. 1997. ``Groups and Singular Combinatorics.'' \emph{Journal of Global Arithmetic} 0 (December): 1--50.
+\leavevmode\vadjust pre{\hypertarget{ref-Lee1997}{}}%
+Lee, T., and C. Martin. 1997. {``Groups and Singular Combinatorics.''} \emph{{J}ournal of Global Arithmetic} 0 (December): 1--50.
 
-\leavevmode\hypertarget{ref-Lee1999}{}%
-Lee, X., and A. Lastname. 1999. ``Smoothly Connected Reducibility for Separable Lines.'' \emph{Belarusian Mathematical Archives} 51 (May): 1401--42.
+\leavevmode\vadjust pre{\hypertarget{ref-Lee1999}{}}%
+Lee, X., and A. Lastname. 1999. {``Smoothly Connected Reducibility for Separable Lines.''} \emph{{B}elarusian {M}athematical {A}rchives} 51 (May): 1401--42.
 
-\leavevmode\hypertarget{ref-Ludwig1972}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Ludwig1972}{}}%
 Ludwig, D. E. F. 1972. \emph{The Circular Sea: Sontagist Camp and Socialist Realism}. University of Illinois Press.
 
-\leavevmode\hypertarget{ref-McElwaine1980}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-McElwaine1980}{}}%
 McElwaine, W. 1980. \emph{Socialist Realism, Postcultural Situationism and Marxism}. Loompanics.
 
-\leavevmode\hypertarget{ref-Mensh2017}{}%
-Mensh, Brett, and Konrad Kording. 2017. ``Ten simple rules for structuring papers.pdf.'' \emph{PLoS Computational Biology} 13 (9): e1005619. \url{https://doi.org/10.1101/088278}.
+\leavevmode\vadjust pre{\hypertarget{ref-Mensh2017}{}}%
+Mensh, Brett, and Konrad Kording. 2017. {``{Ten simple rules for structuring papers.pdf}.''} \emph{PLoS Computational Biology} 13 (9): e1005619. \url{https://doi.org/10.1101/088278}.
 
-\leavevmode\hypertarget{ref-Miller2002}{}%
-Miller, Q. 2002. ``Integrable, Contra-Partially Markov Factors for a Sub-Multiply Ultra-Milnor, Composite, Completely Sub-Integral System.'' \emph{Lithuanian Journal of Non-Commutative Dynamics} 37 (April): 153--91.
+\leavevmode\vadjust pre{\hypertarget{ref-Miller2002}{}}%
+Miller, Q. 2002. {``Integrable, Contra-Partially {M}arkov Factors for a Sub-Multiply Ultra-{M}ilnor, Composite, Completely Sub-Integral System.''} \emph{{L}ithuanian {J}ournal of Non-Commutative Dynamics} 37 (April): 153--91.
 
-\leavevmode\hypertarget{ref-Miller2009}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Miller2009}{}}%
 Miller, U. Y., and Y. Borel. 2009. \emph{Convex Algebra}. Cambridge University Press.
 
-\leavevmode\hypertarget{ref-Moore2011}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Moore2011}{}}%
 Moore, T. 2011. \emph{Dynamics with Applications to Non-Linear Analysis}. Cambridge University Press.
 
-\leavevmode\hypertarget{ref-Prinn1975}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Prinn1975}{}}%
 Prinn, N. F. 1975. \emph{Reinventing Surrealism: Socialist Realism in the Works of Stone}. Yale University Press.
 
-\leavevmode\hypertarget{ref-Reicher1991}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Reicher1991}{}}%
 Reicher, Q. 1991. \emph{Socialist Realism and Sontagist Camp}. University of Southern North Dakota at Hoople Press.
 
-\leavevmode\hypertarget{ref-Reynolds1994}{}%
-Reynolds, P S. 1994. ``Time-series analyses of beaver body temperatures.'' In \emph{Case Studies in Biometry}, edited by N. Lange, L. Ryan, L. Billard, D. Brillinger, L. Conquest, and J. Greenhouse. New York: John Wiley; Sons.
+\leavevmode\vadjust pre{\hypertarget{ref-Reynolds1994}{}}%
+Reynolds, P S. 1994. {``{Time-series analyses of beaver body temperatures}.''} In \emph{Case Studies in Biometry}, edited by N. Lange, L. Ryan, L. Billard, D. Brillinger, L. Conquest, and J. Greenhouse. New York: John Wiley; Sons.
 
-\leavevmode\hypertarget{ref-Sargeant1972}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Sargeant1972}{}}%
 Sargeant, O. 1972. \emph{The Economy of Reality: Socialist Realism in the Works of Cage}. And/Or Press.
 
-\leavevmode\hypertarget{ref-Tilton1975}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Tilton1975}{}}%
 Tilton, Z. W. Q. 1975. \emph{Sontagist Camp and Socialist Realism}. University of Georgia Press.
 
-\leavevmode\hypertarget{ref-White1994}{}%
-White, D., Z. Thomas, and B. Raman. 1994. ``Measurability in Algebraic Algebra.'' \emph{Journal of Integral Model Theory} 32 (September): 55--61.
+\leavevmode\vadjust pre{\hypertarget{ref-White1994}{}}%
+White, D., Z. Thomas, and B. Raman. 1994. {``Measurability in Algebraic Algebra.''} \emph{{J}ournal of Integral Model Theory} 32 (September): 55--61.
 
-\leavevmode\hypertarget{ref-Zhao1986}{}%
-Zhao, I. 1986. ``On Klein's Conjecture.'' \emph{Iranian Journal of Local Category Theory} 30 (September): 1--18.
+\leavevmode\vadjust pre{\hypertarget{ref-Zhao1986}{}}%
+Zhao, I. 1986. {``On {K}lein's Conjecture.''} \emph{{I}ranian {J}ournal of Local Category Theory} 30 (September): 1--18.
 
-\leavevmode\hypertarget{ref-Zhou2007}{}%
-Zhou, I., and A. Gupta. 2007. ``Some Uniqueness Results for Additive, Countably Composite Random Variables.'' \emph{Slovenian Journal of Higher Microlocal Algebra} 46 (August): 1--85.
+\leavevmode\vadjust pre{\hypertarget{ref-Zhou2007}{}}%
+Zhou, I., and A. Gupta. 2007. {``Some Uniqueness Results for Additive, Countably Composite Random Variables.''} \emph{{S}lovenian {J}ournal of Higher Microlocal Algebra} 46 (August): 1--85.
+
+\end{CSLReferences}
 
 \endgroup
 
@@ -548,7 +580,7 @@ Zhou, I., and A. Gupta. 2007. ``Some Uniqueness Results for Additive, Countably 
 
 \chaptermark{Summary in Dutch}
 
-\begin{dutch}
+\begin{otherlanguage}{dutch}
 
 \emph{Replace this with the Dutch title of your thesis}
 
@@ -556,7 +588,7 @@ Zhou, I., and A. Gupta. 2007. ``Some Uniqueness Results for Additive, Countably 
 
 The summary goes here.
 
-\end{dutch}
+\end{otherlanguage}
 
 \hypertarget{acknowledgments}{%
 \chapter*{Acknowledgments}\label{acknowledgments}}
@@ -564,7 +596,7 @@ The summary goes here.
 
 \chaptermark{Acknowledgments}
 
-This section is optional, but theses typically include acknowledgments (\textdutch{\emph{dankwoord}} in Dutch) at the end. You may want to mix languages to thank people in their native tongue (though most Dutch speakers write it entirely in Dutch). But the standard language of the thesis template is English. You can switch temporarily by wrapping the text in language tags like so: \texttt{{[}Your\ Dutch\ text\ here{]}\{lang=nl\}}. This is important for things like hyphenation to work properly.
+This section is optional, but theses typically include acknowledgments (\foreignlanguage{dutch}{\emph{dankwoord}} in Dutch) at the end. You may want to mix languages to thank people in their native tongue (though most Dutch speakers write it entirely in Dutch). But the standard language of the thesis template is English. You can switch temporarily by wrapping the text in language tags like so: \texttt{{[}Your\ Dutch\ text\ here{]}\{lang=nl\}}. This is important for things like hyphenation to work properly.
 
 \hypertarget{contributions-to-the-chapters}{%
 \chapter*{Contributions to the chapters}\label{contributions-to-the-chapters}}
@@ -573,7 +605,7 @@ This section is optional, but theses typically include acknowledgments (\textdut
 \chaptermark{Contributions to chapters}
 \setlength{\parindent}{0pt}
 
-\emph{If your thesis consists of or contains articles that have co-authors, you have to include a page with a reference list, which names all of the contributing authors and specifies their contribution. See an example below, where the contributions are specified according to the} CRediT \emph{system} (Contributor Roles Taxonomy; \url{https://www.casrai.org/credit.html}; Brand et al. \protect\hyperlink{ref-Brand2015}{2015}).
+\emph{If your thesis consists of or contains articles that have co-authors, you have to include a page with a reference list, which names all of the contributing authors and specifies their contribution. See an example below, where the contributions are specified according to the} CRediT \emph{system} {[}Contributor Roles Taxonomy; \url{https://www.casrai.org/credit.html}; Brand et al. (\protect\hyperlink{ref-Brand2015}{2015}){]}.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
